@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.4 — 2026-10-24
+
+Previs gate — the duel test skipped storyboards and paid for it:
+
+- `SKILL.md` Step 6: a storyboard pass is now **required** before video handoff when
+  the sequence has 3+ shots, a hand-off, a contact beat, a side/height swap, or runs
+  over ~8 s. Writing the `storyboard` block is explicitly *not* the pass: render
+  panels, annotate, build the animatic.
+- `previs_waived` field for deliberate skips, with a stated reason.
+- Validator warns on 3+ shots without storyboard specs.
+- `qc-repair.md`: previs gate check added.
+- Examples: Last Train and The Interview gained storyboard blocks.
+
 ## 0.4.3 — 2026-10-24
 
 Finding from the H3 duel test (kimono vs sailor suit, 10 s): a textbook

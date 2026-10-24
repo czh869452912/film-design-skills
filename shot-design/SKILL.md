@@ -119,15 +119,29 @@ The card is the design; the panel and the prompt are projections of it.
 - **Duration shape**: at least one real hold and one real snap; the longest shot should be a charge or a landing, never a burst or an impact. `render --format rhythm` shows the shape and flags even division.
 - **Run** `python scripts/shotlist.py validate <file.json>` and fix every error; `render --format cuts` shows what each cut still leaves undeclared.
 
-### Step 6 — Storyboard the shots you need to see
+### Step 6 — Storyboard before any video handoff
 
 Read `references/storyboard.md`. For each shot, add a `storyboard` block to the card: what the panel shows, arrows, annotation, simplification level.
+
+**The previs gate.** A storyboard pass is **required** before handing a sequence to a video model when any of these is true:
+
+- the sequence has **3 or more shots**;
+- anything is **transferred between hands** (weapon, letter, cup, key);
+- there is a **contact beat** (weapon on weapon, body on ground);
+- two characters swap **screen sides, height or depth**;
+- the piece is longer than ~8 s.
+
+**Writing the `storyboard` block is not the pass.** The gate means: render at least one panel per beat (and every contact or handoff shot), annotate it with `annotate.py`, and build an animatic with `animatic.py` — then look at it. A block of prose in the JSON is a plan to do that, not the check itself.
+
+Panels are **optional** only for a single shot, or for a sequence whose every frame is already fixed by approved reference images. If the gate applies and you skip it, record why in the shot list (`"previs_waived": "reason"`) — "ran out of time" is not a reason; the failures this avoids cost more than the panels.
+
+Why: H3/Seedance execute a prompt from one anchor image. Without panels, there is no shared spatial reference for shots 2–5, and the failures are exactly the ones that look like model bugs — a second sheath appearing, a blade changing hands, a character jumping sides between cuts. Those are design holes that a rough panel catches for free.
 
 - Readability beats beauty: silhouette, screen direction, horizon, light direction — then arrows, then detail.
 - Default to **rough greyscale panels**; clean panels are for approval, not thinking.
 - Produce the drawing brief with `render --format storyboard`. When the user wants images, hand each panel to the image skill (`gpt-image` or `novelai-image`) — that skill owns prompt syntax.
 - **Draw the arrows with the script, not with the image model.** `annotate.py` adds the label bar and every overlay from `storyboard.overlays`, so marks stay legible and can be re-run when the card changes.
-- Draw panels only where a decision is at stake. A 6-shot sequence needs 6 panels; a 30 s sequence does not need 40.
+- Draw one panel per shot that carries a decision. A 6-shot sequence needs 6 panels; a 30 s sequence does not need 40.
 
 ### Step 7 — Build an animatic
 

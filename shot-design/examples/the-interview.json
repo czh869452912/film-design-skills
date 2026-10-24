@@ -107,7 +107,15 @@
         }
       ],
       "mechanism": "M24",
-      "beat_id": "B1"
+      "beat_id": "B1",
+      "storyboard": {
+        "panel": "two-shot across the table, officer nearer the camera, photo entering lower left",
+        "arrows": [
+          "arrow of the photo sliding across the table"
+        ],
+        "annotation": "S01 · MS · eye · static · 4.5 s",
+        "level": "rough"
+      }
     },
     {
       "id": "S02",
@@ -191,7 +199,13 @@
       ],
       "references": [],
       "mechanism": "M18",
-      "beat_id": "B2"
+      "beat_id": "B2",
+      "storyboard": {
+        "panel": "suspect's face right two thirds, eyes shadowed, photo edge bottom left",
+        "arrows": [],
+        "annotation": "S02 · MCU · low · static · 3.0 s",
+        "level": "rough"
+      }
     },
     {
       "id": "S03",
@@ -276,7 +290,15 @@
       ],
       "references": [],
       "mechanism": "M20",
-      "beat_id": "B3"
+      "beat_id": "B3",
+      "storyboard": {
+        "panel": "his face and one hand, fingertip on the print at the bottom edge",
+        "arrows": [
+          "arrow of the photo returning right to left"
+        ],
+        "annotation": "S03 · CU · low · static · 2.5 s",
+        "level": "rough"
+      }
     },
     {
       "id": "S04",
@@ -360,7 +382,13 @@
       ],
       "references": [],
       "mechanism": "M18",
-      "beat_id": "B4"
+      "beat_id": "B4",
+      "storyboard": {
+        "panel": "officer left of centre, dark foreground shoulder, print bright at the bottom",
+        "arrows": [],
+        "annotation": "S04 · MCU · high · static · 5.0 s",
+        "level": "rough"
+      }
     }
   ],
   "beats": [

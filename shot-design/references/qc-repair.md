@@ -14,6 +14,7 @@ Review the sequence, then review each shot, then review the prompt. Do not revie
 | Duration shape | one real hold and one real snap; no even division unless declared ritual | run `render --format rhythm`; give length to a charge or a landing, shorten the impact |
 | Cut priority | every cut has emotion + story declared; lower items only sacrificed deliberately | run `render --format cuts`; fix the highest undeclared item first |
 | Beat traceability | every fact stated in a beat is visible in a shot that owns it | move the fact, or add the shot; never leave it only in the beat sheet |
+| Previs gate | 3+ shots, a handoff, a contact or a side/height swap has rendered panels and an animatic before video | draw the panels, annotate, build the animatic; if skipped, set `previs_waived` with a reason |
 | Landing | the final shot is the longest or shortest, and comes after the peak | trim or extend the last shot |
 | Duration | fits the model's single-pass limit | split into clips, or cut beats |
 

@@ -416,6 +416,17 @@ def check(data: dict) -> tuple[list[str], list[str]]:
                 f"beats with no shot: {', '.join(orphans)} — either give each beat a shot or drop it"
             )
 
+    if len(shots) >= 3:
+        has_panel = any(
+            isinstance(shot.get("storyboard"), dict) for shot in shots if isinstance(shot, dict)
+        )
+        waived = as_text(data.get("previs_waived"))
+        if not has_panel and not waived:
+            warnings.append(
+                "previs gate: 3+ shots without storyboard specs — storyboard before any video "
+                "handoff, or set previs_waived with a reason"
+            )
+
     stats = duration_stats(data)
     if stats["count"] >= 4 and stats["mean"]:
         declared = as_text((data.get("rhythm") or {}).get("shape")).lower()

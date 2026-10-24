@@ -103,7 +103,13 @@
         }
       ],
       "mechanism": "M31",
-      "beat_id": "B1"
+      "beat_id": "B1",
+      "storyboard": {
+        "panel": "empty carriage, she sits centre-left, the letter flat on her knee, two thirds of the frame empty",
+        "arrows": [],
+        "annotation": "S01 · WS · eye · static · 5.0 s",
+        "level": "rough"
+      }
     },
     {
       "id": "S02",
@@ -186,7 +192,15 @@
       ],
       "references": [],
       "mechanism": "M19",
-      "beat_id": "B2"
+      "beat_id": "B2",
+      "storyboard": {
+        "panel": "hands folding the letter at seat height, her soft jaw at the top edge, dark glass behind",
+        "arrows": [
+          "small push arrow at the frame edge"
+        ],
+        "annotation": "S02 · CU · low · push in · 3.0 s",
+        "level": "rough"
+      }
     },
     {
       "id": "S03",
@@ -270,7 +284,15 @@
       ],
       "references": [],
       "mechanism": "M32",
-      "beat_id": "B3"
+      "beat_id": "B3",
+      "storyboard": {
+        "panel": "face in the left third, the paper boat at the bottom edge, black window filling the right",
+        "arrows": [
+          "push arrow toward the window light"
+        ],
+        "annotation": "S03 · MCU · eye · push in · 4.0 s",
+        "level": "rough"
+      }
     }
   ],
   "beats": [
