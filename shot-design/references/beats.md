@@ -24,6 +24,7 @@ Rules:
 - **One job per beat.** A beat that is both reveal and impact is usually two beats.
 - **Never two bursts adjacent.** The second has no contrast to borrow.
 - **The charge beat is what makes the burst read.** Cutting the pause is the most common reason an action sequence feels weightless.
+- **An impact beat owns a reaction, not just a contact.** The contact frame is one shot; who it lands on is the next. Steel meeting steel with nobody's hand or face in frame is texture, not story.
 - **Land after the peak.** The last beat is the consequence, not the hit.
 - **A beat can cross a cut, and a cut can happen inside a beat.** Cut where the beat's information changes, not on a stopwatch.
 

@@ -176,6 +176,7 @@ Answer the user in their language. Dialogue, lyrics and on-screen text keep thei
 - **The turn frame decides the shot.** If you cannot name the picture at the moment information changes, the shot has no event — go back to the viewing plan.
 - **Every shot changes information.** Emotion without new information is wallpaper.
 - **A ban without a positive substitute is a hole.** Say what the body does instead of what it must not do; a prohibition alone gets executed as a missing limb.
+- **A contact without a person is texture, not story.** If the frame holds only steel on steel, the audience cannot tell who hit whom; put a hand or a face in the contact, or cut to the reaction immediately.
 - **Split the shot, do not add a clause.** If a shot carries two facts, or one fact that needs more than ~2.5 s, add a shot rather than piling constraints into one.
 - **Movement needs a motive inside the frame** — a gaze, a gesture, a shape, an approach. "Push in for emotion" is not a motive; the motive is *what the push-in reveals or withholds*.
 - **Design for the model's hands.** A 3-second beat gets one action and one move. Ambition that the model cannot execute reads as noise.

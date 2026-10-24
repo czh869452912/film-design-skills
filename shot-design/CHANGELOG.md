@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.3 — 2026-10-24
+
+Finding from the H3 duel test (kimono vs sailor suit, 10 s): a textbook
+object-insert at the impact beat lost to a reaction close-up, because at 1.2 s the
+model cannot hold who is holding what.
+
+- New rule: **a contact without a person is texture, not story** — the contact
+  frame must contain a hand or a face, or the reaction follows in the next shot.
+- `M07 Impact close` failure mode updated: an object-only frame severs
+  who-hit-whom; pair with `M18`.
+- `beats.md`: the `impact` beat owns a reaction, not only a contact.
+- `qc-repair.md`: contact-ownership check added to the shot table.
+
 ## 0.4.2 — 2026-10-24
 
 Rhythm, not division:

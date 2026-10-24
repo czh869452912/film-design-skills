@@ -23,6 +23,7 @@ Review the sequence, then review each shot, then review the prompt. Do not revie
 |---|---|
 | One idea | the purpose can be said in one clause |
 | Information load | every key fact has a shot long enough to carry it (≈2.5 s+), or the fact is split across shots |
+| Contact ownership | the frame where weapons or hands meet contains a person (hand or face), or a reaction shot follows within one cut |
 | Ban substitute | every ban names the positive action that replaces it (not "don't look" but "eyes stay on the shelf label") |
 | Turn frame | the picture at the moment information changes is written and visible | 
 | Mechanism fit | the chosen mechanism's failure mode is addressed in the card |

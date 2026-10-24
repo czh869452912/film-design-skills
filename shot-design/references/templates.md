@@ -63,7 +63,7 @@ IDs are stable. Put the ID in `shot.mechanism` and the validator will check it e
 | M04 | Dead stop | the pause before the move | CU/MS, eye | static | M05, M03 | held so long it reads as an error |
 | M05 | Wind-up | before the strike | MCU, low, foreground occlusion | static or small push | M06 | pose unreadable because the silhouette is hidden |
 | M06 | Dash | closing distance | MS, side-on, wide lens | track with subject, or static letting them cross | M07 | camera and subject move together: nothing moves |
-| M07 | Impact close | the contact point | CU/ECU at contact, low | shallow push or static | M08 | impact happens off-frame |
+| M07 | Impact close | the contact point | CU/ECU at contact, low | shallow push or static | M08, M18 | object-only frame severs who-hit-whom; the frame must contain a hand or a face, or the next shot must be the reaction |
 | M08 | Hit-and-fly | the consequence of a hit | MS→WS, eye | follow or pan with the body | M09 | body leaves frame before it moves |
 | M09 | Shockwave | the world absorbs the hit | WS/EWS, low | static, one-frame shake | M10 | debris as confetti; no spatial logic |
 | M10 | Landing | a fall or jump ends | WS, ground level | static, camera settles | M09, M02 | no ground interaction: no dust, no compression |

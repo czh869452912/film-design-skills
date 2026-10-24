@@ -11,6 +11,13 @@ build/
 artifacts/
 *.mp4
 
+# raw frames and clips from the H3 duel test (report, designs, prompts and verdict are tracked)
+duel-test/frames/
+duel-test/frames-out/
+duel-test/h3/
+duel-test/judge/x/
+duel-test/judge/y/
+
 # locally installed project skills (host state, not part of the deliverable)
 .dsh/
 
@@ -19,3 +26,5 @@ __pycache__/
 *.pyc
 Thumbs.db
 .DS_Store
+
+duel-test/judge/_diff_*
