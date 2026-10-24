@@ -99,17 +99,27 @@ def test_init_and_synthetic(python: str, verbose: bool) -> int:
         if not (annotated / "S01.png").exists():
             raise AssertionError("annotate did not write a panel")
 
+        refs = tmp_dir / "refs"
+        run([python, str(HERE / "build_refpack.py"), str(scaffold),
+             "--images", str(panels), "--out", str(refs), "--first-frame"])
+        manifest = refs / "manifest.json"
+        if not manifest.exists():
+            raise AssertionError("build_refpack did not write a manifest")
+        payload = json.loads(manifest.read_text(encoding="utf-8"))
+        if payload.get("count") != 2 or len(payload.get("pictures", [])) != 2:
+            raise AssertionError("reference pack has the wrong picture count")
+
         if shutil.which("ffmpeg") is None:
             if verbose:
                 print("  animatic skipped (no ffmpeg)")
-            return 2
+            return 3
 
         movie = tmp_dir / "animatic.mp4"
         run([python, str(HERE / "animatic.py"), str(scaffold),
              "--images", str(panels), "--out", str(movie)])
         if not movie.exists() or movie.stat().st_size < 1000:
             raise AssertionError("animatic did not write a video")
-        return 3
+        return 4
 
 
 def main() -> int:

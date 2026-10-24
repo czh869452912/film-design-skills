@@ -1,0 +1,35 @@
+subject_definitions:
+<Subject 1> is the young woman in the deep red furisode kimono, with long black hair tied low, wooden geta, and a black lacquered sheathed katana held horizontally in front of her waist.
+<Subject 2> is the young woman in the navy sailor uniform, with a white scarf, pleated skirt, black boots, short hair, and a drawn katana.
+<Subject 3> is the shrine courtyard at dusk: wet stone steps, a stone lantern, cedar trees, a small torii in the fog, and mist lying below the third step.
+<Picture 1> is the composition and staging reference for [Shot 1] and the first frame of the target video: <Subject 1> on the left third on the seventh step, <Subject 2> on the right third, four empty steps between them, the lantern in the left foreground, the small torii in the bright mist at the lower right.
+<Picture 2> is the composition and staging reference for [Shot 2]: a low medium close shot of <Subject 2>'s feet and lowered blade, the stone lantern as a black wedge on the left.
+<Picture 3> is the composition and staging reference for [Shot 3]: a side medium shot, <Subject 2> climbing three steps and covering the lantern, <Subject 1> revealed behind her.
+<Picture 4> is the composition and staging reference for [Shot 4]: a low close shot, the blade tip at the black sheath, the contact between the two.
+<Picture 5> is the composition and staging reference for [Shot 5]: a low medium shot pulling into a wide, <Subject 1> lower on the steps and <Subject 2> above her, turning back.
+
+summary:
+[reference generation + keyframe completion] The target video is a ten-second duel between <Subject 1> and <Subject 2> on the steps of <Subject 3>. <Subject 2> moves first; <Subject 1> blocks with the sheath instead of drawing, and by the end their positions have changed. <Picture 1> is the first frame of [Shot 1]; <Picture 1> through <Picture 5> each fix the staging of one shot, while the visual style is specified only in this text.
+
+retention_analysis:
+<Subject 1> (appears in all shots): fully_preserved - the deep red furisode, the low-tied black hair, the geta and the sheathed black katana are retained; the blade is never drawn.
+<Subject 2> (appears in all shots): fully_preserved - the navy sailor uniform, white scarf, pleated skirt, black boots, short hair and drawn katana are retained.
+<Subject 3> (appears in all shots): fully_preserved - the stone steps, lantern, torii, mist and the backlight from the upper right are retained.
+<Picture 1> ([Shot 1] first frame): fully_preserved - layout, subject placement, camera height and the four empty steps are retained.
+<Picture 2> ([Shot 2] staging): fully_preserved - the low angle on the feet and the lantern's position are retained.
+<Picture 3> ([Shot 3] staging): fully_preserved - the side angle, the lantern between the two women, and their overlap are retained.
+<Picture 4> ([Shot 4] staging): fully_preserved - the close framing on the contact point is retained.
+<Picture 5> ([Shot 5] staging): fully_preserved - the swapped positions and the wide reveal are retained.
+All five pictures contribute layout only: their monochrome sketch style, line work and any labels are not retained.
+
+detailed_description:
+The target video is a 2D-animated cinematic illustration in a muted dusk palette with a single warm backlight; it is never a sketch, never monochrome line art, and carries none of the reference panels' pencil texture. Each woman carries exactly one katana: <Subject 1> only the black lacquered sheathed one, <Subject 2> only the drawn one. No second scabbard, no extra blade, no floating weapon; the weapon never changes hands.
+[Shot 1] A wide, static side shot at a low angle, composed as in <Picture 1>. <Subject 1> stands on the seventh step in the left third, the black sheath horizontal in front of her waist, its tip angled fifteen degrees toward <Subject 2>. <Subject 2> stands in the right third, left foot forward, the drawn blade lowered behind her leg. Four empty steps lie between them; the lantern is a black wedge in the foreground, and the small torii stands in the bright mist at the lower right. Neither woman moves; only the hems and the mist move.
+[Shot 2] At 00:02.600, the camera cuts to a low medium close shot framed as in <Picture 2> and pushes in slowly. <Subject 2>'s rear heel presses into the wet stone; the blade tip draws a shallow arc behind her leg. The heel lifts, then only the ball of her foot remains, and she leaves the frame.
+[Shot 3] At 00:04.700, the camera cuts to a side medium shot framed as in <Picture 3> and holds still, wide enough that both women and both heads remain in frame. <Subject 2> climbs three steps, her body covering the lantern; <Subject 1> is revealed behind her, the sheath coming up. <Subject 2>'s blade passes over her shoulder, and <Subject 1>'s geta leaves the stone by an inch.
+[Shot 4] At 00:06.000, the camera cuts to a low close shot framed as in <Picture 4> and holds; the hand holding the black sheath is visible at the contact. The blade tip is an inch from the sheath; the mist behind it is bright. The blade bites the lacquer, a white line bursts open, and the blade slides out of the right edge of frame, leaving a palm-long white line on the black.
+[Shot 5] At 00:07.200, the camera cuts to a low medium shot framed as in <Picture 5> and pulls back slowly into a wide. At first only the sheath and the white line are visible; the pull reveals the mist, the steps and the torii. <Subject 1> is now lower on the steps and <Subject 2> is above her, turning back. The positions have changed; the frame holds to the end.
+
+overall_soundscape: Cedar wind and a thin air tone fill the courtyard. A boot grinds sand, one breath is audible, a tsuba clicks, three quick boot strikes land on wet stone, a blade cuts the air, and the wind drops for a beat. Steel bites lacquered wood with a dry crack and a hiss. The wind returns at the end under two breaths.
+
+non_diegetic_music: N/A

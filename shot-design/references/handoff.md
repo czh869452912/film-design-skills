@@ -35,13 +35,38 @@ Do not rename, reorder, or pre-translate these into the target's fields. Give th
 
 Every reference asset must arrive with a role and an exclusion. A role is what the asset is *allowed* to define:
 
-`identity` · `wardrobe` · `scene/architecture` · `prop` · `motion` · `camera path` · `lighting/palette` · `voice timbre` · `music` · `first frame` · `last frame` · `storyboard`
+`identity` · `wardrobe` · `scene/architecture` · `prop` · `motion` · `camera path` · `lighting/palette` · `voice timbre` · `music` · `first frame` · `last frame` · `storyboard/staging`
 
 | Example | Role | Attributes to preserve | Exclusion |
 |---|---|---|---|
 | `<Picture 1>` | identity + first frame | dark bob, loose grey t-shirt, posture, machine on the left, drum light | do not take the room's clutter |
+| `<Picture 2>` | storyboard/staging for [Shot 2] | subject placement, screen direction, horizon, light direction | do not take the pencil style, labels or arrows |
 | `<Video 1>` | motion | only her leaning motion and its timing | do not take its clothing or scene |
 | `<Audio 1>` | voice timbre | breathy delivery | do not copy its dialogue |
+
+### The storyboard pack
+
+The strongest default for a multi-shot piece: **one panel per shot becomes one `<Picture N>`**, each bound to its own shot. The panel fixes composition, staging, screen direction and light direction; the prompt fixes style, identity and performance. This is why the previs gate exists — the panels are not only a check, they are the input kit.
+
+| Rule | Why |
+|---|---|
+| Feed **unannotated** panels | labels, arrows and impact marks leak into the render; annotate a copy for review |
+| One picture per shot, in shot order | keeps `<Picture N>` ↔ `[Shot N]` mapping trivial |
+| Declare every picture's role as **staging only** | otherwise the model averages the sketch style into the video |
+| Add **one** style keyframe if the look matters | combined kit: panels for staging, one colour frame for palette/identity |
+| Exclude sketch style, text and arrows explicitly | the panel's pencil texture is the most common leak |
+
+Budget: H3 takes up to 9 images, so a 5-shot piece fits panels for every shot with room for a style keyframe. Beyond 9 shots, use panels for the shots that carry staging risk (contact, hand-off, side swap) and text for the rest.
+
+**What to expect** (from a 10 s H3 test with five sketch panels):
+
+| Kit | Staging fidelity | Style |
+|---|---|---|
+| one colour keyframe only | low — later shots drift, heads get cropped | good |
+| panels only | high — composition follows each panel | **collapses to sketch**: the pencil style leaks into the video even when the prompt forbids it |
+| keyframe + panels | high | mostly good, with sketch texture creeping into mid-sequence shots |
+
+So: use the keyframe + panels kit as the default, and treat style leakage as a known failure. Fixes, in order: (1) put the style picture first and name it as the style reference; (2) convert the panels to toned greyscale or colour keys before feeding; (3) feed only the panels for the risky shots rather than all of them; (4) add the style-exclusion sentence to every shot, not only the first.
 
 Rules:
 

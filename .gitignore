@@ -15,6 +15,9 @@ artifacts/
 duel-test/frames/
 duel-test/frames-out/
 duel-test/frames-v2/
+duel-test/frames-panels/
+duel-test/frames-mixed/
+duel-test/refs/
 duel-test/h3/
 duel-test/judge/x/
 duel-test/judge/y/

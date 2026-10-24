@@ -151,6 +151,16 @@ python scripts/animatic.py shotlist.json --images storyboard --out animatic/anim
 
 The panels are concatenated at each shot's `duration_s`, with an `.edl.json` recording in/out times. Missing panels become labelled placeholders, so timing can be reviewed before the drawings exist. Review the animatic for rhythm, not for image quality: does the cut land where the beat does?
 
+### Step 7b — Pack the panels as the video reference kit
+
+```bash
+python scripts/build_refpack.py shotlist.json --images storyboard --out refs/run1 --first-frame
+```
+
+Copies the **clean** panels into an ordered pack (`01-S01.png` …), writes `manifest.json` + `refs.md` with one role per picture, and maps `<Picture N>` → `[Shot N]`. Hand that pack to the prompt skill: one picture per shot, role "composition and staging", **sketch style excluded**, plus at most one colour keyframe if the look matters.
+
+This is the default reference strategy for multi-shot pieces. A single hero keyframe fixes one frame; a panel pack fixes the staging of every shot, which is exactly what breaks in generation when it is missing.
+
 ### Step 8 — Hand off, do not pack
 
 The design is finished when the brief in `references/handoff.md` §2 is complete: intent, shots, references with roles and exclusions, continuity, bans, beat windows.
@@ -234,9 +244,10 @@ python scripts/shotlist.py render shotlist.json --format csv      # spreadsheet 
 python scripts/shotlist.py render shotlist.json --format storyboard  # per-panel drawing brief
 python scripts/shotlist.py render shotlist.json --format brief    # handoff brief for the prompt writer
 python scripts/annotate.py shotlist.json --images storyboard --out annotated --sheet sheet.png
+python scripts/build_refpack.py shotlist.json --images storyboard --out refs/run1 --first-frame
 python scripts/animatic.py shotlist.json --images annotated --out animatic/animatic.mp4 --transition fade
 python scripts/eval.py examples/                                  # corpus stats + doc integrity
 python scripts/selftest.py                                        # regression gate: run after editing the tools
 ```
 
-The scripts never design and never format model prompts. `shotlist.py` checks and prints the design (it reads the mechanism list straight out of `references/templates.md`); `annotate.py` draws labels and arrows; `animatic.py` turns panels and durations into a reviewable clip; `eval.py` summarises a body of work and guards the docs against table corruption; `selftest.py` proves all of it still runs.
+The scripts never design and never format model prompts. `shotlist.py` checks and prints the design (it reads the mechanism list straight out of `references/templates.md`); `annotate.py` draws labels and arrows; `build_refpack.py` turns clean panels into the ordered reference kit; `animatic.py` turns panels and durations into a reviewable clip; `eval.py` summarises a body of work and guards the docs against table corruption; `selftest.py` proves all of it still runs.

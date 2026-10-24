@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.4.5 — 2026-10-24
+
+Storyboard panels as the video model's reference kit (tested on H3, 10 s duel):
+
+- New `scripts/build_refpack.py`: copies clean panels into an ordered pack
+  (`01-S01.png` …), writes `manifest.json` + `refs.md` mapping `<Picture N>` → `[Shot N]`
+  with a staging-only role. Wired into `selftest.py`.
+- `handoff.md`: "storyboard pack" reference strategy, with the measured trade-offs —
+  panels only keep staging but collapse the render to sketch style; keyframe + panels
+  keeps the look with some sketch leakage; includes the four ordered fixes.
+- `storyboard.md`: clean vs annotated panels — annotated copies are for review, clean
+  copies are the reference input.
+- `SKILL.md`: Step 7b builds the reference kit; panels are the default reference
+  strategy for multi-shot pieces.
+
 ## 0.4.4 — 2026-10-24
 
 Previs gate — the duel test skipped storyboards and paid for it:

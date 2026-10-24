@@ -124,6 +124,17 @@ When the panel is produced by an image model:
 - Generate at the final aspect ratio; do not crop a square panel into 16:9 later.
 - If identity matters, use one reference image and bind it to the character, not to the whole panel.
 
+### Panels as the video model's reference kit
+
+A panel is not only a check; for a multi-shot piece it is usually the best **staging reference** you can give the video model. Keep two copies:
+
+| Copy | Purpose | Fed to a model? |
+|---|---|---|
+| clean panel | reference input: composition, staging, screen direction, light direction | yes, as `<Picture N>` per shot |
+| annotated panel (`annotate.py`) | review: labels, arrows, impact marks | no — marks would render into the video |
+
+Feed the pack with `build_refpack.py` (see `SKILL.md`): one picture per shot, declared as staging only, with the sketch style excluded. If the look matters, add **one** colour keyframe for palette and identity — the panels carry layout, the keyframe carries style.
+
 ## 9. Panel review
 
 For each panel, answer in two seconds:

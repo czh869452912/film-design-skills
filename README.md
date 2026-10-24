@@ -43,7 +43,9 @@ python shot-design/scripts/shotlist.py render shot-design/examples/descent.json 
 
 **设计层**：节拍表（13 套节奏模板）、起/转/终观看方案比较、42 条机制库（M01–M42）+ 8 个修饰项、六拨盘情绪系统、构图（含竖屏与色彩结构）、问答链与剪辑六法则。
 
-**预演层**：分镜绘制规范（箭头、标注、版式、简略等级）→ `annotate.py` 用脚本画箭头与标签（不交给图片模型）→ `animatic.py` 按每镜时长拼接，可加淡入淡出与音轨 → EDL。
+**预演层**：分镜绘制规范（箭头、标注、版式、简略等级）→ `annotate.py` 用脚本画箭头与标签（不交给图片模型）→ `build_refpack.py` 把干净分镜打包成有序参考（`<Picture N>` ↔ `[Shot N]`）→ `animatic.py` 按每镜时长拼接，可加淡入淡出与音轨 → EDL。
+
+分镜不光是用来看的，**默认就是视频模型的参考图**：一镜一张、声明为"构图与调度"、排除草图风格；需要风格时再加一张彩色关键帧（实测结论见 [handoff.md](shot-design/references/handoff.md)）。
 
 **交付层**：设计稿（参考图角色、连续性、禁止项、节拍窗口）交给提示词技能；H3 走 Ref2VA。
 
