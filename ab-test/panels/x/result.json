@@ -1,0 +1,10 @@
+{
+  "status": "DONE",
+  "correlation": "Xr9bNn",
+  "model": "nai-diffusion-5-full",
+  "action": "generate",
+  "seed": 1766239571,
+  "files": [
+    "image_0.png"
+  ]
+}

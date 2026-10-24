@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shot Design"
+  short_description: "Design shots and encode emotion for AI video"
+  default_prompt: "Use $shot-design to turn this beat into a shot sequence with camera language and a handoff brief for Seedance 2.5 or MiniMax H3."

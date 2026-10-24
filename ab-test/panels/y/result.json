@@ -1,0 +1,10 @@
+{
+  "status": "DONE",
+  "correlation": "RFmRE3",
+  "model": "nai-diffusion-5-full",
+  "action": "generate",
+  "seed": 2656763160,
+  "files": [
+    "image_0.png"
+  ]
+}

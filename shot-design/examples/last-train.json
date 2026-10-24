@@ -1,0 +1,306 @@
+{
+  "title": "Last Train",
+  "intent": {
+    "logline": "On the last train, a night-shift cleaner folds an unsent letter into a paper boat.",
+    "turn": "rehearsed apology -> the decision to keep it to herself",
+    "audience_knows": "the carriage is empty and she will not send it"
+  },
+  "target": {
+    "model": "h3",
+    "duration_s": 12,
+    "aspect": "16:9",
+    "mode": "ref2va"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "duration_s": 5.0,
+      "purpose": "Establish the emptiness and the letter in her hand.",
+      "emotion": {
+        "target": "isolation",
+        "dials": {
+          "proximity": 2,
+          "power": 5,
+          "pressure": 6,
+          "stability": 2,
+          "value": 8,
+          "time": 6
+        },
+        "contradiction": "wide shot for a private emotion"
+      },
+      "framing": {
+        "size": "WS",
+        "angle": "eye-level",
+        "lens_mm": 35,
+        "notes": "she sits centre-left; two thirds of the carriage empty to the right"
+      },
+      "composition": {
+        "value_masses": "dark window band across the top, one cold fluorescent tube above her, wet black glass behind",
+        "focus": "the letter on her knee",
+        "negative_space": "the empty seat rows to frame right"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Cleaner",
+            "screen": "centre-left",
+            "facing": "camera-left",
+            "pose": "seated, letter in right hand"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "the emptiness is the subject; the camera refuses to help her",
+        "start_frame": "wide carriage, figure small",
+        "end_frame": "unchanged, her hand resting on the unfolded letter",
+        "turn_frame": "her hand stops moving; the letter lies flat on her knee"
+      },
+      "light": {
+        "key": "overhead fluorescent",
+        "ratio": "6:1",
+        "palette": "cold green-white against black glass"
+      },
+      "action": {
+        "primary": "She smooths the letter flat on her knee, then stops.",
+        "cues": [
+          "thumb presses the fold",
+          "jaw sets",
+          "shoulders drop"
+        ],
+        "subtext": "She is rehearsing the apology for the last time."
+      },
+      "sound": {
+        "diegetic": "wheel rhythm, ventilation hum, a fluorescent buzz",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "cut-on-sound",
+        "matches": "the fluorescent buzz carries into S02"
+      },
+      "continuity": [
+        "navy cleaner uniform, hair tied back",
+        "letter in her right hand",
+        "window always behind her"
+      ],
+      "bans": [
+        "no crowd",
+        "no on-screen text",
+        "no music",
+        "no fast cuts"
+      ],
+      "references": [
+        {
+          "label": "<Picture 1>",
+          "role": "identity + scene + first frame",
+          "defines": "the cleaner, her navy uniform, the empty carriage, the cold fluorescent tube, the wet black window",
+          "preserve": "fully",
+          "exclude": "any text on the carriage window decals"
+        }
+      ],
+      "mechanism": "M31",
+      "beat_id": "B1"
+    },
+    {
+      "id": "S02",
+      "duration_s": 3.0,
+      "purpose": "Make the folding an act of care, not a plot device.",
+      "emotion": {
+        "target": "tenderness with precision",
+        "dials": {
+          "proximity": 9,
+          "power": 4,
+          "pressure": 7,
+          "stability": 3,
+          "value": 7,
+          "time": 4
+        }
+      },
+      "framing": {
+        "size": "CU",
+        "angle": "slight low angle",
+        "lens_mm": 50,
+        "notes": "hands and letter at seat height; her out-of-focus jaw at the top edge"
+      },
+      "composition": {
+        "value_masses": "lit hands in the lower two thirds, dark window above, soft jaw line at the top",
+        "focus": "the crease under her thumbnail",
+        "negative_space": "dark glass behind the hands"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Cleaner",
+            "screen": "center",
+            "facing": "down",
+            "pose": "hands working the paper"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "push in",
+        "amplitude": "small",
+        "speed": "slow",
+        "motivation": "the crease she is making",
+        "start_frame": "letter flat, hands still",
+        "end_frame": "a small paper boat in her palm",
+        "turn_frame": "the thumbnail presses the crease; the boat holds its shape"
+      },
+      "light": {
+        "key": "overhead fluorescent, slightly warm on the paper",
+        "ratio": "4:1",
+        "palette": "paper white, uniform navy"
+      },
+      "action": {
+        "primary": "She folds the letter twice and presses the crease.",
+        "cues": [
+          "two deliberate folds",
+          "thumbnail presses the edge",
+          "one slow exhale"
+        ],
+        "subtext": "This is the only part of the apology she can still control."
+      },
+      "sound": {
+        "diegetic": "paper crease, wheel rhythm",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "cut-on-action",
+        "matches": "cut on the final press"
+      },
+      "continuity": [
+        "right hand dominant",
+        "same uniform cuff",
+        "letter stays in her right hand"
+      ],
+      "bans": [
+        "no face pulling",
+        "no tears yet",
+        "no music"
+      ],
+      "references": [],
+      "mechanism": "M19",
+      "beat_id": "B2"
+    },
+    {
+      "id": "S03",
+      "duration_s": 4.0,
+      "purpose": "The decision, without a line of dialogue.",
+      "emotion": {
+        "target": "resignation becoming ownership",
+        "dials": {
+          "proximity": 8,
+          "power": 5,
+          "pressure": 5,
+          "stability": 4,
+          "value": 8,
+          "time": 3
+        }
+      },
+      "framing": {
+        "size": "MCU",
+        "angle": "eye-level",
+        "lens_mm": 50,
+        "notes": "face in the left third, boat at the bottom edge"
+      },
+      "composition": {
+        "value_masses": "lit face left, black glass right, the boat a small bright shape at the bottom",
+        "focus": "her eyes, then the boat",
+        "negative_space": "the dark window occupying the right half"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Cleaner",
+            "screen": "left third",
+            "facing": "camera-right in profile",
+            "pose": "seated, boat in right hand"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "push in",
+        "amplitude": "small",
+        "speed": "slow",
+        "motivation": "she lifts the boat toward the window light",
+        "start_frame": "medium close, boat at the bottom edge",
+        "end_frame": "profile against black glass, hand flat over the pocket",
+        "turn_frame": "the boat leaves the window light and disappears into the pocket"
+      },
+      "light": {
+        "key": "fluorescent, passing lights raking the cheek",
+        "ratio": "5:1",
+        "palette": "cold white, teal-black glass"
+      },
+      "action": {
+        "primary": "She looks at the boat, then puts it in her coat pocket.",
+        "cues": [
+          "eyes stay on the boat",
+          "one slow blink",
+          "thumb presses the pocket flap down"
+        ],
+        "subtext": "She is not giving up on the apology; she is deciding it is hers."
+      },
+      "sound": {
+        "diegetic": "the buzz stops, wheels remain",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "hold",
+        "matches": "end on the hand over the pocket"
+      },
+      "continuity": [
+        "same hand",
+        "pocket on the same side",
+        "profile faces the window"
+      ],
+      "bans": [
+        "no smile",
+        "no tear",
+        "no music",
+        "no subtitle"
+      ],
+      "references": [],
+      "mechanism": "M32",
+      "beat_id": "B3"
+    }
+  ],
+  "beats": [
+    {
+      "id": "B1",
+      "name": "establish",
+      "goal": "put her alone with the letter",
+      "duration_s": 5.0,
+      "tension": 3,
+      "knowledge_change": "the carriage is empty and she is not going anywhere"
+    },
+    {
+      "id": "B2",
+      "name": "reveal",
+      "goal": "make the letter an object she can hold",
+      "duration_s": 3.0,
+      "tension": 5,
+      "knowledge_change": "the apology has been written and folded already"
+    },
+    {
+      "id": "B3",
+      "name": "turn",
+      "goal": "she decides not to send it",
+      "duration_s": 4.0,
+      "tension": 7,
+      "knowledge_change": "the letter will stay with her"
+    }
+  ],
+  "rhythm": {
+    "shape": "hold-snap-hold",
+    "note": "hold the wide carriage, tighten on the hands, hold the decision"
+  }
+}

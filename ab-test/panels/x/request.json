@@ -1,0 +1,59 @@
+{
+  "input": "storyboard panel, 16:9, monochrome pencil sketch, rough greyscale, no text, night convenience store interior, close-up at counter height, side angle 30 degrees, a clerk's hand pushes the last carton of warm milk to the counter edge, stops 3cm from the edge, fingertips press for half a second and withdraw, a wet girl's reflection moves in the glass door",
+  "model": "nai-diffusion-5-full",
+  "action": "generate",
+  "parameters": {
+    "params_version": 4,
+    "width": 1344,
+    "height": 768,
+    "scale": 5.5,
+    "uncond_scale": 0,
+    "cfg_rescale": 0,
+    "sampler": "k_euler_ancestral",
+    "steps": 23,
+    "n_samples": 1,
+    "noise_schedule": "karras",
+    "legacy_v3_extend": false,
+    "sm": false,
+    "sm_dyn": false,
+    "dynamic_thresholding": false,
+    "dynamic_thresholding_percentile": 0.999,
+    "dynamic_thresholding_mimic_scale": 10,
+    "controlnet_strength": 1,
+    "skip_cfg_below_sigma": 0,
+    "deliberate_euler_ancestral_bug": false,
+    "prefer_brownian": true,
+    "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+    "explike_fine_detail": false,
+    "minimize_sigma_inf": false,
+    "uncond_per_vibe": true,
+    "wonky_vibe_correlation": true,
+    "straight_alpha": true,
+    "quality_boost": false,
+    "tag_hint_qt": 1,
+    "tag_hint_uc_preset": 2,
+    "reference_information_extracted_multiple": [],
+    "reference_strength_multiple": [],
+    "prompt": "storyboard panel, 16:9, monochrome pencil sketch, rough greyscale, no text, night convenience store interior, close-up at counter height, side angle 30 degrees, a clerk's hand pushes the last carton of warm milk to the counter edge, stops 3cm from the edge, fingertips press for half a second and withdraw, a wet girl's reflection moves in the glass door",
+    "negative_prompt": "",
+    "seed": 1766239571,
+    "v4_prompt": {
+      "caption": {
+        "base_caption": "storyboard panel, 16:9, monochrome pencil sketch, rough greyscale, no text, night convenience store interior, close-up at counter height, side angle 30 degrees, a clerk's hand pushes the last carton of warm milk to the counter edge, stops 3cm from the edge, fingertips press for half a second and withdraw, a wet girl's reflection moves in the glass door",
+        "char_captions": []
+      },
+      "use_coords": false,
+      "use_order": false,
+      "legacy_uc": false
+    },
+    "v4_negative_prompt": {
+      "caption": {
+        "base_caption": "",
+        "char_captions": []
+      },
+      "use_coords": false,
+      "use_order": false,
+      "legacy_uc": false
+    }
+  }
+}

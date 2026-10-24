@@ -1,0 +1,22 @@
+# secrets — never commit
+.env
+.env.*
+!.env.example
+
+# source books and derived OCR output (large, copyrighted)
+reference/
+build/
+
+# scratch runs and media
+test-run/
+test-run2/
+*.mp4
+
+# locally installed project skills (host state, not part of the deliverable)
+.dsh/
+
+# tooling noise
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store

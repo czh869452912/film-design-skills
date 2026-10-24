@@ -1,0 +1,404 @@
+{
+  "title": "The Interview",
+  "intent": {
+    "logline": "In an interview room, a young officer slides a photograph across the table; the man opposite pushes it back with one finger.",
+    "turn": "the officer owns the room -> the suspect quietly owns the officer",
+    "audience_knows": "the photograph is not evidence against the suspect, it is evidence of him"
+  },
+  "target": {
+    "model": "h3",
+    "duration_s": 15,
+    "aspect": "16:9",
+    "mode": "ref2va"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "duration_s": 4.5,
+      "purpose": "Hand the officer the initiative, and make the table a border.",
+      "emotion": {
+        "target": "controlled authority",
+        "dials": {
+          "proximity": 5,
+          "power": 6,
+          "pressure": 7,
+          "stability": 1,
+          "value": 7,
+          "time": 4
+        },
+        "contradiction": "static camera for what should be a pressure scene"
+      },
+      "framing": {
+        "size": "MS",
+        "angle": "eye-level",
+        "lens_mm": 40,
+        "notes": "two-shot across the table, officer nearer camera"
+      },
+      "composition": {
+        "value_masses": "cold fluorescent bar above, pale table, two dark torsos meeting at the table edge",
+        "focus": "the photograph entering from the lower left",
+        "negative_space": "the blank wall behind the suspect"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Officer",
+            "screen": "left foreground, back partly to camera",
+            "facing": "toward suspect"
+          },
+          {
+            "name": "Suspect",
+            "screen": "right, centred",
+            "facing": "toward officer"
+          }
+        ],
+        "screen_direction": "left-to-right"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "the room is a machine; nothing in it should look nervous",
+        "start_frame": "empty table, both seated",
+        "end_frame": "photograph sits under the officer's fingers mid-table",
+        "turn_frame": "the photograph comes to rest under the officer's fingers"
+      },
+      "light": {
+        "key": "overhead fluorescent",
+        "ratio": "5:1",
+        "palette": "green-white, no warmth"
+      },
+      "action": {
+        "primary": "The officer slides the photograph across the table.",
+        "cues": [
+          "two fingers flat on the print",
+          "elbow locked",
+          "chin slightly up"
+        ],
+        "subtext": "He has rehearsed this move and believes it is winning."
+      },
+      "sound": {
+        "diegetic": "paper sliding on laminate, ventilation, a chair creak",
+        "dialogue": "Officer: Look at it.",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "cut-on-look",
+        "matches": "the suspect's eyes drop to the photograph"
+      },
+      "continuity": [
+        "one table, one photograph",
+        "officer on screen left, suspect screen right",
+        "no window"
+      ],
+      "bans": [
+        "no shouting",
+        "no music",
+        "no subtitles",
+        "no camera movement"
+      ],
+      "references": [
+        {
+          "label": "<Picture 1>",
+          "role": "scene + lighting",
+          "defines": "the interview room: pale laminate table, two chairs, overhead fluorescent panel, no window",
+          "preserve": "fully",
+          "exclude": "the suspect's face and clothing"
+        }
+      ],
+      "mechanism": "M24",
+      "beat_id": "B1"
+    },
+    {
+      "id": "S02",
+      "duration_s": 3.0,
+      "purpose": "Show that he recognises the photograph, and refuses to react.",
+      "emotion": {
+        "target": "withheld recognition",
+        "dials": {
+          "proximity": 9,
+          "power": 4,
+          "pressure": 6,
+          "stability": 1,
+          "value": 8,
+          "time": 5
+        }
+      },
+      "framing": {
+        "size": "MCU",
+        "angle": "slightly low",
+        "lens_mm": 75,
+        "notes": "his face fills the right two thirds, photograph edge at bottom left"
+      },
+      "composition": {
+        "value_masses": "lit forehead and cheekbones, eyes in shadow, dark wall behind",
+        "focus": "the eyes, then the photograph edge",
+        "negative_space": "dark wall, top left"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Suspect",
+            "screen": "right two thirds",
+            "facing": "down-left",
+            "pose": "still, hands flat on the table"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "hold on the absence of a reaction",
+        "start_frame": "eyes on the photograph",
+        "end_frame": "eyes lift to the officer, face unchanged",
+        "turn_frame": "his eyes lift from the photograph to the officer"
+      },
+      "light": {
+        "key": "overhead, eyes shadowed by the brow",
+        "ratio": "8:1",
+        "palette": "cold, desaturated"
+      },
+      "action": {
+        "primary": "He looks at the photograph for a long beat, then lifts his eyes.",
+        "cues": [
+          "no blink for three seconds",
+          "jaw still",
+          "thumb taps once on the table"
+        ],
+        "subtext": "He is not deciding whether to lie; he is deciding how much to enjoy this."
+      },
+      "sound": {
+        "diegetic": "ventilation, one distant door",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "cut-on-action",
+        "matches": "cut on the thumb tap"
+      },
+      "continuity": [
+        "same shadow line across the eyes",
+        "photograph still on the table",
+        "hands flat"
+      ],
+      "bans": [
+        "no smile yet",
+        "no music",
+        "no camera movement",
+        "no reaction shot of the officer"
+      ],
+      "references": [],
+      "mechanism": "M18",
+      "beat_id": "B2"
+    },
+    {
+      "id": "S03",
+      "duration_s": 2.5,
+      "purpose": "Deliver the reversal with the smallest possible gesture.",
+      "emotion": {
+        "target": "quiet dominance",
+        "dials": {
+          "proximity": 8,
+          "power": 3,
+          "pressure": 5,
+          "stability": 1,
+          "value": 8,
+          "time": 6
+        }
+      },
+      "framing": {
+        "size": "CU",
+        "angle": "low",
+        "lens_mm": 50,
+        "notes": "his face and one hand, the photograph in his fingers at the bottom edge"
+      },
+      "composition": {
+        "value_masses": "face lit from below by the table bounce, dark ceiling above, white print at the bottom edge",
+        "focus": "the fingertip on the photograph",
+        "negative_space": "the dark band above his head"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Suspect",
+            "screen": "centre",
+            "facing": "toward camera-left",
+            "pose": "leans back, one finger on the print"
+          }
+        ],
+        "screen_direction": "right-to-left",
+        "reversal_reason": "the photograph physically travels back across the table; the reversal is the turn"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "the reversal is spatial, not kinetic",
+        "start_frame": "his finger on the photograph",
+        "end_frame": "the photograph back on the officer's side of the table",
+        "turn_frame": "the photograph reverses direction on the table"
+      },
+      "light": {
+        "key": "low table bounce plus overhead rim",
+        "ratio": "10:1",
+        "palette": "cold, one warm skin edge"
+      },
+      "action": {
+        "primary": "He smiles faintly and pushes the photograph back across the table.",
+        "cues": [
+          "one finger, no grip",
+          "a small closed-mouth smile",
+          "eyes stay on the officer"
+        ],
+        "subtext": "He is returning the officer's own move, and letting him notice."
+      },
+      "sound": {
+        "diegetic": "paper sliding back, a breath, chair shift",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "cut-on-action",
+        "matches": "cut as the photograph stops moving"
+      },
+      "continuity": [
+        "same hand, same finger",
+        "photograph reverses direction",
+        "face lit the same way"
+      ],
+      "bans": [
+        "no laugh",
+        "no music",
+        "no camera movement",
+        "no subtitles"
+      ],
+      "references": [],
+      "mechanism": "M20",
+      "beat_id": "B3"
+    },
+    {
+      "id": "S04",
+      "duration_s": 5.0,
+      "purpose": "Let the officer understand what just happened, without a line.",
+      "emotion": {
+        "target": "collapse of authority",
+        "dials": {
+          "proximity": 7,
+          "power": 7,
+          "pressure": 6,
+          "stability": 2,
+          "value": 6,
+          "time": 5
+        }
+      },
+      "framing": {
+        "size": "MCU",
+        "angle": "slightly high",
+        "lens_mm": 50,
+        "notes": "the officer left of centre, photograph in his foreground"
+      },
+      "composition": {
+        "value_masses": "lit face, dark foreground shoulder, the print a bright rectangle at the bottom",
+        "focus": "his eyes, then the photograph",
+        "negative_space": "empty table to the right"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Officer",
+            "screen": "left third",
+            "facing": "toward the print",
+            "pose": "leaning forward, hands still"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "he has stopped performing; the frame should too",
+        "start_frame": "the photograph arrives at his hand",
+        "end_frame": "he does not touch it",
+        "turn_frame": "his hand stops above the print and withdraws"
+      },
+      "light": {
+        "key": "overhead",
+        "ratio": "4:1",
+        "palette": "cold, flattening"
+      },
+      "action": {
+        "primary": "He looks at the photograph, then at the empty chair opposite.",
+        "cues": [
+          "hand hovers, then withdraws",
+          "one slow blink",
+          "shoulders drop a centimetre"
+        ],
+        "subtext": "He is recalculating who is being interviewed."
+      },
+      "sound": {
+        "diegetic": "ventilation, the door, nothing else",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "transition_out": {
+        "type": "hold",
+        "matches": "end on the untouched photograph"
+      },
+      "continuity": [
+        "photograph stays out of his hand",
+        "same table edge",
+        "suspect off-screen right"
+      ],
+      "bans": [
+        "no sigh",
+        "no music",
+        "no reaction from the suspect",
+        "no subtitles"
+      ],
+      "references": [],
+      "mechanism": "M18",
+      "beat_id": "B4"
+    }
+  ],
+  "beats": [
+    {
+      "id": "B1",
+      "name": "establish",
+      "goal": "hand the initiative to the officer",
+      "duration_s": 4.5,
+      "tension": 3,
+      "knowledge_change": "the officer believes he is winning"
+    },
+    {
+      "id": "B2",
+      "name": "omen",
+      "goal": "show that the suspect recognises the photograph",
+      "duration_s": 3.0,
+      "tension": 5,
+      "knowledge_change": "the photograph means something to him"
+    },
+    {
+      "id": "B3",
+      "name": "turn",
+      "goal": "the power changes hands",
+      "duration_s": 2.5,
+      "tension": 8,
+      "knowledge_change": "he is not the one being interviewed"
+    },
+    {
+      "id": "B4",
+      "name": "aftermath",
+      "goal": "the officer recalculates",
+      "duration_s": 5.0,
+      "tension": 9,
+      "knowledge_change": "the interview is over and he has lost it"
+    }
+  ],
+  "rhythm": {
+    "shape": "wave",
+    "note": "hold the table, quicken into the reversal, let the officer sit in it"
+  }
+}

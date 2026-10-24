@@ -1,0 +1,502 @@
+{
+  "title": "最后一盒热牛奶",
+  "intent": {
+    "logline": "雨夜便利店里，夜班店员始终不抬头，把最后一盒热牛奶推到柜台边缘；浑身湿透的女孩在门口站了很久，才进来把它拿走。",
+    "turn": "两个人都假装没看见对方 → 一盒被推过去的牛奶和一双停在货架上的手，说明两个人都一直在看着",
+    "audience_knows": "在女孩伸手之前，观众已经知道店员早就察觉到她：他没抬头，却把牛奶推到了她够得着的位置"
+  },
+  "target": {
+    "model": "h3",
+    "duration_s": 12,
+    "aspect": "16:9",
+    "mode": "text-only"
+  },
+  "style": {
+    "look": "实拍夜景，冷白灯管与湿玻璃反光，细颗粒，低照度",
+    "palette": "冷青、钠黄、牛奶纸盒的暖白",
+    "aspect": "16:9"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "establish",
+      "goal": "先让观众记住柜台边缘这个位置是空的，再让一个人背对着它理货",
+      "duration_s": 2.0,
+      "tension": 3,
+      "knowledge_change": "店里只有一个人，规则是他不抬头；门外在下雨"
+    },
+    {
+      "id": "B2",
+      "name": "reveal",
+      "goal": "门口那个人变成具体的身体：湿、冷、在犹豫",
+      "duration_s": 2.4,
+      "tension": 5,
+      "knowledge_change": "门口站着一个湿透的人，她进不进来还不确定"
+    },
+    {
+      "id": "B3",
+      "name": "charge",
+      "goal": "他不抬头，把最后一盒热牛奶推到台面最外沿",
+      "duration_s": 2.8,
+      "tension": 7,
+      "knowledge_change": "牛奶不是顺手放的，是推给她的——他早就知道她在"
+    },
+    {
+      "id": "B4",
+      "name": "turn",
+      "goal": "她走进来；他的手在同一画面里停住",
+      "duration_s": 2.4,
+      "tension": 8,
+      "knowledge_change": "她的沉默和他的一样，是互相的，不是单方面的"
+    },
+    {
+      "id": "B5",
+      "name": "landing",
+      "goal": "她拿走牛奶离开，痕迹留在店里",
+      "duration_s": 2.4,
+      "tension": 4,
+      "knowledge_change": "两个人都把这件事处理成没发生过，只有水痕和脚印作证"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "beat_id": "B1",
+      "mechanism": "M01",
+      "duration_s": 2.0,
+      "purpose": "先让观众学会柜台边缘那块空位，再让一个人背对着它。",
+      "emotion": {
+        "target": "习惯性的疏离",
+        "dials": {"proximity": 2, "power": 5, "pressure": 4, "stability": 1, "value": 7, "time": 7}
+      },
+      "framing": {
+        "size": "WS",
+        "angle": "eye-level",
+        "lens_mm": 28,
+        "options": [
+          {
+            "name": "A",
+            "start": "店内纵深全景：他在中左背身理货，柜台台面右端空着，正面玻璃墙外只有雨",
+            "turn": "纸箱被推上最上层货架，他的手在箱沿停住，画面里仍然没有第二个人",
+            "end": "同一构图，他转身去拿下一箱；空台面在画右亮着",
+            "tradeoff": "观众先认识这块空位；她在下一镜才出现，reveal 归她"
+          },
+          {
+            "name": "B",
+            "start": "从门外贴近玻璃拍店内，他在货架间只露出半身",
+            "turn": "玻璃上开始有雨流下来，遮住他的脸",
+            "end": "整块玻璃变成灰色，人只剩轮廓",
+            "tradeoff": "有了'有人在外面看'的预感，但店内地理学不清楚，后面五镜没有落点"
+          },
+          {
+            "name": "C",
+            "start": "俯拍柜台台面：空、亮、只有收银机",
+            "turn": "一只手从画外伸进来又收回去",
+            "end": "台面仍然空着",
+            "tradeoff": "最快建立'空位'，但把人物全推成画外，12 秒撑不住两个没有身体的人"
+          }
+        ],
+        "chosen": "A",
+        "notes": "柜台上方一盏射灯把台面照成亮带，台面右端留出三分之一的空；玻璃墙占画面后三分之一。"
+      },
+      "composition": {
+        "value_masses": "顶灯冷白条、货架暗块、玻璃外钠黄霓虹碎光",
+        "focus": "空的柜台台面右端",
+        "negative_space": "台面右端那块将要放下牛奶的空位"
+      },
+      "staging": {
+        "subjects": [
+          {"name": "店员", "screen": "画面中左偏后", "facing": "背对镜头、略朝右", "pose": "双手把纸箱推上最上层货架"},
+          {"name": "柜台", "screen": "画面左侧前景", "facing": "—", "pose": "台面空着，只有收银机"}
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "这个镜头要观众盯着那块空台面，镜头一动就变成在介绍环境。",
+        "start_frame": "纵深店内，他在中左理货，柜台台面右端空着，玻璃外只有雨。",
+        "turn_frame": "纸箱被推上货架最上层，他的手在箱沿停住——画面里仍然没有第二个人。",
+        "end_frame": "同一构图，他转身去拿下一箱；空台面在画右亮着。"
+      },
+      "light": {"key": "顶灯冷白日光灯管 + 柜外钠黄路灯", "ratio": "8:1", "palette": "冷青、钠黄、纸箱褐"},
+      "action": {
+        "primary": "夜班店员把一箱货推上最上层货架，转身去拿下一箱。",
+        "cues": ["后颈有汗", "袖口卷到小臂", "纸箱边角被压塌"],
+        "subtext": "他一个人值一整夜，熟练到不需要看。"
+      },
+      "sound": {
+        "diegetic": "雨打玻璃、冷柜低频嗡嗡、灯管电流声，门外一辆车压过积水",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "纵深店内：两列货架，柜台在左，正面玻璃墙落雨；店员背影在中左，台面右端空着",
+        "arrows": [],
+        "overlays": [],
+        "annotation": "S01 · WS · 平视 · 静止 · 2.0 s｜note：台面右端必须是空的",
+        "level": "rough"
+      },
+      "transition_out": {"type": "cut-on-sound", "matches": "纸箱落上货架的一声闷响，雨声同时变近，切到门口"},
+      "continuity": ["冷白灯管为主光", "柜台在画面左、玻璃门在画面右后", "深灰工装、袖口卷起", "玻璃上全程有雨水流痕"],
+      "bans": ["无配乐", "无字幕", "无第二个人入画", "镜头不得移动"],
+      "references": [],
+      "render": {"status": "pending", "image": null}
+    },
+    {
+      "id": "S02",
+      "beat_id": "B2",
+      "mechanism": "M39",
+      "duration_s": 2.4,
+      "purpose": "把门口那个人变成具体的身体：湿、冷、在犹豫，而且她看得见他。",
+      "emotion": {
+        "target": "被看见却不肯先开口的僵持",
+        "dials": {"proximity": 5, "power": 4, "pressure": 7, "stability": 2, "value": 8, "time": 6}
+      },
+      "framing": {
+        "size": "MS",
+        "angle": "eye-level",
+        "lens_mm": 40,
+        "options": [
+          {
+            "name": "A",
+            "start": "隔玻璃的中景：她站在门外，门框把画面竖着切开，店内灯打亮她右半张脸",
+            "turn": "她抬手到门把前停住，指尖没有落下去",
+            "end": "她把手收回来抱住手臂，玻璃上她的倒影与货架重叠",
+            "tradeoff": "信息与她同步，我们和她一起等；距离是站着看"
+          },
+          {
+            "name": "B",
+            "start": "从店外拍她的背影和玻璃里的店内",
+            "turn": "玻璃反光里浮出柜台和他的背影",
+            "end": "她的背影和他在同一块玻璃上",
+            "tradeoff": "两人同框更早，但丢掉她的脸和湿的状态，后面'她看得见'无从谈起"
+          },
+          {
+            "name": "C",
+            "start": "门上雨痕特写",
+            "turn": "雨痕后面慢慢浮出她的轮廓",
+            "end": "整块玻璃上是她的湿影",
+            "tradeoff": "延迟身体、悬疑更足，但要吃掉一个镜头的时间，12 秒里买不起"
+          }
+        ],
+        "chosen": "A",
+        "notes": "门框落在画面右三分之一；她的手与门把之间约一掌宽的距离就是她还没做的决定。"
+      },
+      "composition": {
+        "value_masses": "玻璃的灰、店内灯切出的亮边、门外霓虹的红蓝碎光",
+        "focus": "她抬起又停住的那只手",
+        "negative_space": "她的手与门把之间约一掌的距离"
+      },
+      "staging": {
+        "subjects": [
+          {"name": "女孩", "screen": "画面右三分之二，门框切到她的左肩", "facing": "面向店内，朝画面左", "pose": "站着不动，双臂微抱，湿发贴额"}
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "slow push",
+        "amplitude": "小幅，约 5%",
+        "speed": "极慢，与她抬手同步",
+        "motivation": "她向前探身去看清柜台后面有没有人——是她的动作把镜头带近，不是镜头在抒情。",
+        "start_frame": "隔玻璃中景：她在门外，门框竖切画面，店内灯打亮她右半张脸，雨在两人之间。",
+        "turn_frame": "她的手指停在门把上方，差一掌，没有落下去。",
+        "end_frame": "她收回手抱住手臂；玻璃上叠着她与货架的倒影，她仍站在门外。"
+      },
+      "light": {"key": "店内顶部日光灯从她右侧斜打 + 门外钠黄路灯勾左轮廓", "ratio": "6:1", "palette": "冷青、钠黄、湿黑"},
+      "action": {
+        "primary": "湿透的女孩站在门外，抬起到门把前的手停住，又收回来抱住自己。",
+        "cues": ["水从袖口滴到门槛", "呼出的白气很短", "脚跟没有跨过门槛线"],
+        "subtext": "她不是不敢进来，是不想让他看见自己需要进来。"
+      },
+      "sound": {
+        "diegetic": "雨声变近但仍隔着玻璃（闷）、冷柜嗡嗡、她鞋底在湿台阶上的一次挪动",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "门外中景：她正面朝店内，门框竖切，雨线斜落，湿发贴额、湿袖口滴水；右手悬在门把上方",
+        "arrows": ["PUSH 小幅，顺着她探身的动作"],
+        "overlays": [
+          {"type": "sight", "from": [0.60, 0.30], "to": [0.06, 0.34], "label": "HER EYES IN"}
+        ],
+        "annotation": "S02 · MS · 平视 · 缓推 · 2.4 s｜note：她始终没跨过门槛线",
+        "level": "rough"
+      },
+      "transition_out": {"type": "cut-on-action", "matches": "她收回手的一刻切到柜台，下一镜一只手正伸向牛奶（同一个'手'的动势）"},
+      "continuity": ["玻璃上全程有雨水流痕", "湿发贴额、深色连帽衫", "门框在画面右三分之一", "主光来自店内"],
+      "bans": ["不给她正脸特写", "不让她推门", "无配乐", "无字幕"],
+      "references": [],
+      "render": {"status": "pending", "image": null}
+    },
+    {
+      "id": "S03",
+      "beat_id": "B3",
+      "mechanism": "M19",
+      "duration_s": 2.8,
+      "purpose": "让观众亲眼看见：他一次都没抬头，却准确地把牛奶推到了她够得着的位置。",
+      "emotion": {
+        "target": "假装专注的体贴",
+        "dials": {"proximity": 8, "power": 6, "pressure": 6, "stability": 9, "value": 7, "time": 2},
+        "contradiction": "一个从头到尾没动过的头，做了一件必须一直看着才能做到的事。"
+      },
+      "framing": {
+        "size": "CU",
+        "angle": "low",
+        "lens_mm": 50,
+        "options": [
+          {
+            "name": "A",
+            "start": "台面高度的低机位特写：他的前臂从左入画，牛奶立在他手边，画面上沿是他虚焦的下颌与眼",
+            "turn": "纸盒被推到台面最外沿停住，手指松开、收回",
+            "end": "牛奶独自立在台面边缘，蒸汽升起；他的手已回到货架下层",
+            "tradeoff": "信息与观众同步，我们看着它被推过去，所以无法替他解释成'顺手'"
+          },
+          {
+            "name": "B",
+            "start": "他的侧脸特写，眼睛看货架",
+            "turn": "手在画外推，画面上只有他没有动的眼睛",
+            "end": "他眨一次眼",
+            "tradeoff": "保住'不抬头'，但位置变化发生在画外，观众要靠推理，力度减半"
+          },
+          {
+            "name": "C",
+            "start": "柜台对面的过肩，牛奶在前景，她在门外远处虚焦",
+            "turn": "牛奶被推入前景",
+            "end": "牛奶与她同框，隔着一层玻璃",
+            "tradeoff": "两人关系被镜头直接说破，'不说'就没了，且要跨轴"
+          }
+        ],
+        "chosen": "A",
+        "notes": "台面亮带占画面下三分之一；他的侧脸只留虚焦的下沿，眼睛必须看得见'没有抬'。"
+      },
+      "composition": {
+        "value_masses": "台面白亮横带在下、手臂暗块横切画面、上沿虚焦侧脸为中间调",
+        "focus": "纸盒底部与台面边缘的接触线",
+        "negative_space": "纸盒右前方那一段空台面——推过去的距离就是他不肯说出口的那句话"
+      },
+      "staging": {
+        "subjects": [
+          {"name": "店员的手与前臂", "screen": "左下入画，横过画面下三分之一", "facing": "手掌朝下", "pose": "指尖搭在纸盒侧面，缓慢右推"},
+          {"name": "牛奶纸盒", "screen": "画面中右", "facing": "—", "pose": "立在台面上，随推动滑向右侧"}
+        ],
+        "screen_direction": "left-to-right"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "该动的是他的手不是机器；镜头一推就变成替他抒情。",
+        "start_frame": "台面高度特写：他的前臂从左入画，牛奶在手边，画面上沿是他虚焦的下半张脸，眼睛看着货架下层。",
+        "turn_frame": "纸盒越过台面中线的瞬间，他的指尖离开纸盒开始收回；他的眼睛没有离开货架标签。",
+        "end_frame": "牛奶立在台面最外沿，蒸汽升起；他的手已出画，回到货架下层。"
+      },
+      "light": {"key": "柜台上方射灯垂直压下 + 冷柜蓝白侧光", "ratio": "10:1", "palette": "暖白纸盒、冷青阴影、木纹台面"},
+      "action": {
+        "primary": "店员不抬头，用右手把最后一盒热牛奶推到台面最外沿，然后收手。",
+        "cues": ["拇指在纸盒侧面留下一个湿印", "推的过程中手腕没有抬起", "推到位后手指并拢收回"],
+        "subtext": "他早就听见门口的雨声停了，也知道停在哪一步。"
+      },
+      "sound": {
+        "diegetic": "纸盒底部擦过台面的短促干摩擦声、冷柜嗡鸣、隔玻璃变闷的雨声",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "低机位特写：台面横带在下，前臂暗块横切，牛奶在台面中右；画面上沿是虚焦的侧脸，眼睛向下",
+        "arrows": ["PUSH CARTON：手把纸盒推向右，主体动、镜头不动"],
+        "overlays": [
+          {"type": "arrow", "from": [0.55, 0.62], "to": [0.86, 0.60], "label": "PUSH CARTON"},
+          {"type": "sight", "from": [0.30, 0.16], "to": [0.12, 0.34], "label": "HIS GAZE DOWN"}
+        ],
+        "annotation": "S03 · CU · 低机位 · 静止 · 2.8 s｜note：他的头全程不动",
+        "level": "rough"
+      },
+      "transition_out": {"type": "cut-on-action", "matches": "他收手回货架的动作在切点完成：下一镜他的手正落在同一层货架上"},
+      "continuity": ["纸盒始终是同一盒、朝向不变", "台面边缘在画面右侧", "工装袖口卷到小臂", "他不许正脸入画"],
+      "bans": ["他不得抬头", "不得出现第二个人的手", "无配乐", "无慢动作"],
+      "references": [],
+      "render": {"status": "pending", "image": null}
+    },
+    {
+      "id": "S04",
+      "beat_id": "B4",
+      "mechanism": "M24",
+      "duration_s": 2.4,
+      "purpose": "两个人第一次同框：她走进来，他停住——沉默是互相的。",
+      "emotion": {
+        "target": "共谋般的克制",
+        "dials": {"proximity": 6, "power": 5, "pressure": 5, "stability": 8, "value": 8, "time": 4}
+      },
+      "framing": {
+        "size": "MS",
+        "angle": "eye-level",
+        "lens_mm": 35,
+        "options": [
+          {
+            "name": "A",
+            "start": "从店内一侧看的中景：柜台在左前景（台面边缘的牛奶冒汽），门在右后，他在中景货架前",
+            "turn": "她推门进来走两步，他在同一画面里停下手",
+            "end": "两人之间隔着一整片空地，谁也没看谁",
+            "tradeoff": "两个'不动'同时可见，代价是距离较远、脸不清楚"
+          },
+          {
+            "name": "B",
+            "start": "他的中景背身，门铃响",
+            "turn": "他的肩停住，头没有转",
+            "end": "他继续理货",
+            "tradeoff": "'互相'要靠观众自己补，跨度过大"
+          },
+          {
+            "name": "C",
+            "start": "她的中景进门，他在后景虚焦",
+            "turn": "她看见台面边缘的牛奶，脚步慢下来",
+            "end": "她停在他与牛奶之间",
+            "tradeoff": "给她的反应，但把他降为背景，权力偏向她，后半段失去对称"
+          }
+        ],
+        "chosen": "A",
+        "notes": "柜台在左前景、门在右后，两人之间的空地必须占画面中央三分之一。"
+      },
+      "composition": {
+        "value_masses": "前景柜台暗、台面边一条亮白（牛奶）、后景货架重复竖线、门外钠黄",
+        "focus": "两人之间那片空地",
+        "negative_space": "店中央的空地——它比任何台词都响"
+      },
+      "staging": {
+        "subjects": [
+          {"name": "女孩", "screen": "画面右后，门口", "facing": "朝画面左、朝柜台", "pose": "推门进来，走两步后停住"},
+          {"name": "店员", "screen": "画面中景偏左", "facing": "侧背对镜头、朝货架", "pose": "双手停在货架下层"}
+        ],
+        "screen_direction": "right-to-left",
+        "reversal_reason": "上一镜是店员的手把牛奶推向右（左→右），这一镜是女孩朝柜台走（右→左）：两个不同主体的运动，不是同一条路线的反转；柜台与她之间始终隔着一整片空地"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "两个'停住'要在同一个不动的画框里同时发生，机器一动就替他们说话了。",
+        "start_frame": "店内一侧中景：柜台左前景，牛奶在台面边缘冒汽，门在右后，他在中景理货。",
+        "turn_frame": "门铃响、她跨进门槛的同时，他的手在货架上停住——两个人的静止在同一画面里对上。",
+        "end_frame": "她停在店中央，他背对她继续理货；两人之间是一整片空地，牛奶就在两人之间。"
+      },
+      "light": {"key": "顶灯冷白 + 门外钠黄逆光打在她湿发上", "ratio": "5:1", "palette": "冷青、钠黄、湿黑"},
+      "action": {
+        "primary": "女孩推门进店走两步停住；同一时刻，店员的手在货架上停住，头没有转。",
+        "cues": ["门铃只响一声", "她的鞋在湿地垫上打滑半厘米", "他停住时肩抬高一次（吸气）"],
+        "subtext": "两个人都知道对方在，都在等对方先开口——所以谁也没有动。"
+      },
+      "sound": {
+        "diegetic": "门铃一声、气弹簧回弹、雨声涌进来、湿鞋在瓷砖上的两步、冷柜嗡鸣",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "侧向中景：左前景柜台与台面边缘的牛奶，右后门口女孩刚跨进来，中景他的背影、手停在货架上",
+        "arrows": [],
+        "overlays": [
+          {"type": "sight", "from": [0.63, 0.42], "to": [0.57, 0.60], "label": "HER EYES DOWN"},
+          {"type": "sight", "from": [0.30, 0.38], "to": [0.22, 0.62], "label": "HIS EYES DOWN"}
+        ],
+        "annotation": "S04 · MS 双人 · 平视 · 静止 · 2.4 s｜note：两条视线都不相交",
+        "level": "rough"
+      },
+      "transition_out": {"type": "cut-on-action", "matches": "她的手伸向台面边缘的牛奶，切点落在指尖触到纸盒之前"},
+      "continuity": ["牛奶始终在台面最外沿、冒汽", "柜台在画面左、门在画面右后", "湿发、深色上衣", "他始终不抬头"],
+      "bans": ["两人不得对视", "无对白", "无配乐", "不得出现第三个人"],
+      "references": [],
+      "render": {"status": "pending", "image": null}
+    },
+    {
+      "id": "S05",
+      "beat_id": "B5",
+      "mechanism": "M21",
+      "duration_s": 2.4,
+      "purpose": "让'她来过'只以水痕和脚印留在画面里，然后让这间空店自己结束。",
+      "emotion": {
+        "target": "被人来过之后的空",
+        "dials": {"proximity": 6, "power": 4, "pressure": 6, "stability": 7, "value": 8, "time": 5}
+      },
+      "framing": {
+        "size": "CU→WS",
+        "angle": "low",
+        "lens_mm": 35,
+        "options": [
+          {
+            "name": "A",
+            "start": "台面边缘特写：牛奶冒汽，她湿透的袖口从右入画扣住纸盒",
+            "turn": "纸盒离台的一瞬，台面上留下一圈水痕",
+            "end": "后拉成中景：一串湿脚印从门口到柜台，他背影仍在理货",
+            "tradeoff": "一个镜头里完成'拿走'与'留下'，代价是后拉要快且准"
+          },
+          {
+            "name": "B",
+            "start": "地面特写：湿脚印一个个印上瓷砖",
+            "turn": "一双湿鞋走出画面",
+            "end": "台面边缘的水痕",
+            "tradeoff": "只留痕迹更冷，但'拿走'被跳过，观众会怀疑她到底拿到没有"
+          },
+          {
+            "name": "C",
+            "start": "他的中景，不抬头",
+            "turn": "身后地面出现湿脚印",
+            "end": "他仍在理货",
+            "tradeoff": "守住他，但牛奶的去向不明，'交易'不成立"
+          }
+        ],
+        "chosen": "A",
+        "notes": "起幅台面亮带占下半；后拉终点必须同时装下他、脚印、空台面三样东西。"
+      },
+      "composition": {
+        "value_masses": "起：亮台面占下半、纸盒暖白为点；终：暗店内、湿脚印为唯一高光、他背影为暗块",
+        "focus": "台面边缘那一圈水痕",
+        "negative_space": "被拿空的台面边缘"
+      },
+      "staging": {
+        "subjects": [
+          {"name": "女孩的手与前臂", "screen": "画面右入画", "facing": "—", "pose": "湿袖口，扣住纸盒拿走"},
+          {"name": "女孩", "screen": "后拉后画面右侧走向门口", "facing": "背对镜头", "pose": "把纸盒抱在胸前推门出去"},
+          {"name": "店员", "screen": "后拉后画面左侧中景", "facing": "背对镜头", "pose": "仍在理货，头不抬"}
+        ],
+        "screen_direction": "left-to-right",
+        "reversal_reason": "她拿到牛奶后转身出店，方向必然反转；地上那串湿脚印是同一条路线的方向证据"
+      },
+      "camera": {
+        "move": "pull out",
+        "amplitude": "中幅，CU→WS",
+        "speed": "慢起、匀速、末尾停稳",
+        "motivation": "牛奶被拿走，画面空了；镜头往后退，是为了把这个空和地上的痕迹一起装进来。",
+        "start_frame": "台面边缘特写：牛奶冒着汽，她湿透的袖口从右入画，手指扣住纸盒。",
+        "turn_frame": "纸盒离开台面的一瞬，台面上留下一圈清清楚楚的水痕——她真的来过。",
+        "end_frame": "中景：她的背影推门出去，门铃响；一串湿脚印从柜台直到门口；他在左侧理货，头没有抬。"
+      },
+      "light": {"key": "台面射灯 + 门外钠黄（她出门时逆光）", "ratio": "8:1", "palette": "冷青、钠黄、暖白"},
+      "action": {
+        "primary": "女孩拿走台面边缘的牛奶，转身推门出去，湿脚印留在地上。",
+        "cues": ["纸盒在她手里晃了一下，蒸汽断了", "她把纸盒抱在胸前而不是拎着", "门关上时雨声被切断"],
+        "subtext": "她没有说谢谢，他也没有等她说完——两个人都把这件事处理成没发生过。"
+      },
+      "sound": {
+        "diegetic": "纸盒离台的轻响、湿鞋三步、门铃、门合上后雨声被关在外面、冷柜嗡鸣继续",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "起：台面边缘特写、蒸汽、湿手拿盒；终：中景，她的背影出门，湿脚印通向柜台，他在左侧理货",
+        "arrows": ["PULL：镜头后退，从台面拉到全店"],
+        "overlays": [
+          {"type": "arrow", "from": [0.50, 0.42], "to": [0.50, 0.86], "label": "PULL BACK"},
+          {"type": "arrow", "from": [0.58, 0.62], "to": [0.86, 0.60], "label": "EXIT"}
+        ],
+        "annotation": "S05 · CU→WS · 低机位 · 后拉 · 2.4 s｜note：最后一帧停在他不抬头上",
+        "level": "rough"
+      },
+      "transition_out": {"type": "hold", "matches": "停在空台面与湿脚印上，让雨声一个人收尾"},
+      "continuity": ["台面水痕位置与 S03 的纸盒位置一致", "湿脚印从门口到柜台", "冷白灯管与门外钠黄不变", "牛奶已被拿空"],
+      "bans": ["她不得回头", "他不得抬头", "无对白", "无配乐", "无慢动作", "无字幕"],
+      "references": [],
+      "render": {"status": "pending", "image": null}
+    }
+  ]
+}

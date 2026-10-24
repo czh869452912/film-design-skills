@@ -1,0 +1,570 @@
+{
+  "title": "Descent",
+  "intent": {
+    "logline": "A figure steps out of a tear in the sky and lands in the middle of a market street.",
+    "turn": "the crowd waits for a savior -> the arrival is a threat",
+    "audience_knows": "the crowd is relieved; the viewer sees the tear is wrong"
+  },
+  "target": {
+    "model": "h3",
+    "duration_s": 10,
+    "aspect": "16:9",
+    "mode": "ref2va"
+  },
+  "style": {
+    "look": "monochrome storyboard for previz",
+    "palette": "paper white, mid grey, black",
+    "aspect": "16:9"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "establish",
+      "goal": "the street is ordinary, and already wrong",
+      "duration_s": 3.6,
+      "tension": 3,
+      "knowledge_change": "this is a normal afternoon"
+    },
+    {
+      "id": "B2",
+      "name": "reveal",
+      "goal": "the figure becomes legible against the tear",
+      "duration_s": 1.8,
+      "tension": 5,
+      "knowledge_change": "the arrival is a body, not a light"
+    },
+    {
+      "id": "B3",
+      "name": "charge",
+      "goal": "it gathers itself before it moves",
+      "duration_s": 2.2,
+      "tension": 7,
+      "knowledge_change": "it is about to do something"
+    },
+    {
+      "id": "B4",
+      "name": "impact",
+      "goal": "the landing answers the crowd's hope",
+      "duration_s": 2.4,
+      "tension": 10,
+      "knowledge_change": "this is not a rescue"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "beat_id": "B1",
+      "duration_s": 3.6,
+      "purpose": "Make the street react before the figure exists in frame.",
+      "emotion": {
+        "target": "dread under ordinary daylight",
+        "dials": {
+          "proximity": 3,
+          "power": 5,
+          "pressure": 5,
+          "stability": 2,
+          "value": 7,
+          "time": 6
+        },
+        "contradiction": "flat, everyday daylight for a thing that should not exist"
+      },
+      "framing": {
+        "size": "WS",
+        "angle": "eye-level",
+        "lens_mm": 24,
+        "notes": "stalls along both edges, sky in the top third",
+        "options": [
+          {
+            "name": "A",
+            "start": "empty street, crowd small at both edges, sky blank",
+            "turn": "every head tilts up, sky still blank",
+            "end": "the same wide frame, all eyes on nothing",
+            "tradeoff": "knowledge with the crowd; judging distance"
+          },
+          {
+            "name": "B",
+            "start": "medium on the crowd, heads up, sky out of frame",
+            "turn": "a bright rim enters the top edge",
+            "end": "crowd silhouettes, light above them",
+            "tradeoff": "surprise; inhabiting distance"
+          }
+        ],
+        "chosen": "A"
+      },
+      "composition": {
+        "value_masses": "white sky band, mid-grey street, black stall silhouettes",
+        "focus": "the empty centre of the street",
+        "negative_space": "the sky that will be torn open"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Crowd",
+            "screen": "both edges",
+            "facing": "away from camera",
+            "pose": "mid-step, stopping"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "the street has stopped; the camera should too",
+        "start_frame": "ordinary street, people mid-step",
+        "end_frame": "same frame, every head turned up",
+        "turn_frame": "heads begin to lift; a balloon stops rising; the sky is still empty"
+      },
+      "light": {
+        "key": "flat overcast",
+        "ratio": "2:1",
+        "palette": "grey, no colour"
+      },
+      "action": {
+        "primary": "Everyone in the street stops and turns toward the sky.",
+        "cues": [
+          "one shopper freezes mid-step",
+          "a balloon stops rising"
+        ],
+        "subtext": "They have been waiting for this, and they are wrong to."
+      },
+      "sound": {
+        "diegetic": "street ambience cutting to silence, then a low hum",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "wide street, tiny crowd along both edges, every head tilted up, empty white sky above",
+        "arrows": [
+          "dotted eye-lines from the crowd up into the sky"
+        ],
+        "annotation": "S01 · WS · eye · static · 2.5 s",
+        "level": "rough",
+        "overlays": [
+          {
+            "type": "sight",
+            "from": [
+              0.18,
+              0.72
+            ],
+            "to": [
+              0.42,
+              0.18
+            ]
+          },
+          {
+            "type": "sight",
+            "from": [
+              0.82,
+              0.72
+            ],
+            "to": [
+              0.58,
+              0.18
+            ]
+          }
+        ]
+      },
+      "transition_out": {
+        "type": "cut-on-sound",
+        "matches": "the hum carries into the tear"
+      },
+      "continuity": [
+        "overcast flat light",
+        "stalls on both sides",
+        "nobody faces camera"
+      ],
+      "bans": [
+        "no colour",
+        "no hero pose",
+        "no on-screen text"
+      ],
+      "references": [],
+      "mechanism": "M01"
+    },
+    {
+      "id": "S02",
+      "beat_id": "B2",
+      "duration_s": 1.8,
+      "purpose": "Show the body, not a light, and let it come down through the frame.",
+      "emotion": {
+        "target": "majesty with the wrongness underneath",
+        "dials": {
+          "proximity": 6,
+          "power": 3,
+          "pressure": 5,
+          "stability": 3,
+          "value": 8,
+          "time": 5
+        }
+      },
+      "framing": {
+        "size": "MS",
+        "angle": "low",
+        "lens_mm": 35,
+        "notes": "figure in the upper third, tear filling the sky behind",
+        "options": [
+          {
+            "name": "A",
+            "start": "figure small inside the tear, sky fills the frame",
+            "turn": "tilt down: street enters below, the tear rises out of frame",
+            "end": "figure low in frame, street beneath it",
+            "tradeoff": "we descend with the body; loss of the tear's scale"
+          },
+          {
+            "name": "B",
+            "start": "low wide, figure a silhouette against the tear",
+            "turn": "figure falls through frame while the camera holds",
+            "end": "figure lands small, tear still overhead",
+            "tradeoff": "we watch from the ground; keeps scale, loses intimacy"
+          }
+        ],
+        "chosen": "A"
+      },
+      "composition": {
+        "value_masses": "bright torn band across the top, dark figure centre, grey street below",
+        "focus": "the figure against the tear",
+        "negative_space": "white sky left of the tear"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Figure",
+            "screen": "centre",
+            "facing": "toward camera",
+            "pose": "one boot forward, coat trailing up"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "tilt down",
+        "amplitude": "small",
+        "speed": "slow",
+        "motivation": "follow the body down until it owns the street",
+        "start_frame": "figure small in the tear, sky filling the frame",
+        "end_frame": "figure low in frame, street visible beneath",
+        "turn_frame": "the boot leaves the tear; the street appears below the figure"
+      },
+      "light": {
+        "key": "the tear itself, behind the figure",
+        "ratio": "12:1",
+        "palette": "blown white, silhouette black"
+      },
+      "action": {
+        "primary": "The figure steps out of the tear and falls the last metre.",
+        "cues": [
+          "one boot finds air",
+          "coat lifts above the shoulders"
+        ],
+        "subtext": "It falls like it already knows the ground will take it."
+      },
+      "sound": {
+        "diegetic": "a low hum, wind pulling upward",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "low angle, small figure inside a bright torn band in the sky, long coat lifted, street dark below",
+        "arrows": [
+          "arrow down along the body path, label DESCEND",
+          "small arc for the tilt"
+        ],
+        "annotation": "S02 · MS · low · tilt down · 2.5 s",
+        "level": "rough",
+        "overlays": [
+          {
+            "type": "arrow",
+            "from": [
+              0.55,
+              0.14
+            ],
+            "to": [
+              0.52,
+              0.62
+            ],
+            "curve": 0.06,
+            "label": "DESCEND"
+          },
+          {
+            "type": "arrow",
+            "from": [
+              0.62,
+              0.82
+            ],
+            "to": [
+              0.62,
+              0.32
+            ],
+            "label": "TILT"
+          }
+        ]
+      },
+      "transition_out": {
+        "type": "cut-on-action",
+        "matches": "cut as the boot leaves the tear"
+      },
+      "continuity": [
+        "tear stays in the same part of the sky",
+        "coat lifts upward",
+        "crowd silhouettes at the bottom edge"
+      ],
+      "bans": [
+        "no glowing hero light",
+        "no wings",
+        "no on-screen text"
+      ],
+      "references": [],
+      "mechanism": "M02"
+    },
+    {
+      "id": "S03",
+      "beat_id": "B3",
+      "duration_s": 2.2,
+      "purpose": "Buy the pause that makes the landing read.",
+      "emotion": {
+        "target": "gathering pressure",
+        "dials": {
+          "proximity": 8,
+          "power": 4,
+          "pressure": 7,
+          "stability": 2,
+          "value": 9,
+          "time": 6
+        }
+      },
+      "framing": {
+        "size": "MCU",
+        "angle": "low",
+        "lens_mm": 50,
+        "notes": "foreground shoulder of a bystander occludes the lower left"
+      },
+      "composition": {
+        "value_masses": "black figure on the left, white tear behind, grey dust at the feet",
+        "focus": "the closing hand",
+        "negative_space": "bright tear burning out the right edge"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Figure",
+            "screen": "left of centre",
+            "facing": "camera-right",
+            "pose": "crouched, hand opening"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "push in",
+        "amplitude": "small",
+        "speed": "slow",
+        "motivation": "the hand closes; the frame closes with it",
+        "start_frame": "crouched figure, open hand",
+        "end_frame": "fist closed, dust lifted around the knuckles",
+        "turn_frame": "the fingers close; dust lifts around the knuckles"
+      },
+      "light": {
+        "key": "tear behind, rim only",
+        "ratio": "10:1",
+        "palette": "black mass, white edge"
+      },
+      "action": {
+        "primary": "The figure closes its hand and the dust lifts around it.",
+        "cues": [
+          "fingers curl one by one",
+          "dust rises before the hand is shut"
+        ],
+        "subtext": "It is not gathering power; it is deciding how much to use."
+      },
+      "sound": {
+        "diegetic": "the hum drops in pitch, a low pulse",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "low medium close-up, crouched figure left, huge bright tear burning the right edge, dust at the knuckles",
+        "arrows": [
+          "small push arrow at the frame edge",
+          "radial short lines at the hand"
+        ],
+        "annotation": "S03 · MCU · low · push in · 2.5 s",
+        "level": "rough",
+        "overlays": [
+          {
+            "type": "impact",
+            "at": [
+              0.4,
+              0.68
+            ],
+            "label": "IMPACT"
+          },
+          {
+            "type": "arrow",
+            "from": [
+              0.82,
+              0.5
+            ],
+            "to": [
+              0.56,
+              0.5
+            ],
+            "label": "PUSH"
+          }
+        ]
+      },
+      "transition_out": {
+        "type": "cut-on-action",
+        "matches": "cut on the fist closing"
+      },
+      "continuity": [
+        "opposite screen side from S02 so the cut does not repeat",
+        "same coat shape",
+        "tear still behind"
+      ],
+      "bans": [
+        "no face detail",
+        "no energy beams",
+        "no on-screen text"
+      ],
+      "references": [],
+      "mechanism": "M05"
+    },
+    {
+      "id": "S04",
+      "beat_id": "B4",
+      "duration_s": 2.4,
+      "purpose": "Answer the crowd's hope with a consequence.",
+      "emotion": {
+        "target": "force delivered, hope withdrawn",
+        "dials": {
+          "proximity": 4,
+          "power": 3,
+          "pressure": 6,
+          "stability": 4,
+          "value": 8,
+          "time": 4
+        }
+      },
+      "framing": {
+        "size": "WS",
+        "angle": "ground level",
+        "lens_mm": 24,
+        "notes": "figure centred small, crowd silhouettes across the bottom edge"
+      },
+      "composition": {
+        "value_masses": "white dust ring expanding, black figure at its centre, dark crowd along the bottom",
+        "focus": "the dust ring",
+        "negative_space": "empty street left and right of the ring"
+      },
+      "staging": {
+        "subjects": [
+          {
+            "name": "Figure",
+            "screen": "centre",
+            "facing": "toward camera",
+            "pose": "landed, one knee down"
+          },
+          {
+            "name": "Crowd",
+            "screen": "bottom edge",
+            "facing": "away from camera",
+            "pose": "blown back, arms up"
+          }
+        ],
+        "screen_direction": "none"
+      },
+      "camera": {
+        "move": "static",
+        "amplitude": "none",
+        "speed": "none",
+        "motivation": "the ground takes the hit; the camera lets it",
+        "start_frame": "figure an instant above the ground",
+        "end_frame": "knee down, dust ring across the frame, crowd blown back",
+        "turn_frame": "knee and fist strike; the dust ring reaches the bottom edge of frame"
+      },
+      "light": {
+        "key": "tear now behind the figure's back",
+        "ratio": "9:1",
+        "palette": "grey dust, black silhouette"
+      },
+      "action": {
+        "primary": "The figure lands and the dust ring throws the crowd back.",
+        "cues": [
+          "knee and fist strike together",
+          "coats blow outward before the dust reaches them"
+        ],
+        "subtext": "The street got its answer, and it is the wrong one."
+      },
+      "sound": {
+        "diegetic": "impact, then dust settling, then silence",
+        "dialogue": "none",
+        "music": "none"
+      },
+      "storyboard": {
+        "panel": "ground-level wide, figure small and centred on one knee, dust ring expanding, crowd silhouettes pushed back along the bottom edge",
+        "arrows": [
+          "radial burst at the impact point",
+          "outward arrows along the dust ring"
+        ],
+        "annotation": "S04 · WS · ground · static · 2.5 s",
+        "level": "rough",
+        "overlays": [
+          {
+            "type": "impact",
+            "at": [
+              0.5,
+              0.72
+            ]
+          },
+          {
+            "type": "arrow",
+            "from": [
+              0.5,
+              0.7
+            ],
+            "to": [
+              0.2,
+              0.78
+            ],
+            "curve": -0.08
+          },
+          {
+            "type": "arrow",
+            "from": [
+              0.5,
+              0.7
+            ],
+            "to": [
+              0.8,
+              0.78
+            ],
+            "curve": 0.08
+          }
+        ]
+      },
+      "transition_out": {
+        "type": "hold",
+        "matches": "hold on the settling dust"
+      },
+      "continuity": [
+        "tear behind the figure",
+        "crowd stays on the bottom edge",
+        "no fire, no colour"
+      ],
+      "bans": [
+        "no explosion fireball",
+        "no debris confetti",
+        "no on-screen text",
+        "no camera shake beyond one frame"
+      ],
+      "references": [],
+      "mechanism": "M10"
+    }
+  ],
+  "rhythm": {
+    "shape": "hold-snap-hold",
+    "note": "hold the empty street, snap the reveal, hold the pause, let the dust settle"
+  }
+}
