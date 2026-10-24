@@ -1,0 +1,39 @@
+{
+  "title": "Duel — baseline timing",
+  "intent": {
+    "logline": "A kimono girl and a sailor-uniform girl face off on shrine steps; the one who moves first loses.",
+    "turn": "both wait -> the one who strikes first is already counted",
+    "audience_knows": "the sheathed blade is the answer"
+  },
+  "target": {"model": "h3", "duration_s": 10, "aspect": "16:9", "mode": "ref2va"},
+  "style": {"look": "monochrome storyboard for previz", "palette": "paper white, mid grey, black", "aspect": "16:9"},
+  "beats": [
+    {"id": "B1", "name": "establish", "goal": "the standoff and the height difference", "duration_s": 3.5, "tension": 3, "knowledge_change": "who holds the high ground"},
+    {"id": "B2", "name": "charge", "goal": "she does not draw", "duration_s": 1.5, "tension": 5, "knowledge_change": "the sheath is a choice"},
+    {"id": "B3", "name": "burst", "goal": "the sailor girl moves first", "duration_s": 2.0, "tension": 8, "knowledge_change": "first mover is committed"},
+    {"id": "B4", "name": "impact", "goal": "the blade takes the sheath", "duration_s": 1.5, "tension": 9, "knowledge_change": "the kimono girl was waiting"},
+    {"id": "B5", "name": "landing", "goal": "the sheath at the scarf", "duration_s": 1.5, "tension": 5, "knowledge_change": "the answer is the sheath"}
+  ],
+  "shots": [
+    {"id": "S01", "beat_id": "B1", "duration_s": 3.5,
+     "framing": {"size": "WS", "angle": "low"},
+     "camera": {"move": "truck right"},
+     "storyboard": {"panel": "over B's shoulder, A on the seventh step upper right", "annotation": "S01 · WS · low · truck right · 3.5s"}},
+    {"id": "S02", "beat_id": "B2", "duration_s": 1.5,
+     "framing": {"size": "CU", "angle": "eye-level"},
+     "camera": {"move": "push in"},
+     "storyboard": {"panel": "A's waist, thumb on the tsuba, blade half an inch out", "annotation": "S02 · CU · eye · push in · 1.5s"}},
+    {"id": "S03", "beat_id": "B3", "duration_s": 2.0,
+     "framing": {"size": "MS", "angle": "eye-level"},
+     "camera": {"move": "pan right"},
+     "storyboard": {"panel": "B climbs and cuts diagonally, A steps left", "annotation": "S03 · MS · eye · pan right · 2.0s"}},
+    {"id": "S04", "beat_id": "B4", "duration_s": 1.5,
+     "framing": {"size": "MCU", "angle": "eye-level"},
+     "camera": {"move": "static"},
+     "storyboard": {"panel": "over A's shoulder, blade strikes the sheath, lacquer chips", "annotation": "S04 · MCU · eye · static · 1.5s"}},
+    {"id": "S05", "beat_id": "B5", "duration_s": 1.5,
+     "framing": {"size": "MS", "angle": "eye-level"},
+     "camera": {"move": "pull out"},
+     "storyboard": {"panel": "two-shot, sheath tip under B's scarf", "annotation": "S05 · MS · eye · pull out · 1.5s"}}
+  ]
+}

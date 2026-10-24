@@ -14,12 +14,12 @@ retention_analysis:
 <Picture 1> ([Shot 1] first frame): fully_preserved - the opening frame reproduces its composition, subject placement, camera height and lighting.
 
 detailed_description:
-The target video is a 2D-animated illustration in a muted dusk palette, matching the reference frame.
+The target video is a 2D-animated illustration in a muted dusk palette, matching the reference frame. Each woman carries exactly one katana: <Subject 1> only the black lacquered sheathed one, <Subject 2> only the drawn one. No second scabbard, no extra blade, no floating weapon; the weapon never changes hands; the white scarf stays tied around <Subject 2> neck.
 [Shot 1] A wide shot from behind <Subject 2>'s right shoulder, low angle. <Subject 1> stands on the seventh step in the upper right, holding the hem of her kimono with her left hand, the black sheath horizontal at her waist, the tip angled down toward the steps. <Subject 2> fills the lower left, her back to the camera, drawn blade hanging at her right leg, the tip twenty centimetres above the stone. The camera trucks sixty centimetres to the right and lowers ten centimetres as the sheath tip drops one inch. Cedar wind moves the hems; the mist stays at ground level.
 [Shot 2] At 00:03.500, the camera cuts to a close shot at <Subject 1>'s waist. Her thumb presses the tsuba; the blade shows half a finger's width at the sheath mouth and stops. She does not draw it. The camera pushes in twenty centimetres, slowly.
 [Shot 3] At 00:05.000, the camera cuts to a side medium shot and pans thirty degrees with <Subject 2> as she climbs three steps and cuts diagonally downward. <Subject 1> steps one step to her left, yielding, her geta sliding on the wet stone.
 [Shot 4] At 00:07.000, the camera cuts to a medium close shot over <Subject 1>'s shoulder and holds still. <Subject 2>'s blade sweeps through the foreground and strikes the black sheath, chipping the lacquer. <Subject 1> turns to <Subject 2>'s inside. No blade touches a body.
-[Shot 5] At 00:08.500, the camera cuts to a two-shot on the same axis and pulls back forty centimetres, slightly down. The tip of <Subject 1>'s sheath rests under the edge of <Subject 2>'s white scarf; <Subject 2>'s blade points out into the fog. Both women breathe; the wood creaks, and the frame holds to the end.
+[Shot 5] At 00:08.500, the camera cuts to a two-shot on the same axis and pulls back forty centimetres, slightly down; both heads remain in frame. The tip of <Subject 1>'s sheath rests under the edge of <Subject 2>'s white scarf; <Subject 2>'s blade points out into the fog. Both women breathe; the wood creaks, and the frame holds to the end.
 
 overall_soundscape: Cedar wind moves through the courtyard above a thin high air tone. Wooden geta scrape stone, a sheath mouth clicks once, a boot slips on wet steps, and steel grazes lacquered wood with a muffled scrape. Breath is audible, and then the wind returns.
 

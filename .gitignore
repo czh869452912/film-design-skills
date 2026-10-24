@@ -14,9 +14,18 @@ artifacts/
 # raw frames and clips from the H3 duel test (report, designs, prompts and verdict are tracked)
 duel-test/frames/
 duel-test/frames-out/
+duel-test/frames-v2/
 duel-test/h3/
 duel-test/judge/x/
 duel-test/judge/y/
+duel-test/judge/_diff_*
+duel-test/judge2/A1/
+duel-test/judge2/A2/
+duel-test/judge2/B1/
+duel-test/judge2/B2/
+duel-test/judge2/diff/
+duel-test/panels/*/
+duel-test/previs/*/
 
 # locally installed project skills (host state, not part of the deliverable)
 .dsh/
