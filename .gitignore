@@ -7,9 +7,8 @@
 reference/
 build/
 
-# scratch runs and media
-test-run/
-test-run2/
+# local runs: animatics, generated panels, scratch shot lists
+artifacts/
 *.mp4
 
 # locally installed project skills (host state, not part of the deliverable)
