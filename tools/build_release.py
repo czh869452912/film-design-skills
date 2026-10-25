@@ -32,9 +32,9 @@ def build(out: Path) -> Path:
                 continue
             if path.name not in ('LICENSE', 'NOTICE') and path.suffix not in ('.md', '.py', '.json', '.yaml'):
                 raise ValueError(f'unexpected skill file: {path}')
-            entries[path.relative_to(ROOT).as_posix()] = path.read_bytes()
+            entries[path.relative_to(ROOT).as_posix()] = path.read_bytes().replace(b'\r\n', b'\n')
     for name in ('LICENSE', 'NOTICE', 'VERSION', 'requirements.txt'):
-        entries[name] = (ROOT / name).read_bytes()
+        entries[name] = (ROOT / name).read_bytes().replace(b'\r\n', b'\n')
     entries['INSTALL.md'] = ('''# Film Design Skills
 
 Copy the five skill folders into the same skill directory supported by your host.
