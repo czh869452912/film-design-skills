@@ -1,0 +1,115 @@
+{
+  "title": "神社擦身：候选 3 镜 8 格",
+  "target": {
+    "duration_s": 10,
+    "aspect": "16:9"
+  },
+  "scene": {
+    "axes": "+Y 向神社上阶，+X 平台东侧",
+    "positions": "A 起 (0,2) 终 (0.7,2)；B 起 (0,0) 终约 (0,2)。摄影机均在 +X 侧。",
+    "constraints": "无对白、配乐、慢动作或血浆。无武器接触，不加金属碰撞声。"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "B 先动",
+      "goal": "从重心准备到接近，跨 S01/S02"
+    },
+    {
+      "id": "B2",
+      "name": "斩击落空",
+      "goal": "A 侧让，B 收住"
+    },
+    {
+      "id": "B3",
+      "name": "重新判断",
+      "goal": "B 回看，A 未追击"
+    }
+  ],
+  "review": {
+    "status": "text-walkthrough-only",
+    "unresolved": [
+      "需用粗图验证侧让时机、距离和遮挡",
+      "若 C2 无法读清，改全景或两镜版本"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat_ids": [
+        "B1"
+      ],
+      "camera": {
+        "move": "locked",
+        "position": "C1：东侧较远，全景固定"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "duration_s": 1.6,
+          "description": "A 在平台、B 在下方两级，距离与刀的状态可见：A 持入鞘刀，B 裸刃在身侧。"
+        },
+        {
+          "id": "S01-P02",
+          "duration_s": 1.2,
+          "description": "B 前移重心准备先动，A 注视 B，没有后退。"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "beat_ids": [
+        "B1",
+        "B2"
+      ],
+      "camera": {
+        "move": "locked",
+        "position": "C2：同在东侧，较近中全景；必须容纳脚步和刀路"
+      },
+      "panels": [
+        {
+          "id": "S02-P01",
+          "duration_s": 1.2,
+          "description": "B 到达平台边缘，A 仍在原位；切近后的脚步与前镜接续。"
+        },
+        {
+          "id": "S02-P02",
+          "duration_s": 1.0,
+          "description": "B 跨入平台开始斩击，A 开始向 +X 侧让。"
+        },
+        {
+          "id": "S02-P03",
+          "duration_s": 0.8,
+          "description": "A 已离开原目标位置；B 的刀经过那处空位，身体、刀路和手有轮廓分离。"
+        },
+        {
+          "id": "S02-P04",
+          "duration_s": 1.6,
+          "description": "B 在原 A 附近收住并降刀，A 在侧面持入鞘刀。"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "beat_ids": [
+        "B3"
+      ],
+      "camera": {
+        "move": "locked",
+        "position": "C1：回全景固定"
+      },
+      "panels": [
+        {
+          "id": "S03-P01",
+          "duration_s": 1.0,
+          "description": "回到 C1：双方都在平台；A 侧移、B 上前的最终位置能与动作镜对应。"
+        },
+        {
+          "id": "S03-P02",
+          "duration_s": 1.6,
+          "description": "B 转头寻找 A；A 看着 B，刀仍在鞘内，没有追击。"
+        }
+      ]
+    }
+  ]
+}

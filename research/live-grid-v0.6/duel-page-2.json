@@ -1,0 +1,112 @@
+{
+  "page_id": "duel-page-2",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece",
+  "global_prompt": "2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel. This page continues directly from a missed horizontal slash. All characters are now on the upper flat landing; no one goes down the steps.",
+  "characters": {
+    "A": {
+      "appearance": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip"
+    },
+    "B": {
+      "appearance": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands"
+    }
+  },
+  "negative": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+  "panels": [
+    {
+      "panel_id": "S02-P03",
+      "shot_id": "S02",
+      "summary": "Critical miss, closer full-body side view. Red defender is already safely nearer camera on the SAME LEVEL landing. Navy attackers horizontal silver blade passes through EMPTY SPACE behind her at her old position; clear visible air gap between blade and her body. Both feet on the same flat slab; steps remain far left outside the sidestep path.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing in foreground right after a short sidestep toward camera, both feet on level landing, body clearly below and separated from background blade lane, holding black fully sheathed sword",
+          "local_center": [
+            0.7,
+            0.68
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "in background center left on level landing, arms extended to right, silver sword slashing empty air BEHIND red defender, no contact",
+          "local_center": [
+            0.47,
+            0.36
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S02-P04",
+      "shot_id": "S02",
+      "summary": "Same closer full-body view. Navy attacker brakes near reds former position on flat landing and lowers silver blade. Red defender remains offset toward camera on same level, hands on sheathed sword, no counterattack. Blade clear of defender.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "foreground right on level landing, calm and still, holding fully sheathed black sword at hip",
+          "local_center": [
+            0.7,
+            0.66
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "background near center, stopping after missed slash, bent knees, lowering drawn silver blade toward empty ground on right",
+          "local_center": [
+            0.56,
+            0.38
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S03-P01",
+      "shot_id": "S03",
+      "summary": "Return to original wide east-side view. Both women now on the SAME upper landing. Navy attacker stands where red originally stood; red defender stands one short step toward camera from attacker. Two lower steps are far screen left and empty. Red torii and stone lantern match opening.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing foreground right on flat upper landing, one short step nearer camera than navy attacker, black sword fully sheathed",
+          "local_center": [
+            0.69,
+            0.62
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "standing background right on same flat upper landing, lowered drawn silver blade, looking forward after missing",
+          "local_center": [
+            0.65,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S03-P02",
+      "shot_id": "S03",
+      "summary": "Same wide composition and final positions. Navy attacker turns head toward red defender nearer camera, surprised. Red defender calmly watches her with black sword still completely sheathed. No further attack.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing still foreground right on same level upper landing, looking calmly at navy attacker, black sword remains fully in sheath",
+          "local_center": [
+            0.69,
+            0.62
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "standing background right, turning head toward red defender in foreground, surprised, silver katana lowered safely away",
+          "local_center": [
+            0.65,
+            0.35
+          ]
+        }
+      ]
+    }
+  ]
+}

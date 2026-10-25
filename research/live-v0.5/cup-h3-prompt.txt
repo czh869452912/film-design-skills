@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is the adult black-haired woman in the red cardigan and white shirt seated at the left of <Picture 1>.
+<Subject 2> is the adult blonde-bob woman in the blue blouse seated at the right of <Picture 1>.
+<Subject 3> is the single small white cup held by <Subject 1> over the bare wooden table in <Picture 1>.
+<Picture 1> is the first-frame composition, identity and rendering reference for the only continuous shot: both women seated across a bare table, the one cup at the left, and both faces and the tabletop visible.
+
+summary:
+[keyframe completion + reference generation] A six-second single continuous shot begins from <Picture 1>. <Subject 1> offers <Subject 3> to a hesitant <Subject 2>. The recipient supports the cup before the giver releases it, then looks up. There is one cup throughout, with its ownership changing visibly in the same frame.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - red cardigan, short black hair, left seat and identity.
+<Subject 2> (appears in [Shot 1]): fully_preserved - blonde bob, blue blouse, right seat and identity.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the same single white cup, solid and always supported.
+<Picture 1> ([Shot 1] first frame, composition and style): fully_preserved - fixed eye-level two-shot and simple colored pencil illustration, faces and tabletop stay visible.
+
+detailed_description:
+A restrained illustrated animation keeps the soft colors, linework and plain room of <Picture 1>. The camera is completely stationary throughout the six-second continuous take. The table, chairs and background do not move. Motion is small, ordinary and readable, with no new objects entering.
+[Shot 1] Begin exactly from the seated two-person arrangement of <Picture 1>. At the left, <Subject 1>, the short black-haired woman in the red cardigan, supports the only white cup, <Subject 3>, in her right hand near her side of the tabletop. At the right, <Subject 2>, the blonde woman in the blue blouse, watches the cup with her hands drawn close to herself. Both women's heads, the connecting forearms and the cup remain visible in the same medium framing. For the opening second the recipient hesitates: her gaze drops to the cup and she pauses rather than reaching immediately. The giver waits and looks toward her, without pushing the cup into her hands.
+From about 1.0 to 2.7 seconds, the giver lifts the cup just above the table and slowly extends her right forearm toward the space between them. Her idle left hand stays on her own side, away from the transfer. The receiver begins to lift her left hand palm-up toward the cup base, with a small clearly visible gap before contact. Her idle right hand remains near her chest. The cup travels once toward the receiver and remains upright; there are no duplicate cups or sudden replacements.
+From 2.7 to 3.8 seconds the receiver places her left palm under the base and curls her fingers around its lower side. The giver still grips the opposite side for a brief readable interval, so the two connected hands visibly share support of the same cup. The supporting palm is established before the giver opens her grip. There is no floating or jumping of the object.
+From 3.8 to 4.5 seconds the giver gently releases the cup and withdraws her open right hand toward her own side. The receiver alone now supports and grips the cup near its base with her left hand; the cup follows her hand toward her torso rather than moving independently. From 4.5 to 6.0 seconds she settles it near herself, raises her eyes toward the giver and holds a quiet receptive gaze. The giver's hand remains clear. Neither drinks, speaks, nor puts the cup down. Hold this changed relationship in the same camera view until the end, with no edit, zoom, insert or time jump.
+
+overall_soundscape:
+Quiet room tone, restrained fabric movement and subtle hand contact with ceramic. No cup landing sound because it is not set down, no dialogue or vocalization.
+
+non_diegetic_music:
+N/A

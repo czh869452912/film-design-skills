@@ -1,0 +1,4 @@
+interface:
+  display_name: "影视媒体执行"
+  short_description: "使用我能提供的图片和视频模型执行画面方案，组织参考输入并按实际结果局部回改"
+  default_prompt: "用 $screen-media 根据我可提供的模型和工具执行这份画面方案，保留导演意图并检查实际生成结果。"

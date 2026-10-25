@@ -1,0 +1,4 @@
+interface:
+  display_name: "导演共创"
+  short_description: "与普通创作者共同探索拍法，把复杂意图变为具体画面、表演、声音与观看体验"
+  default_prompt: "用 $film-direction 帮我把这个想法拍成有表现力的短片段，主动提出画面方案，并用容易理解的方式带我一起完善。"

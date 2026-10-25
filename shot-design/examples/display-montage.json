@@ -1,0 +1,55 @@
+{
+  "title": "四种陶器：等时长展示",
+  "target": {
+    "duration_s": 8,
+    "aspect": "1:1"
+  },
+  "intent": {
+    "goal": "比较四种器型，保持同等观看时间；不添加冲突或高潮"
+  },
+  "review": {
+    "status": "text-plan-only"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "duration_s": 2,
+      "camera": {
+        "move": "locked"
+      },
+      "action": {
+        "primary": "直筒杯置于相同台面与光线下，完整轮廓可见；固定停留用于比较。"
+      }
+    },
+    {
+      "id": "S02",
+      "duration_s": 2,
+      "camera": {
+        "move": "locked"
+      },
+      "action": {
+        "primary": "浅碟置于相同台面与光线下，完整轮廓可见；固定停留用于比较。"
+      }
+    },
+    {
+      "id": "S03",
+      "duration_s": 2,
+      "camera": {
+        "move": "locked"
+      },
+      "action": {
+        "primary": "圆腹壶置于相同台面与光线下，完整轮廓可见；固定停留用于比较。"
+      }
+    },
+    {
+      "id": "S04",
+      "duration_s": 2,
+      "camera": {
+        "move": "locked"
+      },
+      "action": {
+        "primary": "细颈瓶置于相同台面与光线下，完整轮廓可见；固定停留用于比较。"
+      }
+    }
+  ]
+}

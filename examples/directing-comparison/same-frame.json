@@ -1,0 +1,86 @@
+{
+  "title": "接受好意却不让步：同框版",
+  "target": {
+    "aspect": "16:9",
+    "duration_s": 8
+  },
+  "intent": {
+    "facts": "甲递杯，乙接过；不新增对白与微笑。",
+    "audience": "同时读出手已接受与脸仍回避，结尾保持人物距离。",
+    "locks": [
+      "交接成功",
+      "无对白",
+      "不通过改表情制造和解"
+    ]
+  },
+  "scene": {
+    "space": "甲乙隔桌，各留在自己一侧；杯从甲侧进入中间空区，再收回乙侧。",
+    "camera": "斜侧固定双人中景，头与桌边双手在画幅内，接触点不被前臂遮住。"
+  },
+  "review": {
+    "status": "text-design-only",
+    "unresolved": [
+      "同框中手与脸的可读尺度尚待画图检查",
+      "时间尚待走戏和播放"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "purpose": "接受与回避同时可见，不通过切镜抹掉距离。",
+      "framing": {
+        "size": "MS two-shot",
+        "angle": "oblique side"
+      },
+      "camera": {
+        "move": "locked"
+      },
+      "sound": {
+        "dialogue": "none",
+        "music": "none",
+        "environment": "仅保留场景已有环境声"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "duration_s": 1.5,
+          "description": "甲持杯在自己一侧，乙脸朝画外，手仍在自己一侧；二人分占画面两侧。",
+          "state": {
+            "holder": "A",
+            "gaze_B": "away"
+          }
+        },
+        {
+          "id": "S01-P02",
+          "duration_s": 2.5,
+          "description": "同一只杯进入空区；乙托住杯底，甲仍握杯侧。乙保持原有回避视线，身体不靠近。",
+          "state": {
+            "holder": "A+B",
+            "support": "A握杯侧，B托杯底",
+            "gaze_B": "away"
+          }
+        },
+        {
+          "id": "S01-P03",
+          "duration_s": 1.5,
+          "description": "乙已接稳，甲空手离开杯侧；两人的脸和手仍在同框，乙不转向甲。",
+          "state": {
+            "holder": "B",
+            "A_hand": "empty",
+            "gaze_B": "away"
+          }
+        },
+        {
+          "id": "S01-P04",
+          "duration_s": 2.5,
+          "description": "杯与乙的手收在乙自己一侧，甲的空手退回甲侧；人物身体与构图不靠近，保留未发生的对视。",
+          "state": {
+            "holder": "B",
+            "A_hand": "empty",
+            "gaze_B": "away"
+          }
+        }
+      ]
+    }
+  ]
+}

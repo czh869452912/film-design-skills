@@ -1,167 +1,73 @@
-# Shot List Spec
+# 数据与工具
 
-One JSON file per sequence, covering the whole preproduction chain: beats → shots → storyboard panels. It is the contract between design, drawing and prompts: if a shot changes, the card changes first; the panel and the prompt are rebuilt from it.
+需要保存结构化方案或组装媒体时使用。所有脚本从 skill 目录运行；文字分镜无需先转 JSON。
 
-## 1. Schema
+## 最小数据
 
 ```json
 {
-  "title": "Descent",
-  "intent": {
-    "logline": "A figure steps out of a tear in the sky and lands in front of a crowd.",
-    "turn": "the crowd is waiting for a savior -> it is not a savior",
-    "audience_knows": "something is wrong with the arrival before the crowd does"
-  },
-  "target": {
-    "model": "h3",
-    "duration_s": 10,
-    "aspect": "16:9",
-    "mode": "ref2va"
-  },
-  "style": {
-    "look": "monochrome storyboard for previz",
-    "palette": "paper white, mid grey, black",
-    "aspect": "16:9"
-  },
-  "beats": [
-    {"id": "B1", "name": "omen", "goal": "the street reacts before anything appears",
-     "duration_s": 2.0, "tension": 4, "knowledge_change": "something is coming"},
-    {"id": "B2", "name": "reveal", "goal": "the figure becomes legible",
-     "duration_s": 2.5, "tension": 6, "knowledge_change": "the arrival is a threat"}
-  ],
-  "shots": [
-    {
-      "id": "S01",
-      "beat_id": "B1",
-      "mechanism": "M01",
-      "duration_s": 2.0,
-      "purpose": "Make the street react before the figure exists in frame.",
-      "emotion": {
-        "target": "dread",
-        "dials": {"proximity": 3, "power": 5, "pressure": 5, "stability": 2, "value": 8, "time": 6},
-        "contradiction": "bright, ordinary daylight for a thing that should not exist"
-      },
-      "framing": {
-        "size": "WS",
-        "angle": "eye-level",
-        "lens_mm": 28,
-        "options": [
-          {"name": "A", "start": "empty street, crowd small at both edges, sky blank",
-           "turn": "every head tilts up, sky still blank", "end": "the same wide frame, all eyes on nothing",
-           "tradeoff": "knowledge with the crowd; judging distance"},
-          {"name": "B", "start": "medium on the crowd, heads up, sky out of frame",
-           "turn": "a bright rim enters the top edge", "end": "crowd silhouettes, light above them",
-           "tradeoff": "surprise; inhabiting distance"}
-        ],
-        "chosen": "A",
-        "notes": "street furniture on both sides, sky occupying the top third"
-      },
-      "composition": {
-        "value_masses": "white sky band, mid-grey street, black silhouettes of stalls",
-        "focus": "the empty centre of the street",
-        "negative_space": "the sky that will be torn open"
-      },
-      "staging": {
-        "subjects": [{"name": "Crowd", "screen": "along both edges", "facing": "away from camera", "pose": "standing, still"}],
-        "screen_direction": "none"
-      },
-      "camera": {
-        "move": "static", "amplitude": "none", "speed": "none",
-        "motivation": "the street has stopped; the camera should too",
-        "start_frame": "ordinary street, people mid-step",
-        "turn_frame": "heads begin to lift, a balloon stops rising",
-        "end_frame": "same frame, everyone turned toward the sky"
-      },
-      "light": {"key": "flat overcast daylight", "ratio": "2:1", "palette": "grey, no colour"},
-      "action": {
-        "primary": "Every person in the street stops and turns toward the sky.",
-        "cues": ["one shopper freezes mid-step", "a child's balloon stops rising"],
-        "subtext": "They have been waiting for this, and they are wrong to."
-      },
-      "sound": {"diegetic": "street ambience cutting to silence, then a low hum", "dialogue": "none", "music": "none"},
-      "storyboard": {
-        "panel": "wide street, tiny crowd along both edges, all heads turned up, empty sky above",
-        "arrows": ["thin dotted eye-lines up to the sky"],
-        "overlays": [
-          {"type": "sight", "from": [0.18, 0.72], "to": [0.42, 0.18]},
-          {"type": "sight", "from": [0.82, 0.72], "to": [0.58, 0.18]}
-        ],
-        "annotation": "S01 · WS · eye · static · 2.0 s",
-        "level": "rough"
-      },
-      "transition_out": {"type": "cut-on-sound", "matches": "the hum carries into the tear"},
-      "continuity": ["overcast flat light", "street stalls on both sides", "no one faces camera"],
-      "bans": ["no colour", "no hero pose", "no on-screen text"],
-      "references": [],
-      "render": {"status": "pending", "image": null}
-    }
-  ]
+  "title": "递杯",
+  "shots": [{
+    "id": "S01",
+    "framing": {"size": "MS", "angle": "eye-level"},
+    "camera": {"move": "locked"},
+    "panels": [
+      {"id": "S01-P01", "description": "甲持杯，乙伸手靠近。"},
+      {"id": "S01-P02", "description": "乙托住杯底，甲仍握杯。"},
+      {"id": "S01-P03", "description": "甲松手，乙独自持杯。"}
+    ]
+  }]
 }
 ```
 
-## 2. Required fields (validator-enforced)
+必需内容为非空 `shots`、各镜 `id`、各格 `id/description`。ID 使用字母、数字、下划线与连字符；镜头 ID、全序列画格 ID 各自唯一。数组顺序就是镜头和画格顺序。
 
-| Field | Why |
+| 可选字段 | 用途 |
 |---|---|
-| `id` | continuity and panels reference it |
-| `beat_id` | every shot must serve a beat |
-| `duration_s` | budgets, animatic timing |
-| `purpose` | a shot without a job is filler |
-| `framing.size` | the audience's distance is the first decision |
-| `camera.move` | every shot owns a movement decision, including "static" |
-| `action.primary` | one readable action |
-| `transition_out.type` | the cut is part of the design |
+| `scene` | 共享场地、地标、路径与摄影机位置 |
+| `shots[].purpose/framing/camera` | 观看理由、取景与连续摄影机描述 |
+| `beats` + `shots[].beat_ids` | 节拍表与多对多关联；引用须存在 |
+| `panels[].state` | 位置、视线、持物与承托等状态记录 |
+| `panels[].framing/composition/staging/sound` | 覆盖该镜对应字段，表达本格变化 |
+| `review` | 检查过的材料、具体问题与修改记录 |
 
-Optional but expected: `mechanism` (an ID from `templates.md`), `framing.options` + `framing.chosen`, `camera.turn_frame`, `storyboard`, `render`.
+## 时间与图片
 
-## 3. Design rules
+草稿可以未定时。动态分镜前填写各格 `duration_s`，所有时间为有限正数；镜头时间由画格相加。另填 `shot.duration_s` 时须与合计一致，单格镜头可沿用镜头时间。`target.duration_s` 表达总约束，完整定时后须与总和一致。多个未定时画格不会被自动均分。
 
-- **Mechanisms come from the library.** `mechanism` holds an ID (`M01`…) from `templates.md`; do not invent new names when a mechanism exists, and do not stack more than two.
-- **Framing options are compared, not decorated.** When `framing.options` is present it holds 2–3 viewing plans, each with `start`, `turn`, `end` and a `tradeoff`; `framing.chosen` names the winner. This is the `framing-decision.md` ritual in data form.
-- **`camera.turn_frame` is the picture at the moment information changes.** If you cannot write it, the shot has no event.
-- **One primary action.** Secondary behaviour goes in `cues`, never as a second event.
-- **One camera move** per shot.
-- **Dials are 0–10**; use them to compare shots.
-- **At most one contradiction per sequence.**
-- **Screen direction** is `left-to-right`, `right-to-left`, `toward-camera`, `away-from-camera`, or `none`; a change needs `reversal_reason`.
-- **Bans name this material's collapse modes.**
-- **References carry a role, attributes and an exclusion**:
-  `{"label": "<Picture 1>", "role": "identity + first frame", "defines": "…", "preserve": "fully", "exclude": "…"}`
-  Label convention follows the target model (`<Picture 1>` for H3, `@Image 1` for Seedance).
-- **A single shot over 6 s carries `beats`** inside the shot (`[{"window": "0-3s", "action": "…"}]`) so the model does not pick its own timing.
-- **A storyboard block only adds what the card cannot show**: arrows, annotation, simplification level. If the panel needs a new design decision, fix the card first.
-- **Overlays are drawn by script, not by the image model**: `storyboard.overlays` holds deterministic marks in normalised panel coordinates (0–1, origin top-left):
-  `{"type": "arrow", "from": [0.2, 0.8], "to": [0.55, 0.3], "curve": 0.1, "label": "DESCEND"}`,
-  `{"type": "sight", "from": [...], "to": [...]}` (dotted),
-  `{"type": "impact", "at": [0.5, 0.6], "size": 0.06, "label": "IMPACT"}`,
-  `{"type": "orbit", "at": [0.5, 0.5], "radius": 0.2, "start": -140, "end": -20, "label": "ORBIT CW"}`.
-  Four overlays per panel maximum. `annotate.py` renders them.
+`panels[].image` 可指向图片，相对路径以 JSON 所在目录解析。通常按画格命名，如 `S01-P02.png`。`--images` 覆盖图片根目录，该目录内同名画格优先，且不回退到原绝对路径。支持 png/jpg/jpeg/webp。
 
-## 4. Beat rules
+标注和参考包默认拒绝缺图，部分输出用 `--allow-missing`。动态分镜可显示占位图，`--require-images` 禁止占位。EDL 记录原 shot/panel、请求时间、帧位置和实际帧数；累计帧边界按 fps 量化，短到不足一帧的画格会报错。
 
-- `beats[].duration_s` sums to the piece duration (±0.1 s).
-- Every `shot.beat_id` exists.
-- Tension values are 0–10; the peak should sit at 70–85 % of the runtime.
-- A `burst` beat must follow a `charge` beat. (The validator cannot tell names apart reliably, so this is a manual check in `beats.md` §6.)
+## 命令
 
-## 5. Validation rules the script runs
+```text
+python scripts/shotlist.py init plan.json
+python scripts/shotlist.py validate plan.json --strict
+python scripts/shotlist.py render plan.json --format sheet
+python scripts/shotlist.py validate plan.json --timed --check-images --images panels
+python scripts/annotate.py plan.json --images panels --out annotated --sheet sheet.png
+python scripts/board.py plan.json --images panels --out review-board.png --columns 2
+python scripts/animatic.py plan.json --images annotated --out animatic.mp4 --require-images
+python scripts/build_refpack.py plan.json --images panels --out refs --select S02-P03
+```
 
-1. Unique ids; positive durations; total fits the model's single-pass limit.
-2. Shot duration ≥ 1.2 s.
-3. A single shot over 6 s without `beats` is flagged.
-4. Required fields present and non-empty.
-5. Every shot's `beat_id` exists; beat durations sum to the total.
-6. Tension peak position flagged when outside 60–90 %.
-7. `mechanism` must exist in `templates.md`; more than two mechanisms per shot is flagged.
-8. Framing options: at least two, each with `start`/`turn`/`end`; `chosen` must name one of them.
-9. Dials 0–10; screen-direction flips need `reversal_reason`.
-10. Handoff readiness: references have `label`, `role`, `defines`; multi-shot sequences have `continuity`.
-11. Storyboard readiness: a shot with a `storyboard` block has `panel` and `annotation`; a shot with camera movement other than `static` should have at least one arrow.
-12. Overlays: known types only, coordinates are `[x, y]` pairs in 0–1, four per panel maximum.
-13. Aspect: must be a known ratio; a vertical aspect with `WS`/`EWS`/`FS` framing is flagged (stack or crop instead).
+`init` 创建待填写的草稿；提供总时长与镜数时，均分仅用于初始化。`render --format` 支持 sheet、storyboard、cuts、csv 等视图，其余格式见 `--help`。按当前编辑任务选择输出。
 
-## 6. Table view
+`board.py` 将实际图片按原顺序排成审阅宫格，等比留边而不裁掉内容；输出同名 JSON 保存原图、shot/panel、原图摘要与画布位置。格数不必填满行，不增加切点，不会自动标记内容通过。默认拒绝缺图或覆盖已有输出。它用于比较，干净原图继续用于生成。
 
-| Shot | Dur | Beat | Mechanism | Framing | Camera | Action | Cut out |
+`build_refpack.py` 保留参考序号、原镜头和画格映射；`--first-frame` 只接受序列真正的第一格。图片和视频的模型选择、参考绑定与输入转换由当前媒体执行工具处理，数据格式不含任何供应商必填字段。
 
-One line per shot. Paragraphs belong in the card.
+`inventory.py` 统计语料与结构；`selftest.py --verbose` 执行离线回归。JSON 工具需要 Python 3.10+，标注和裁图需要 Pillow，动态分镜需要 FFmpeg，媒体回归另用 FFprobe。
+
+## 箭头与兼容格式
+
+画格可带 `overlays`，坐标为左上原点的归一化 `[x,y]`：
+
+```json
+{"type":"arrow", "from":[0.2,0.6], "to":[0.6,0.6], "label":"REACH"}
+```
+
+`arrow/sight` 使用 from/to，`impact/orbit` 使用 at；curve、size、radius、start、end 控制外观。生成参考图时保留干净版本。
+
+旧 `action.primary/storyboard.panel` 自动转为一格，格 ID 等于镜头 ID，可使用 `render.image` 或 `<shot_id>.png`。旧 `beat_id` 继续接受，与 `beat_ids` 同时出现时须一致。机制编号等旧附加字段仍可读，出现时检查引用；它们不是新草稿的必填项。

@@ -1,0 +1,112 @@
+{
+  "page_id": "child-cat",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece",
+  "global_prompt": "1boy, 1cat, four successive moments of ONE continuous locked low side-view wide shot, unchanged camera and identical room geometry. A simple tall wooden table occupies the LEFT half of the room; its two thin legs leave a clear open view of the floor under the tabletop. A red toy cube stays on the floor at far left under table. Same child on RIGHT and same cat under table on LEFT in every panel, full child and cat visible. Cat faces right toward child throughout. Open floor between them, cream wall, daylight. The child notices the cat, crouches, extends an empty hand and the cat backs LEFT farther beneath the table, away from hand. No physical contact.",
+  "characters": {
+    "C": {
+      "appearance": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks"
+    },
+    "K": {
+      "appearance": "small white cat, orange ears, orange tail, green eyes"
+    }
+  },
+  "negative": "lowres, watermark, logo, speech bubbles, text, bad anatomy, extra limbs, duplicate objects",
+  "panels": [
+    {
+      "panel_id": "S01-P01",
+      "shot_id": "S01",
+      "summary": "Wide low side view. Child stands upright on right, notices the small cat under table on left, looking down toward it. Cat sits just inside the right edge of the under-table space, facing child. Red cube remains farther left behind cat.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "standing upright on right beside table, full body visible, head turned down left toward cat under table, arms relaxed",
+          "local_center": [
+            0.76,
+            0.43
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "sitting on floor under table at left, facing right toward child, orange tail resting behind",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P02",
+      "shot_id": "S01",
+      "summary": "Same wide camera and table. Child bends knees into a squat on right, looking directly at cat. Hands still near his own knees. Cat remains at exactly the same floor spot near right edge under table, facing child.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "squatting on right beside table, both feet on floor, knees bent, hands near own knees, looking left under table",
+          "local_center": [
+            0.73,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "sitting at same position under table on left, facing right toward squatting child, ears attentive",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P03",
+      "shot_id": "S01",
+      "summary": "Same wide camera and table. Child stays squatting on right and extends one EMPTY open hand low toward cat. A clear gap remains between fingertips and cat. Cat is still at original under-table position, leaning back warily toward left.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "remaining in squat on right, extending one empty open hand left toward cat close to floor, fingers stop well short of cat",
+          "local_center": [
+            0.7,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "under table at original position on left, facing right toward approaching empty hand, leaning body back left warily",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P04",
+      "shot_id": "S01",
+      "summary": "Same wide camera. Cat has taken two short backward steps to the LEFT, deeper under table and closer to red cube, while still facing right toward child. The distance from cats nose to childs outstretched empty hand is visibly LARGER than in previous panel. Child stays in same squat on right, keeps empty palm where it was and watches cat retreat. No touching or lifting cat.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "same squat on right, holding extended empty hand still in previous place, watching cat move away left, full body visible",
+          "local_center": [
+            0.7,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "standing deeper under table at far left near red toy cube, taking backward steps left while head faces right toward child, visibly farther from hand",
+          "local_center": [
+            0.16,
+            0.77
+          ]
+        }
+      ]
+    }
+  ]
+}

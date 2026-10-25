@@ -1,0 +1,79 @@
+{
+  "title": "接受好意却不让步：末尾揭示版",
+  "target": {
+    "aspect": "16:9",
+    "duration_s": 8
+  },
+  "intent": {
+    "facts": "甲递杯，乙接过；不新增对白与微笑。",
+    "audience": "先看乙的疏离，最后才看见已接稳的杯；有意省略交接。",
+    "locks": [
+      "交接成功",
+      "无对白",
+      "不通过改表情制造和解"
+    ]
+  },
+  "scene": {
+    "space": "甲乙隔桌，各留在自己一侧；杯从甲侧进入中间空区，再收回乙侧。",
+    "camera": "斜侧固定双人中景，头与桌边双手在画幅内，接触点不被前臂遮住。"
+  },
+  "review": {
+    "status": "text-design-only",
+    "unresolved": [
+      "首镜反射或声音不可提前明确透露接杯",
+      "此版不适用于全过程必须可见的要求",
+      "尚待绘制与实际播放"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "purpose": "暂时保留接受与否的未知，只看见疏离。",
+      "framing": {
+        "size": "CU",
+        "angle": "same working side"
+      },
+      "camera": {
+        "move": "locked"
+      },
+      "sound": {
+        "dialogue": "none",
+        "music": "none",
+        "note": "不加入会明确证明接杯的声响"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "duration_s": 4,
+          "description": "乙脸部近景，维持回避的视线，手与杯在取景外；画面中没有反射揭示交接。"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "purpose": "已被接住的杯重新解释前镜的冷淡。",
+      "framing": {
+        "size": "CU hands",
+        "angle": "same working side"
+      },
+      "camera": {
+        "move": "locked"
+      },
+      "sound": {
+        "dialogue": "none",
+        "music": "none"
+      },
+      "panels": [
+        {
+          "id": "S02-P01",
+          "duration_s": 4,
+          "description": "杯已稳在乙的手中，甲空手位于画面另一侧；不重演接杯，不添加微笑或靠近。",
+          "state": {
+            "holder": "B",
+            "A_hand": "empty"
+          }
+        }
+      ]
+    }
+  ]
+}

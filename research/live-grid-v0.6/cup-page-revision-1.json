@@ -1,0 +1,112 @@
+{
+  "page_id": "cup-page-revision-1",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece",
+  "global_prompt": "2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background. Only the first cup rests on the table. In the second and third panels the cup is raised in MID-AIR at chest height. In the last panel the receiver holds it near her chest.",
+  "characters": {
+    "A": {
+      "appearance": "girl, short black bob hair, brown eyes, red cardigan, white shirt"
+    },
+    "B": {
+      "appearance": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt"
+    }
+  },
+  "negative": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+  "panels": [
+    {
+      "panel_id": "S01-P01",
+      "shot_id": "S01",
+      "summary": "Initial state, single white cup rests on tabletop in front of red woman, red woman grips cup side. Blue woman keeps both hands folded in her lap below table, no reaching yet.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right hand gripping side of the single cup resting on table, left hand resting at left table edge",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, looking at cup, both hands folded in lap below table, no hands reaching toward cup",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P02",
+      "shot_id": "S01",
+      "summary": "Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right arm extended toward right, holding the single white cup by its side above table center, left hand stays at table edge",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, reaching open left palm under the offered cup with a visible gap before contact, right hand near her own chest",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P03",
+      "shot_id": "S01",
+      "summary": "Shared support IN MID-AIR. Same medium two-shot. Red womans extended arm holds the single white cup at chest height halfway between the two women, clearly above the tabletop. Blue womans left palm touches and supports its bottom; blue womans right hand steadies its side. Red woman has NOT let go. Exactly three hands contact the same raised cup, cup base visible resting on blue palm. Red womans unused left hand stays on far left table edge.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right arm extended horizontally toward right at chest height, right hand gripping the left side of the single white cup held high above table, still holding the cup, left hand rests at far left table edge",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, both forearms raised toward left at chest height, left palm directly contacting and supporting bottom of the shared airborne white cup, right hand gripping its other side, three hands hold this same raised cup",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P04",
+      "shot_id": "S01",
+      "summary": "Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, empty right hand withdrawn to left side of table, open relaxed fingers, looking at blue woman",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, holding the single white cup near her chest in both hands, looking up at red woman",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    }
+  ]
+}

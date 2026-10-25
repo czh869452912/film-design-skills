@@ -1,0 +1,112 @@
+{
+  "page_id": "duel-page-1",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece",
+  "global_prompt": "2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel.",
+  "characters": {
+    "A": {
+      "appearance": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip"
+    },
+    "B": {
+      "appearance": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands"
+    }
+  },
+  "negative": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+  "panels": [
+    {
+      "panel_id": "S01-P01",
+      "shot_id": "S01",
+      "summary": "Wide side view, full bodies and feet visible. Red defender stands on upper landing at screen right, navy attacker stands two shallow steps below at screen left; distance between them is about two body lengths. Both look at each other. Establish top landing edge.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing still on level upper landing on right, upright, holding black sheathed sword at hip, watching attacker",
+          "local_center": [
+            0.73,
+            0.46
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "standing left two steps below defender, drawn silver sword lowered at side, watching defender",
+          "local_center": [
+            0.28,
+            0.59
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P02",
+      "shot_id": "S01",
+      "summary": "Same wide camera and geometry. Navy attacker shifts weight forward and bends leading knee to start approaching up the steps. Red defender stays in exactly her established spot on landing.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing still at right on upper landing, black sword remains in sheath, watching attacker",
+          "local_center": [
+            0.73,
+            0.46
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "leaning forward on lower steps at left, bent leading knee, starting to ascend, holding drawn blade low",
+          "local_center": [
+            0.33,
+            0.56
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S02-P01",
+      "shot_id": "S02",
+      "summary": "Cut to a closer full-body side view from the same east side. Navy attacker reaches the landing edge, feet and final step visible, red defender remains at original upper landing spot. Keep space around both feet.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "standing at right on upper landing, upright, calm, sword fully sheathed",
+          "local_center": [
+            0.7,
+            0.48
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "arriving at landing edge from left, leading foot planted on top step, rear foot one step below, drawn blade beginning to lift",
+          "local_center": [
+            0.38,
+            0.55
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S02-P02",
+      "shot_id": "S02",
+      "summary": "Same closer full-body camera. Navy attacker steps onto landing and starts a horizontal slash toward red defenders original position. Red defender starts one short sidestep toward camera, staying at the same elevation on the flat landing. Show both feet and the clear horizontal blade path.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "starting sideways step toward camera on level landing, leading foot moves forward in depth, upper body shifts out of blade lane, sword stays sheathed at hip",
+          "local_center": [
+            0.7,
+            0.61
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "stepping right onto flat upper landing, starting horizontal katana slash into defenders original location, both hands on hilt",
+          "local_center": [
+            0.43,
+            0.46
+          ]
+        }
+      ]
+    }
+  ]
+}

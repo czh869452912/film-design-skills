@@ -1,0 +1,26 @@
+subject_definitions:
+<Subject 1> is the adult woman in the deep red kimono, tied-back long black hair and wooden geta, holding one black fully sheathed katana, at the upper right in <Picture 1>.
+<Subject 2> is the adult short-haired woman in the navy sailor uniform, white scarf and black boots, holding one drawn silver katana at the lower left in <Picture 1>.
+<Subject 3> is the broad stone shrine stairway, cedar trees, stone lantern and distant torii in <Picture 1>.
+<Picture 1> is the opening visual reference for identities, broad stairway and the upper-right/lower-left relationship. It is the first-frame anchor for [Shot 1].
+
+summary:
+[keyframe completion + reference generation] A ten-second three-shot illustrated duel begins from <Picture 1>. <Subject 2> moves uphill first and makes one committed downward cut. <Subject 1> steps sideways off the attack line without drawing her sword. The attack passes through the vacated space, the attacker stops and looks back toward her. The action remains in one continuous place and time.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - kimono, identity and entirely sheathed black katana; she never attacks.
+<Subject 2> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - navy costume, short hair and one silver drawn blade in her right hand.
+<Subject 3> (appears in all shots): fully_preserved - continuous broad shrine steps and fixed landmarks, sufficient lateral space for a single sideways step.
+<Picture 1> ([Shot 1] first frame, identities, visual style and starting geography): fully_preserved - preserve the opening arrangement and colored pencil illustration. The later action is described below, not copied from a failed eight-panel image set.
+
+detailed_description:
+A restrained colored pencil animated illustration has the flat muted dusk colors and clear figures of <Picture 1>. Movement plays at ordinary speed in one continuous space. Each woman has exactly one weapon. The red woman's black sword stays completely in its sheath, while the navy woman's silver blade remains connected to the hilt in her right hand. All three shots are full-body views wide enough to show both heads, both sets of feet, the attack path and the sideways escape.
+[Shot 1] Start from <Picture 1> with the fixed camera east of the action line. <Subject 1>, the red-kimono woman, is farther uphill at screen right, quietly holding her fully sheathed black sword close to her waist. <Subject 2>, the navy-uniform woman, is lower at screen left, her drawn silver katana pointed outward and down. Cedar trees, the left stone lantern and upper-right torii keep the stairway identifiable. For the opening 1.5 seconds both watch each other. Then the navy woman shifts weight forward, bends her rear knee and raises her sword into a preparation position while the red woman follows her with her eyes. The red woman neither retreats downhill nor draws her sword.
+[Shot 2] At 00:02.800, cut to a slightly closer full-body side view from the SAME east side. Keep the navy woman approaching from screen left and the red woman to screen right. From 2.8 to 4.3 seconds the attacker climbs the short remaining gap on the broad stairs, footfalls making her approach visible. Her leading foot lands on the red woman's stair level. From 4.3 to 5.2 seconds she begins ONE diagonal downward slash toward the red woman's original position. As the blade starts descending, the red woman takes ONE lateral step toward the camera along the same broad stair, moving out of the straight attack lane, not jumping to another step. Her wooden geta visibly lifts and plants; her whole body follows the foot. The sheathed sword stays at her hip. From 5.2 to 6.0 seconds the attacker's silver blade sweeps through the clearly empty space BEHIND the displaced red woman. There is visible separation between blade and body, no parry and no metal contact. From 6.0 to 7.4 seconds the attacker absorbs her forward momentum with bent knees and lowers the blade; the red woman finishes her planted sidestep in the near right foreground. Both are now on the same stair level, laterally offset rather than exchanging places.
+[Shot 3] At 00:07.400, return to the original wider east-side viewing angle. Preserve the final positions from the preceding shot: the navy woman near the old target position, the red woman offset toward the right foreground, both on the upper stair level. From 7.4 to 8.4 seconds let the stopped positions read. Then the navy woman turns her head to find the red woman beside her and watches with wary reassessment, blade down. The red woman meets the look without pursuit, her sword still wholly sheathed. Hold the changed relationship until 10.0 seconds. No second exchange, slow motion, teleportation, extra insert or triumphant pose.
+
+overall_soundscape:
+Quiet cedar wind and subtle clothing throughout. Ordinary boot footfalls climbing stone, a geta scrape during the sidestep, one blade swish through empty air and restrained breathing after the miss. No metallic impact, dialogue or vocalization.
+
+non_diegetic_music:
+N/A

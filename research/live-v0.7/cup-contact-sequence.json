@@ -1,0 +1,48 @@
+{
+  "title": "cup-contact",
+  "target": {
+    "aspect": "16:9",
+    "duration_s": 6
+  },
+  "review": {
+    "status": "planned-not-drawn"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "camera": {
+        "move": "locked"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "description": "Medium two-shot. Red woman holds the single cup near her own body above the table. Blue woman looks at the offered cup, hesitating, hands folded near her own body.",
+          "duration_s": 1.5
+        },
+        {
+          "id": "S01-P02",
+          "description": "Same medium two-shot. Red woman extends the cup toward blue woman. Blue woman unfolds one hand and reaches toward it, but a clear air gap still separates her palm from cup. Red woman alone supports the cup.",
+          "duration_s": 1.5
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "camera": {
+        "move": "locked"
+      },
+      "panels": [
+        {
+          "id": "S02-P01",
+          "description": "Cut to a tight hand close-up. Exactly ONE white cup held ABOVE tabletop, exactly TWO hands from opposite sides simultaneously supporting it. A red sleeve enters from the LEFT, its hand still grips the upper left side of cup. A blue sleeve enters from the RIGHT, its open palm is pressed flush against the BOTTOM of the SAME cup. The red hand has NOT released. Show both red grip and blue supporting palm in physical contact with this cup. No faces, no full people.",
+          "duration_s": 1.5
+        },
+        {
+          "id": "S02-P02",
+          "description": "Same tight hand close-up and tabletop. The blue-sleeved hand alone now supports the single white cup from below near right half of frame. The red-sleeved hand is OPEN and EMPTY, withdrawn leftward with a visible gap from the cup. Show one cup and two separated hands, one holding and the other empty. No faces, no full people.",
+          "duration_s": 1.5
+        }
+      ]
+    }
+  ]
+}

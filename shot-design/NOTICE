@@ -1,47 +1,24 @@
 # NOTICE
 
-This skill's text is original. It was written from two books and informed by
-public material; no third-party prose or code was copied.
+The skill text and scripts are original. Principles were distilled from the following books and public material; no book passages, complete third-party system prompts or source code were copied.
 
-## Books whose principles are distilled here
+## Books
 
-- Steven D. Katz, *Film Directing: Shot by Shot — Visualizing from Concept to Screen*,
-  Michael Wiese Productions, 1991.
-- Marcos Mateu-Mestre, *Framed Ink: Drawing and Composition for Visual Storytellers*,
-  Design Studio Press, 2010.
-- Bruce Block, *The Visual Story* (3rd ed., 2020) — referenced for the six
-  structural variables in `composition.md`.
-- Walter Murch, *In the Blink of an Eye* (2nd ed., 2001) — the Rule of Six
-  priority order in `sequence-rhythm.md`; the weights are his published figures,
-  the wording and the checks are ours.
+- Steven D. Katz, *Film Directing: Shot by Shot — Visualizing from Concept to Screen*, Michael Wiese Productions, 1991.
+- Marcos Mateu-Mestre, *Framed Ink: Drawing and Composition for Visual Storytellers*, Design Studio Press, 2010.
+- Bruce Block, *The Visual Story*, 3rd ed., 2020.
+- Walter Murch, *In the Blink of an Eye*, 2nd ed., 2001.
 
-No passages are reproduced; the page and chapter anchors in `references/sources.md`
-exist so a reader can go back to the originals.
+## Public material
 
-## Public material that informed structure (not copied)
+- [62656456/ai-film-skills](https://github.com/62656456/ai-film-skills), Apache-2.0: indexed camera arrangements and viewing-plan comparison.
+- [smixs/visual-skills](https://github.com/smixs/visual-skills), CC BY 4.0, © Serge Shima: dramaturgy and concrete physical facts in shot cards.
+- [zenstory-ai/drama-skills](https://github.com/zenstory-ai/drama-skills), MIT: preserving creator choices, reference roles and frozen-frame boundaries.
+- [0xhughs/director-skills](https://github.com/0xhughs/director-skills), MIT: separating visual intent from model-specific translation.
+- [OpenAI Cookbook — Sora](https://github.com/openai/openai-cookbook/tree/main/examples/sora) and [BytePlus Seedance guide](https://docs.byteplus.com/zh-CN/docs/ModelArk/seedance-2-5-prompt-guide): historical model-prompt experiments.
+- Disney Animation Story/Layout, Pixar in a Box and Toon Boom production discussions: iterative rough-board methods. Links are in references/sources.md.
+- [YILING0013/novelai_local_web](https://github.com/YILING0013/novelai_local_web), AGPL-3.0, commit a30d510a4f4eece69bed56958e9468196114c95e: separation of stable identities, per-panel appearances and global/individual prompts. The independently implemented optional page compiler and cropper now live outside the skill at repository integrations/novelai/.
 
-- [62656456/ai-film-skills](https://github.com/62656456/ai-film-skills) (Apache-2.0):
-  the idea of an indexed camera-mechanism library and a viewing-plan comparison
-  before camera choice.
-- [smixs/visual-skills](https://github.com/smixs/visual-skills) (CC BY 4.0,
-  © Serge Shima): dramaturgy-first prompting, and the reminder that shot cards
-  need physical facts rather than adjectives.
-- [OpenAI Cookbook — Sora 2 Prompting Guide](https://github.com/openai/openai-cookbook/tree/main/examples/sora):
-  one camera move plus one action per shot, actions written as beats and counts.
-- [BytePlus Dreamina Seedance 2.5 prompt guide](https://docs.byteplus.com/zh-CN/docs/ModelArk/seedance-2-5-prompt-guide):
-  duration and stage budgets used in `handoff.md`.
+## Software and artwork
 
-The mechanism IDs, beat taxonomy, dial system, storyboard overlay format and the
-validators are original structures.
-
-## Software
-
-- Python 3 standard library.
-- [Pillow](https://python-pillow.org/) for storyboard annotation.
-- [FFmpeg](https://ffmpeg.org/) for animatic assembly (called as an external
-  binary, not bundled).
-
-## Artwork
-
-Example panels were generated for this repository with NovelAI and are not
-derived from the books.
+Scripts use the Python standard library, [Pillow](https://python-pillow.org/) and external [FFmpeg](https://ffmpeg.org/). FFmpeg is not bundled. Repository test artwork was generated with NovelAI and is not taken from the books.

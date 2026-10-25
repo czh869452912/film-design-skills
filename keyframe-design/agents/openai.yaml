@@ -1,0 +1,4 @@
+interface:
+  display_name: "关键画面与原画"
+  short_description: "设计共享 layout、构图与关键姿态，让短片段的画面表达、动作与空间能够绘制"
+  default_prompt: "用 $keyframe-design 将这些镜头落实成 layout 与关键原画设计，优先解决最重要的画面和动作关系。"

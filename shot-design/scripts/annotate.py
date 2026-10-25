@@ -5,8 +5,8 @@ Image models draw arrows badly and text worse. This script puts them on after
 the fact, from data in the shot list, so annotations stay legible, consistent
 and re-runnable.
 
-Panel inputs: `<shot_id>.png|jpg|jpeg|webp` in --images.
-Overlay data: `shot.storyboard.overlays` (see references/shot-list-spec.md).
+Panel inputs: panel ids or explicit image paths; legacy shot images still work.
+Overlay data: panels[].overlays (legacy shot.storyboard.overlays also works).
 
 Usage:
     python annotate.py shotlist.json --images panels --out annotated
@@ -21,6 +21,9 @@ import json
 import math
 import sys
 from pathlib import Path
+
+sys.dont_write_bytecode = True
+from sequence import iter_panels, load, require_valid, resolve_image
 
 try:
     from PIL import Image, ImageDraw, ImageFont
@@ -38,22 +41,6 @@ FONT_CANDIDATES = (
 )
 INK = (24, 24, 24, 255)
 HALO = (255, 255, 255, 235)
-
-
-def load(path: Path) -> dict:
-    with path.open(encoding="utf-8") as fh:
-        data = json.load(fh)
-    if not isinstance(data.get("shots"), list):
-        raise SystemExit("shot list needs a 'shots' array")
-    return data
-
-
-def find_panel(images: Path, shot_id: str) -> Path | None:
-    for ext in IMAGE_EXTS:
-        candidate = images / f"{shot_id}{ext}"
-        if candidate.exists():
-            return candidate
-    return None
 
 
 def load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -169,8 +156,9 @@ def annotate_panel(path: Path, shot: dict, index: int, show_arrows: bool) -> Ima
     framing = shot.get("framing") or {}
     size = str(framing.get("size", "")).strip()
     angle = str(framing.get("angle", "")).strip()
-    duration = float(shot.get("duration_s") or 0)
-    label = f"{shot.get('id', f'S{index:02d}')} · {size} · {angle} · {duration:.1f}s"
+    duration = shot.get("duration_s")
+    timing = f"{duration:g}s" if duration is not None else "timing pending"
+    label = f"{shot.get('shot_id', '')}/{shot['id']} · {size} · {angle} · {timing}"
     draw_label(draw, (base * 0.035, base * 0.035), label, font)
 
     panel = shot.get("storyboard") or {}
@@ -206,24 +194,31 @@ def compose_sheet(panels: list[tuple[str, Image.Image]], cols: int) -> Image.Ima
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("shotlist")
-    ap.add_argument("--images", required=True, help="directory with <shot_id> panel images")
+    ap.add_argument("--images", help="override image folder; otherwise resolve paths beside JSON")
     ap.add_argument("--out", required=True, help="directory for annotated panels")
     ap.add_argument("--sheet", default=None, help="optional contact sheet path")
     ap.add_argument("--cols", type=int, default=2)
     ap.add_argument("--no-arrows", action="store_true")
+    ap.add_argument("--allow-missing", action="store_true", help="write an explicitly partial annotation set")
     args = ap.parse_args()
 
-    data = load(Path(args.shotlist))
-    images = Path(args.images)
+    plan_path = Path(args.shotlist)
+    data = load(plan_path)
+    require_valid(data)
+    images = Path(args.images) if args.images else None
+    views = list(iter_panels(data))
+    sources = [resolve_image(p, images=images, base=plan_path.parent) for p in views]
+    absent = [p['id'] for p, src in zip(views, sources) if src is None]
+    if absent and not args.allow_missing:
+        raise SystemExit("missing panels: " + ", ".join(absent))
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     written: list[str] = []
     panels: list[tuple[str, Image.Image]] = []
     missing: list[str] = []
-    for index, shot in enumerate(data["shots"], start=1):
-        shot_id = str(shot.get("id") or f"S{index:02d}")
-        source = find_panel(images, shot_id)
+    for index, (shot, source) in enumerate(zip(views, sources), start=1):
+        shot_id = shot['id']
         if source is None:
             missing.append(shot_id)
             continue
@@ -235,6 +230,7 @@ def main() -> int:
 
     if args.sheet and panels:
         sheet = compose_sheet(panels, max(1, args.cols))
+        Path(args.sheet).parent.mkdir(parents=True, exist_ok=True)
         sheet.save(args.sheet)
         print(f"sheet: {args.sheet} ({sheet.width}x{sheet.height})")
 

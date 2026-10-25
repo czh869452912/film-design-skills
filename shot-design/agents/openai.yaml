@@ -1,4 +1,4 @@
 interface:
-  display_name: "Shot Design"
-  short_description: "Design shots and encode emotion for AI video"
-  default_prompt: "Use $shot-design to turn this beat into a shot sequence with camera language and a handoff brief for Seedance 2.5 or MiniMax H3."
+  display_name: "镜头设计"
+  short_description: "将场景与导演选择落实为调度、机位、构图、镜序及镜内关键变化，形成可绘制分镜"
+  default_prompt: "用 $shot-design 将这段内容展开为专业分镜，设计画框与动作，并说明重要拍法的取舍。"

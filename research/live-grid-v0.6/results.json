@@ -1,0 +1,1193 @@
+{
+  "date": "2026-10-25",
+  "source_repo_commit": "a30d510a4f4eece69bed56958e9468196114c95e",
+  "model": "nai-diffusion-5-full",
+  "width": 2048,
+  "height": 1152,
+  "steps": 23,
+  "attempts": 4,
+  "successful_pages": 3,
+  "network_failures": 1,
+  "automatic_retries": 0,
+  "h3_calls": 0,
+  "balance_before": 16413,
+  "balance_after": 16236,
+  "observed_balance_decrease": 177,
+  "reviewer": "same executing agent; not independent or blind",
+  "experiments": [
+    {
+      "page_id": "cup-page",
+      "seed": 741092,
+      "result": {
+        "status": "DONE",
+        "correlation": "Xp3xB5",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741092,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "request": {
+        "input": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state. A single white cup rests on the tabletop near the red woman. Red woman grips its side with her right hand. Blue woman keeps both hands away from the cup.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support. Exactly one cup at table center. Red woman still holds its side with her right hand. Blue woman supports its base with her left palm and steadies its other side with her right hand. Three hands visibly contact the same cup.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state. A single white cup rests on the tabletop near the red woman. Red woman grips its side with her right hand. Blue woman keeps both hands away from the cup.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support. Exactly one cup at table center. Red woman still holds its side with her right hand. Blue woman supports its base with her left palm and steadies its other side with her right hand. Three hands visibly contact the same cup.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+          "seed": 741092,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state. A single white cup rests on the tabletop near the red woman. Red woman grips its side with her right hand. Blue woman keeps both hands away from the cup.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support. Exactly one cup at table center. Red woman still holds its side with her right hand. Blue woman supports its base with her left palm and steadies its other side with her right hand. Three hands visibly contact the same cup.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right hand gripping side of the single cup resting on table, left hand resting at left table edge",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, watching the cup, both hands resting near her own body away from cup",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right arm extended toward right, holding the single white cup by its side above table center, left hand stays at table edge",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, reaching open left palm under the offered cup with a visible gap before contact, right hand near her own chest",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right hand still gripping left side of shared cup, left hand remains at table edge far from cup",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, left palm pressed against base of shared white cup, right hand holding its right side, accepting the same cup",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, empty right hand withdrawn to left side of table, open relaxed fingers, looking at blue woman",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, holding the single white cup near her chest in both hands, looking up at red woman",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "review": {
+        "page_id": "cup-page",
+        "source_image": "D:\\ImageGen\\镜头设计skill\\artifacts\\live-grid-v0.6\\cup-page\\raw\\image_0.png",
+        "source_sha256": "c9488e1f5483a171ec324f0aa84780ba6e2219dbb76fa162641df9ae4df8ef4b",
+        "layout_reviewed": true,
+        "all_content_approved": false,
+        "panels": [
+          {
+            "panel_id": "S01-P01",
+            "shot_id": "S01",
+            "grid_cell": [
+              0,
+              0
+            ],
+            "planned_bounds": [
+              0.0,
+              0.0,
+              0.5,
+              0.5
+            ],
+            "box": [
+              18,
+              12,
+              976,
+              562
+            ],
+            "image": "S01-P01.png",
+            "content_approved": false,
+            "observation": "One cup on table; both identities and wardrobe stable. Receiver already reaches early, and giver uses the inner hand rather than the specified anatomical right hand."
+          },
+          {
+            "panel_id": "S01-P02",
+            "shot_id": "S01",
+            "grid_cell": [
+              1,
+              0
+            ],
+            "planned_bounds": [
+              0.5,
+              0.0,
+              1.0,
+              0.5
+            ],
+            "box": [
+              988,
+              12,
+              2031,
+              562
+            ],
+            "image": "S01-P02.png",
+            "content_approved": false,
+            "observation": "Cup is raised and receiver has an air gap before contact. The specified left/right hand assignments are not followed."
+          },
+          {
+            "panel_id": "S01-P03",
+            "shot_id": "S01",
+            "grid_cell": [
+              0,
+              1
+            ],
+            "planned_bounds": [
+              0.0,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "box": [
+              18,
+              601,
+              976,
+              1149
+            ],
+            "image": "S01-P03.png",
+            "content_approved": false,
+            "observation": "Cup has returned to table; no clear shared airborne support by three hands. This repeats the initial state instead of completing contact."
+          },
+          {
+            "panel_id": "S01-P04",
+            "shot_id": "S01",
+            "grid_cell": [
+              1,
+              1
+            ],
+            "planned_bounds": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ],
+            "box": [
+              988,
+              601,
+              2031,
+              1149
+            ],
+            "image": "S01-P04.png",
+            "content_approved": true,
+            "observation": "Receiver alone holds one cup with both hands; giver has released it. Broad final ownership is readable, although posture and framing drift slightly."
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "duel-page-1",
+      "seed": 741093,
+      "result": {
+        "status": "FAILED",
+        "correlation": "s0GeiE",
+        "error": "network error: [Errno 2] No such file or directory"
+      },
+      "request": {
+        "input": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide side view, full bodies and feet visible. Red defender stands on upper landing at screen right, navy attacker stands two shallow steps below at screen left; distance between them is about two body lengths. Both look at each other. Establish top landing edge.\nPanel 2, row 1 column 2: Same wide camera and geometry. Navy attacker shifts weight forward and bends leading knee to start approaching up the steps. Red defender stays in exactly her established spot on landing.\nPanel 3, row 2 column 1: Cut to a closer full-body side view from the same east side. Navy attacker reaches the landing edge, feet and final step visible, red defender remains at original upper landing spot. Keep space around both feet.\nPanel 4, row 2 column 2: Same closer full-body camera. Navy attacker steps onto landing and starts a horizontal slash toward red defenders original position. Red defender starts one short sidestep toward camera, staying at the same elevation on the flat landing. Show both feet and the clear horizontal blade path.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide side view, full bodies and feet visible. Red defender stands on upper landing at screen right, navy attacker stands two shallow steps below at screen left; distance between them is about two body lengths. Both look at each other. Establish top landing edge.\nPanel 2, row 1 column 2: Same wide camera and geometry. Navy attacker shifts weight forward and bends leading knee to start approaching up the steps. Red defender stays in exactly her established spot on landing.\nPanel 3, row 2 column 1: Cut to a closer full-body side view from the same east side. Navy attacker reaches the landing edge, feet and final step visible, red defender remains at original upper landing spot. Keep space around both feet.\nPanel 4, row 2 column 2: Same closer full-body camera. Navy attacker steps onto landing and starts a horizontal slash toward red defenders original position. Red defender starts one short sidestep toward camera, staying at the same elevation on the flat landing. Show both feet and the clear horizontal blade path.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+          "seed": 741093,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide side view, full bodies and feet visible. Red defender stands on upper landing at screen right, navy attacker stands two shallow steps below at screen left; distance between them is about two body lengths. Both look at each other. Establish top landing edge.\nPanel 2, row 1 column 2: Same wide camera and geometry. Navy attacker shifts weight forward and bends leading knee to start approaching up the steps. Red defender stays in exactly her established spot on landing.\nPanel 3, row 2 column 1: Cut to a closer full-body side view from the same east side. Navy attacker reaches the landing edge, feet and final step visible, red defender remains at original upper landing spot. Keep space around both feet.\nPanel 4, row 2 column 2: Same closer full-body camera. Navy attacker steps onto landing and starts a horizontal slash toward red defenders original position. Red defender starts one short sidestep toward camera, staying at the same elevation on the flat landing. Show both feet and the clear horizontal blade path.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing still on level upper landing on right, upright, holding black sheathed sword at hip, watching attacker",
+                  "centers": [
+                    {
+                      "x": 0.365,
+                      "y": 0.23
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, standing left two steps below defender, drawn silver sword lowered at side, watching defender",
+                  "centers": [
+                    {
+                      "x": 0.14,
+                      "y": 0.295
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing still at right on upper landing, black sword remains in sheath, watching attacker",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.23
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, leaning forward on lower steps at left, bent leading knee, starting to ascend, holding drawn blade low",
+                  "centers": [
+                    {
+                      "x": 0.665,
+                      "y": 0.28
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing at right on upper landing, upright, calm, sword fully sheathed",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.74
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, arriving at landing edge from left, leading foot planted on top step, rear foot one step below, drawn blade beginning to lift",
+                  "centers": [
+                    {
+                      "x": 0.19,
+                      "y": 0.775
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, starting sideways step toward camera on level landing, leading foot moves forward in depth, upper body shifts out of blade lane, sword stays sheathed at hip",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.8049999999999999
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, stepping right onto flat upper landing, starting horizontal katana slash into defenders original location, both hands on hilt",
+                  "centers": [
+                    {
+                      "x": 0.715,
+                      "y": 0.73
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.365,
+                      "y": 0.23
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.14,
+                      "y": 0.295
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.23
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.665,
+                      "y": 0.28
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.74
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.19,
+                      "y": 0.775
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.8049999999999999
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.715,
+                      "y": 0.73
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      }
+    },
+    {
+      "page_id": "duel-page-2",
+      "seed": 741094,
+      "result": {
+        "status": "DONE",
+        "correlation": "OzbnHL",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741094,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "request": {
+        "input": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel. This page continues directly from a missed horizontal slash. All characters are now on the upper flat landing; no one goes down the steps.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Critical miss, closer full-body side view. Red defender is already safely nearer camera on the SAME LEVEL landing. Navy attackers horizontal silver blade passes through EMPTY SPACE behind her at her old position; clear visible air gap between blade and her body. Both feet on the same flat slab; steps remain far left outside the sidestep path.\nPanel 2, row 1 column 2: Same closer full-body view. Navy attacker brakes near reds former position on flat landing and lowers silver blade. Red defender remains offset toward camera on same level, hands on sheathed sword, no counterattack. Blade clear of defender.\nPanel 3, row 2 column 1: Return to original wide east-side view. Both women now on the SAME upper landing. Navy attacker stands where red originally stood; red defender stands one short step toward camera from attacker. Two lower steps are far screen left and empty. Red torii and stone lantern match opening.\nPanel 4, row 2 column 2: Same wide composition and final positions. Navy attacker turns head toward red defender nearer camera, surprised. Red defender calmly watches her with black sword still completely sheathed. No further attack.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel. This page continues directly from a missed horizontal slash. All characters are now on the upper flat landing; no one goes down the steps.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Critical miss, closer full-body side view. Red defender is already safely nearer camera on the SAME LEVEL landing. Navy attackers horizontal silver blade passes through EMPTY SPACE behind her at her old position; clear visible air gap between blade and her body. Both feet on the same flat slab; steps remain far left outside the sidestep path.\nPanel 2, row 1 column 2: Same closer full-body view. Navy attacker brakes near reds former position on flat landing and lowers silver blade. Red defender remains offset toward camera on same level, hands on sheathed sword, no counterattack. Blade clear of defender.\nPanel 3, row 2 column 1: Return to original wide east-side view. Both women now on the SAME upper landing. Navy attacker stands where red originally stood; red defender stands one short step toward camera from attacker. Two lower steps are far screen left and empty. Red torii and stone lantern match opening.\nPanel 4, row 2 column 2: Same wide composition and final positions. Navy attacker turns head toward red defender nearer camera, surprised. Red defender calmly watches her with black sword still completely sheathed. No further attack.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+          "seed": 741094,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, same two female swordswomen repeated across four panels, stone shrine landing at dusk, broad level upper landing on right and exactly two shallow steps descending toward left, red torii at far back right, stone lantern at back left. Camera always on east side of action, red-kimono defender A initially screen right on landing, navy attacker B screen left below. A keeps her sword fully inside its black sheath throughout, only B has a visible naked silver blade, no sword clash, no injury, no blood. Maintain the same shrine geometry and identity across every panel. This page continues directly from a missed horizontal slash. All characters are now on the upper flat landing; no one goes down the steps.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Critical miss, closer full-body side view. Red defender is already safely nearer camera on the SAME LEVEL landing. Navy attackers horizontal silver blade passes through EMPTY SPACE behind her at her old position; clear visible air gap between blade and her body. Both feet on the same flat slab; steps remain far left outside the sidestep path.\nPanel 2, row 1 column 2: Same closer full-body view. Navy attacker brakes near reds former position on flat landing and lowers silver blade. Red defender remains offset toward camera on same level, hands on sheathed sword, no counterattack. Blade clear of defender.\nPanel 3, row 2 column 1: Return to original wide east-side view. Both women now on the SAME upper landing. Navy attacker stands where red originally stood; red defender stands one short step toward camera from attacker. Two lower steps are far screen left and empty. Red torii and stone lantern match opening.\nPanel 4, row 2 column 2: Same wide composition and final positions. Navy attacker turns head toward red defender nearer camera, surprised. Red defender calmly watches her with black sword still completely sheathed. No further attack.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing in foreground right after a short sidestep toward camera, both feet on level landing, body clearly below and separated from background blade lane, holding black fully sheathed sword",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.34
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, in background center left on level landing, arms extended to right, silver sword slashing empty air BEHIND red defender, no contact",
+                  "centers": [
+                    {
+                      "x": 0.235,
+                      "y": 0.18
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, foreground right on level landing, calm and still, holding fully sheathed black sword at hip",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.33
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, background near center, stopping after missed slash, bent knees, lowering drawn silver blade toward empty ground on right",
+                  "centers": [
+                    {
+                      "x": 0.78,
+                      "y": 0.19
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing foreground right on flat upper landing, one short step nearer camera than navy attacker, black sword fully sheathed",
+                  "centers": [
+                    {
+                      "x": 0.345,
+                      "y": 0.81
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, standing background right on same flat upper landing, lowered drawn silver blade, looking forward after missing",
+                  "centers": [
+                    {
+                      "x": 0.325,
+                      "y": 0.675
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, long black hair tied back, red kimono, dark hakama, holding a black fully sheathed katana at her left hip, standing still foreground right on same level upper landing, looking calmly at navy attacker, black sword remains fully in sheath",
+                  "centers": [
+                    {
+                      "x": 0.845,
+                      "y": 0.81
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short silver hair, navy blue sailor uniform, dark skirt, holding one drawn silver katana in both hands, standing background right, turning head toward red defender in foreground, surprised, silver katana lowered safely away",
+                  "centers": [
+                    {
+                      "x": 0.825,
+                      "y": 0.675
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.34
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.235,
+                      "y": 0.18
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.33
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.78,
+                      "y": 0.19
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.345,
+                      "y": 0.81
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.325,
+                      "y": 0.675
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.845,
+                      "y": 0.81
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.825,
+                      "y": 0.675
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "review": {
+        "page_id": "duel-page-2",
+        "source_image": "D:\\ImageGen\\镜头设计skill\\artifacts\\live-grid-v0.6\\duel-page-2\\raw\\image_0.png",
+        "source_sha256": "4c55a3a6dbd6dd5c041c8a65c80656f99565d235b0545b596bfdafd4086b506a",
+        "layout_reviewed": true,
+        "all_content_approved": false,
+        "panels": [
+          {
+            "panel_id": "S02-P03",
+            "shot_id": "S02",
+            "grid_cell": [
+              0,
+              0
+            ],
+            "planned_bounds": [
+              0.0,
+              0.0,
+              0.5,
+              0.5
+            ],
+            "box": [
+              12,
+              13,
+              1013,
+              571
+            ],
+            "image": "S02-P03.png",
+            "content_approved": false,
+            "observation": "Two red defenders appear in one panel along with one navy attacker. Defender is on lower foreground ground while attacker is on the upper landing. Critical same-level miss is not demonstrated."
+          },
+          {
+            "panel_id": "S02-P04",
+            "shot_id": "S02",
+            "grid_cell": [
+              1,
+              0
+            ],
+            "planned_bounds": [
+              0.5,
+              0.0,
+              1.0,
+              0.5
+            ],
+            "box": [
+              1029,
+              13,
+              2036,
+              571
+            ],
+            "image": "S02-P04.png",
+            "content_approved": false,
+            "observation": "One of each identity, but attacker remains above and behind defender on a different level. Blade points diagonally downward rather than showing the specified clear horizontal miss and brake."
+          },
+          {
+            "panel_id": "S03-P01",
+            "shot_id": "S03",
+            "grid_cell": [
+              0,
+              1
+            ],
+            "planned_bounds": [
+              0.0,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "box": [
+              12,
+              584,
+              1013,
+              1140
+            ],
+            "image": "S03-P01.png",
+            "content_approved": false,
+            "observation": "Two red defenders and two navy attackers appear. Repeated identities and different ground levels invalidate the planned single pair final positions."
+          },
+          {
+            "panel_id": "S03-P02",
+            "shot_id": "S03",
+            "grid_cell": [
+              1,
+              1
+            ],
+            "planned_bounds": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ],
+            "box": [
+              1029,
+              584,
+              2036,
+              1140
+            ],
+            "image": "S03-P02.png",
+            "content_approved": false,
+            "observation": "One of each identity but different ground levels persist; no clear attacker head-turn toward defender. The final relation does not match the planned same-level result."
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "cup-page-revision-1",
+      "seed": 741092,
+      "result": {
+        "status": "DONE",
+        "correlation": "DS62Ov",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741092,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "request": {
+        "input": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background. Only the first cup rests on the table. In the second and third panels the cup is raised in MID-AIR at chest height. In the last panel the receiver holds it near her chest.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state, single white cup rests on tabletop in front of red woman, red woman grips cup side. Blue woman keeps both hands folded in her lap below table, no reaching yet.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support IN MID-AIR. Same medium two-shot. Red womans extended arm holds the single white cup at chest height halfway between the two women, clearly above the tabletop. Blue womans left palm touches and supports its bottom; blue womans right hand steadies its side. Red woman has NOT let go. Exactly three hands contact the same raised cup, cup base visible resting on blue palm. Red womans unused left hand stays on far left table edge.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background. Only the first cup rests on the table. In the second and third panels the cup is raised in MID-AIR at chest height. In the last panel the receiver holds it near her chest.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state, single white cup rests on tabletop in front of red woman, red woman grips cup side. Blue woman keeps both hands folded in her lap below table, no reaching yet.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support IN MID-AIR. Same medium two-shot. Red womans extended arm holds the single white cup at chest height halfway between the two women, clearly above the tabletop. Blue womans left palm touches and supports its bottom; blue womans right hand steadies its side. Red woman has NOT let go. Exactly three hands contact the same raised cup, cup base visible resting on blue palm. Red womans unused left hand stays on far left table edge.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+          "seed": 741092,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece\n2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background. Only the first cup rests on the table. In the second and third panels the cup is raised in MID-AIR at chest height. In the last panel the receiver holds it near her chest.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Initial state, single white cup rests on tabletop in front of red woman, red woman grips cup side. Blue woman keeps both hands folded in her lap below table, no reaching yet.\nPanel 2, row 1 column 2: Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.\nPanel 3, row 2 column 1: Shared support IN MID-AIR. Same medium two-shot. Red womans extended arm holds the single white cup at chest height halfway between the two women, clearly above the tabletop. Blue womans left palm touches and supports its bottom; blue womans right hand steadies its side. Red woman has NOT let go. Exactly three hands contact the same raised cup, cup base visible resting on blue palm. Red womans unused left hand stays on far left table edge.\nPanel 4, row 2 column 2: Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right hand gripping side of the single cup resting on table, left hand resting at left table edge",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, looking at cup, both hands folded in lap below table, no hands reaching toward cup",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right arm extended toward right, holding the single white cup by its side above table center, left hand stays at table edge",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, reaching open left palm under the offered cup with a visible gap before contact, right hand near her own chest",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, right arm extended horizontally toward right at chest height, right hand gripping the left side of the single white cup held high above table, still holding the cup, left hand rests at far left table edge",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, both forearms raised toward left at chest height, left palm directly contacting and supporting bottom of the shared airborne white cup, right hand gripping its other side, three hands hold this same raised cup",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short black bob hair, brown eyes, red cardigan, white shirt, seated on left, empty right hand withdrawn to left side of table, open relaxed fingers, looking at blue woman",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt, seated on right, holding the single white cup near her chest in both hands, looking up at red woman",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "review": {
+        "page_id": "cup-page-revision-1",
+        "source_image": "D:\\ImageGen\\镜头设计skill\\artifacts\\live-grid-v0.6\\cup-page-revision-1\\raw\\image_0.png",
+        "source_sha256": "41f67f4acdc49fd66546de9d8c467dd6b0e4dbca743caefe2fceb88c7a247705",
+        "layout_reviewed": true,
+        "all_content_approved": false,
+        "panels": [
+          {
+            "panel_id": "S01-P01",
+            "shot_id": "S01",
+            "grid_cell": [
+              0,
+              0
+            ],
+            "planned_bounds": [
+              0.0,
+              0.0,
+              0.5,
+              0.5
+            ],
+            "box": [
+              19,
+              17,
+              977,
+              559
+            ],
+            "image": "S01-P01.png",
+            "content_approved": false,
+            "observation": "Identities stable and one cup visible. Receiver still has hands above table despite the revised lap instruction; exact hand assignment remains unresolved."
+          },
+          {
+            "panel_id": "S01-P02",
+            "shot_id": "S01",
+            "grid_cell": [
+              1,
+              0
+            ],
+            "planned_bounds": [
+              0.5,
+              0.0,
+              1.0,
+              0.5
+            ],
+            "box": [
+              1017,
+              17,
+              2028,
+              559
+            ],
+            "image": "S01-P02.png",
+            "content_approved": false,
+            "observation": "Cup is raised exaggeratedly near head height and receiver is still separated. Raising is readable but intended chest-height blocking is not matched."
+          },
+          {
+            "panel_id": "S01-P03",
+            "shot_id": "S01",
+            "grid_cell": [
+              0,
+              1
+            ],
+            "planned_bounds": [
+              0.0,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "box": [
+              19,
+              601,
+              977,
+              1142
+            ],
+            "image": "S01-P03.png",
+            "content_approved": false,
+            "observation": "Receiver now holds the raised cup alone; giver has both hands away. The intended shared grip has been skipped, so this cannot be an approved handoff contact state."
+          },
+          {
+            "panel_id": "S01-P04",
+            "shot_id": "S01",
+            "grid_cell": [
+              1,
+              1
+            ],
+            "planned_bounds": [
+              0.5,
+              0.5,
+              1.0,
+              1.0
+            ],
+            "box": [
+              1017,
+              601,
+              2028,
+              1142
+            ],
+            "image": "S01-P04.png",
+            "content_approved": true,
+            "observation": "Receiver alone holds one cup near chest; giver has released it. Broad final ownership is readable."
+          }
+        ]
+      }
+    }
+  ]
+}

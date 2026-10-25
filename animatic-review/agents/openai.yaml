@@ -1,0 +1,4 @@
+interface:
+  display_name: "动态预演与回改"
+  short_description: "用时间、剪辑、声音和实际观看检查分镜与关键原画，定位问题并提出可执行的回改"
+  default_prompt: "用 $animatic-review 检查这段分镜或素材的节奏、声音与观看效果，制作所需预演并修正具体问题。"

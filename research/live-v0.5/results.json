@@ -1,0 +1,139 @@
+{
+  "protocol": "Existing worked examples; execution test, no independent reader, no old/new A/B. Visual review uses actual images and video sampled at 8fps. Audio semantics not reviewed.",
+  "image_requests": 17,
+  "image_requests_with_source_image": 3,
+  "novelai_balance": {
+    "before": 16413,
+    "after": 16413,
+    "observed_change": 0
+  },
+  "cup": {
+    "initial_board": "failed",
+    "revision_board": "failed",
+    "initial_issues": [
+      {
+        "panel": "S01-P01",
+        "observed": "two cups, one per person, instead of one shared prop"
+      },
+      {
+        "panel": "S01-P02",
+        "observed": "receiver hand already touches the cup rather than clear pre-contact gap"
+      },
+      {
+        "panel": "S01-P03",
+        "observed": "giver adds a second supporting hand; intended three active hands become four"
+      },
+      {
+        "relation": "same continuous shot",
+        "observed": "viewpoint and render style drift across independently generated panels"
+      }
+    ],
+    "revision_issues": [
+      {
+        "panel": "S01-P01",
+        "observed": "single cup and separated receiver hands achieved; idle hands are on table rather than in lap but away from handoff"
+      },
+      {
+        "panels": [
+          "S01-P02",
+          "S01-P03"
+        ],
+        "observed": "source-image composition retained but offering/shared-support actions not drawn"
+      },
+      {
+        "panel": "S01-P04",
+        "observed": "second cup reappears; intended ownership transfer not drawn"
+      }
+    ],
+    "video_visual_result": "basic handoff readable with caveats; does not validate failed storyboard pipeline",
+    "video_reference": "only corrected P01 as first frame; other failed panels deliberately not submitted",
+    "video_observations": [
+      {
+        "time_s": "~1.5-3.0",
+        "observed": "giver moves one cup toward receiver"
+      },
+      {
+        "time_s": "~3.5-5.1",
+        "observed": "receiver supports cup before giver releases"
+      },
+      {
+        "time_s": "~5.25-6.5",
+        "observed": "giver withdraws and receiver holds same cup"
+      },
+      {
+        "requested_duration_s": 6,
+        "actual_video_duration_s": 6.583333,
+        "actual_size": "1344x768",
+        "frames": 158,
+        "fps": 24,
+        "observed": "length is not exact and size is not exact 16:9"
+      }
+    ]
+  },
+  "duel": {
+    "initial_board": "failed",
+    "revision_opening": "failed exact staging",
+    "initial_issues": [
+      {
+        "relation": "same shot",
+        "observed": "camera scale and height, stair count, torii and relative distances change between panels"
+      },
+      {
+        "panel": "S02-P03",
+        "observed": "does not clearly depict a connected blade passing through vacated attack lane"
+      },
+      {
+        "panels": [
+          "S03-P01",
+          "S03-P02"
+        ],
+        "observed": "fighters remain on separated heights; intended stopped same-level state missing"
+      }
+    ],
+    "revision_issues": [
+      {
+        "panel": "R01-OPEN",
+        "observed": "flat terrace introduced but navy woman is already on terrace, not two steps below; opening rejected as exact layout anchor"
+      }
+    ],
+    "video_reference": "only original P01 as first frame; failed eight-panel sequence and failed revised opening not submitted",
+    "video_visual_result": "failed the intended evasion relation and full-body framing; broad approach/slash/stop sequence readable",
+    "video_observations": [
+      {
+        "time_s": "~4.25-4.625",
+        "observed": "slash descends while red woman is still near original standing position; no clear vacated-lane-before-blade evidence"
+      },
+      {
+        "time_s": "~4.625-5.875",
+        "observed": "red woman then moves toward foreground; path appears to descend stairs rather than a clearly same-level sidestep; world path remains uncertain"
+      },
+      {
+        "time_s": "~6.0-7.25",
+        "observed": "red woman head goes outside the frame; full-body viewing constraint fails"
+      },
+      {
+        "time_s": "~7.375 onward",
+        "observed": "wide view returns; actors watch one another, but exact planned same-level result is not established"
+      },
+      {
+        "requested_duration_s": 10,
+        "actual_video_duration_s": 10.125,
+        "actual_size": "1344x768",
+        "frames": 243,
+        "fps": "24/1"
+      }
+    ]
+  },
+  "h3_jobs": {
+    "cup": {
+      "task_id": "b15abe78-d4f7-4335-ba15-cc81227cc7d6",
+      "status": "SUCCEEDED",
+      "download_status": "complete"
+    },
+    "duel": {
+      "task_id": "6d614423-c7ed-45ab-a198-5c7d8cbc3ce4",
+      "status": "SUCCEEDED",
+      "download_status": "complete"
+    }
+  }
+}

@@ -1,0 +1,512 @@
+[
+  {
+    "case": "cup",
+    "panel": "S01-P01",
+    "seed": 26102500,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, small quiet cafe, simple light gray wall, wooden table; fixed eye-level medium two-shot from the front of a small cafe table. A sits at the LEFT facing right; B sits at the RIGHT facing left. Both heads, elbows, forearms and the entire tabletop are visible. A single plain white ceramic cup rests on the table near A. A grips its left side with her right hand while it still rests on the tabletop. B looks at the cup with a hesitant expression and keeps both hands close to herself, visibly separate from the cup.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\panels\\S01-P01.png"
+  },
+  {
+    "case": "cup",
+    "panel": "S01-P02",
+    "seed": 26102501,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, small quiet cafe, simple light gray wall, wooden table; same fixed medium two-shot from the front of the small cafe table, A LEFT facing right and B RIGHT facing left. Both heads, elbows, forearms and tabletop visible. A holds a single white ceramic cup above the table between them with her extended right hand on the LEFT side of the cup. B hesitantly reaches her LEFT hand toward the cup from BELOW; her fingertips have not reached its underside yet. The cup is clearly supported only by A. B watches the cup, her right hand waits near her chest.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\panels\\S01-P02.png"
+  },
+  {
+    "case": "cup",
+    "panel": "S01-P03",
+    "seed": 26102502,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, small quiet cafe, simple light gray wall, wooden table; same fixed medium two-shot, A LEFT and B RIGHT facing each other over a cafe table, both heads, arms and tabletop visible. A single white ceramic cup is between them above the table. A still grips the LEFT SIDE of this cup with her extended right hand. B has placed her LEFT PALM flat underneath the CUP BASE and her right fingertips against its RIGHT SIDE. The THREE separate hands touch this same cup from three distinct directions. Shared support before release. Clear small air spaces separate their forearms so ownership of each hand can be followed back to its person.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\panels\\S01-P03.png"
+  },
+  {
+    "case": "cup",
+    "panel": "S01-P04",
+    "seed": 26102503,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, small quiet cafe, simple light gray wall, wooden table; same fixed medium two-shot, A LEFT and B RIGHT facing each other over the cafe table. B alone holds a single white ceramic cup near her torso: her LEFT PALM under its BASE, her RIGHT HAND against its right side. A has withdrawn her right hand to her own side of the table with an open relaxed palm, far away from the cup. B looks up toward A. Both faces, every arm, the cup and tabletop are clearly visible. No one drinks.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\panels\\S01-P04.png"
+  },
+  {
+    "case": "cup/revision1",
+    "panel": "S01-P01",
+    "seed": 26102500,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single pencil storyboard image with flat red and blue clothing. Plain empty room, bare wooden worktable, fixed side-facing medium two-shot. Exactly two adult women facing each other: short black-haired red-cardigan woman seated LEFT, blonde bob blue-blouse woman seated RIGHT. There is ONLY ONE WHITE CUP in the whole image. It rests on the tabletop beside the red woman and is grasped by her right hand. The blue woman has BOTH HANDS FOLDED TOGETHER IN HER LAP BELOW THE TABLE, visible upper arms angled down, looking hesitantly at that one distant cup. Her side of the tabletop is completely empty. The red woman has her idle left hand in her lap. Both heads and the cup visible, no text, no panel grid.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\revision1\\panels\\S01-P01.png"
+  },
+  {
+    "case": "cup/revision1",
+    "panel": "S01-P02",
+    "seed": 26102501,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single pencil storyboard image with flat red and blue clothing. Plain empty room, bare wooden worktable, fixed medium two-shot. Red-cardigan black-haired woman LEFT offers the ONLY white cup by gripping its left side with her right hand, extending it above the center of the table. Blue-blouse blonde-bob woman RIGHT hesitantly reaches her left hand palm-up beneath the cup but a clear visible AIR GAP remains between fingertips and the bottom. Her right hand stays folded against her own chest, far away from the cup. Red woman left hand stays below the table in her lap. Exactly TWO active hands, each connected visibly to its owner, and exactly ONE cup. Both faces visible, no text.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": "artifacts/live-v0.5-20261025/cup/revision1/panels/S01-P01.png",
+    "strength": 0.65,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\revision1\\panels\\S01-P02.png"
+  },
+  {
+    "case": "cup/revision1",
+    "panel": "S01-P03",
+    "seed": 26102502,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single pencil storyboard image with flat red and blue clothing. Plain empty room, bare wooden table, fixed medium two-shot. Short black-haired woman in red cardigan LEFT and blonde-bob woman in blue blouse RIGHT. ONE white cup hovers centered over the table. Only TWO hands touch it: red woman RIGHT hand grips its LEFT SIDE, blue woman LEFT palm presses flat under its BASE. Red woman idle left arm hangs straight down to her lap BELOW TABLE, no other red hand near the cup. Blue woman idle right hand is folded against her own upper chest, no other blue hand near the cup. The active red and blue forearms approach from different heights and remain separated. Both faces readable, no lettering.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": "artifacts/live-v0.5-20261025/cup/revision1/panels/S01-P01.png",
+    "strength": 0.65,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\revision1\\panels\\S01-P03.png"
+  },
+  {
+    "case": "cup/revision1",
+    "panel": "S01-P04",
+    "seed": 26102503,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single pencil storyboard image with flat red and blue clothing. Plain room and bare wooden table, same fixed medium two-shot. Short black-haired red-cardigan woman LEFT has both hands withdrawn on her own side, well away from the cup. Blonde-bob blue-blouse woman RIGHT alone holds the ONE white cup near her torso, her left hand supporting its base and gripping its side. Her right hand rests against her chest. She has looked up at the red woman. Both faces and the hand supporting the cup visible, the entire left half of the table is empty. No drinking. No lettering.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, short black hair, red cardigan, white shirt, seated, on the left",
+        "center": {
+          "x": 0.26,
+          "y": 0.47
+        }
+      },
+      {
+        "prompt": "adult woman B, blonde bob haircut, blue blouse, seated, on the right",
+        "center": {
+          "x": 0.75,
+          "y": 0.47
+        }
+      }
+    ],
+    "input_image": "artifacts/live-v0.5-20261025/cup/revision1/panels/S01-P01.png",
+    "strength": 0.65,
+    "output": "artifacts\\live-v0.5-20261025\\cup\\revision1\\panels\\S01-P04.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S01-P01",
+    "seed": 26102600,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; wide full-body two-shot, east-side camera looking diagonally along two broad wet stone steps toward a wide shrine landing, distant torii at upper right, a stone lantern at far left. Kimono woman A stands at the RIGHT on the upper landing, sailor woman B stands at LEFT two steps lower facing her. Clear empty distance between them. A calmly holds exactly one fully SHEATHED black katana at her waist with right hand; B holds exactly one DRAWN silver katana in her right hand, lowered outward beside her right thigh. Both heads and both pairs of feet entirely visible.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S01-P01.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S01-P02",
+    "seed": 26102601,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; same east-side wide full-body two-shot and same shrine steps. Kimono A is RIGHT on the upper landing, calm and still, holding her fully sheathed black katana at the waist. Sailor B is LEFT on the lower step, leaning weight onto the front boot and bending the rear knee to begin advancing. Her right hand raises the drawn silver katana slightly outward ready to move. Both heads, feet and weapons readable. No contact.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S01-P02.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S02-P01",
+    "seed": 26102602,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; closer east-side full-body two-shot of the same shrine landing. Sailor B is at LEFT, her leading boot reaching the landing edge after climbing the last two steps, drawn silver blade rising in her right hand. Kimono A is at RIGHT on the landing, not yet displaced, holding her fully sheathed black katana low at waist level. The gap is now one extended arm plus sword length. Both heads and feet entirely visible. A low stone boundary behind A marks the unchanged back of the landing.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S02-P01.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S02-P02",
+    "seed": 26102603,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; same east-side full-body two-shot on shrine landing. Sailor B at LEFT makes a forward step onto the landing and begins a diagonal downward cut with her right-hand silver katana. Kimono A at RIGHT starts ONE lateral sidestep toward the camera into the foreground, off the straight approach line; her leading geta is just lifting, body upright. A holds the black katana fully in its sheath at her hip, not blocking. Show the start of the sidestep and the start of the downward cut, not a completed pose. Both heads, feet, entire sword blade visible; the fighters are not touching.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S02-P02.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S02-P03",
+    "seed": 26102604,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; same east-side full-body two-shot. Kimono A is now in the RIGHT FOREGROUND after one sidestep toward the camera, holding her fully sheathed black katana at her hip. Sailor B is LEFT MIDGROUND in a forward lunge; her right hand completes a downward diagonal cut through EMPTY SPACE behind A, where A stood previously. Silver blade misses A by a visible gap. Both women, both full bodies, their weapons and the empty attack lane are readable as separate silhouettes, no weapon crossing, no collision.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S02-P03.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S02-P04",
+    "seed": 26102605,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; same east-side full-body two-shot. Sailor B has stopped near the CENTER of the upper shrine landing, feet planted and knees absorbing her forward motion, right hand lowering the drawn silver blade outward. Kimono A stands offset at RIGHT FOREGROUND after the single lateral step, facing B and still holding her black katana fully sheathed. Both remain on the upper landing and there is clear air between them. A did not attack or trade places with B.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.48,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S02-P04.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S03-P01",
+    "seed": 26102606,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; return to the original wider east-side two-shot of the shrine. Both women are now on the UPPER landing: sailor B at CENTER near the old standing place of A, kimono A offset to RIGHT FOREGROUND, no longer directly in B attack lane. The two lower steps at left are empty. B has just stabilized with her right-hand silver blade down, A remains still holding a fully sheathed black katana. Both heads and feet visible, landmarks match the opening.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.48,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S03-P01.png"
+  },
+  {
+    "case": "duel",
+    "panel": "S03-P02",
+    "seed": 26102607,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, one landscape 16:9 image, rough clean pencil storyboard with restrained flat colors, clear readable anatomy and silhouettes, no lettering, no borders, no panel subdivisions, simple lighting, observational camera, abandoned Japanese shrine at dusk, broad wet stone steps, cedar trees, pale low mist; same original wide east-side two-shot and unchanged final positions on the upper landing. Sailor B at CENTER has turned her head toward kimono A at RIGHT FOREGROUND and now watches her with a wary reassessing expression; her body remains braced after the missed cut, drawn silver blade lowered in her right hand. A meets her gaze calmly, black katana still entirely in sheath at her waist, no pursuit. Clearly visible gaze relationship and two separated bodies. No blade contact.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.48,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\panels\\S03-P02.png"
+  },
+  {
+    "case": "duel/revision1",
+    "panel": "R01-OPEN",
+    "seed": 261025100,
+    "model": "nai-diffusion-5-full",
+    "width": 1024,
+    "height": 576,
+    "steps": 23,
+    "prompt": "single storyboard frame, wide fixed eye-level side view, full bodies and both feet visible, rough pencil illustration with restrained flat colors. A SMALL EMPTY LEVEL rectangular stone shrine terrace fills the right two thirds of the frame. Only TWO SHALLOW steps at its LEFT EDGE descend toward the lower left. The terrace surface is FLAT, not an endless staircase. Simple dark low stone boundary across the rear of the terrace and a small torii in the far upper right; cedar trunks and pale dusk mist. Woman A, adult, long black hair tied low, deep red kimono and wooden geta, stands in the RIGHT HALF of the flat terrace facing LEFT. She holds one fully sheathed black katana at her hip. Woman B, adult, short dark hair, navy sailor uniform with white scarf, black boots, stands at LEFT BELOW the terrace, exactly two shallow steps below A, facing RIGHT. She holds one drawn silver katana LOW beside her outside thigh. Clear short approach path to the terrace, plenty of empty terrace floor in front of A and toward the foreground for a sidestep. Both women are the same natural adult height. The opening is a cautious still standoff, neither is lunging. Clean separated silhouettes. No text, no contact, no blood, no close-up.\n",
+    "negative": "text, letters, captions, watermark, signature, speech bubble, comic panels, split screen, montage, collage, multiple views, extra people, extra arms, extra hands, detached hand, floating objects, extra cups, duplicate weapons, blood, gore, speed lines, close-up, cropped head, cropped feet\n",
+    "characters": [
+      {
+        "prompt": "adult woman A, deep red long-sleeved kimono, black hair tied low, wooden geta, holding one fully sheathed black katana at her waist, calm",
+        "center": {
+          "x": 0.74,
+          "y": 0.44
+        }
+      },
+      {
+        "prompt": "adult woman B, navy sailor blouse, white scarf, pleated skirt, black boots, short dark hair, one drawn silver katana in right hand",
+        "center": {
+          "x": 0.31,
+          "y": 0.57
+        }
+      }
+    ],
+    "input_image": null,
+    "strength": null,
+    "output": "artifacts\\live-v0.5-20261025\\duel\\revision1\\panels\\R01-OPEN.png"
+  }
+]

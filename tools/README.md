@@ -1,31 +1,15 @@
-# Source conversion tools
+# 仓库辅助工具
 
-How the two reference books became `build/extracted/*/full.md`. Kept for reproducibility; not needed at skill runtime.
+模型无关的分镜生产工具集中在 [shot-design/scripts](../shot-design/scripts/)，包括独立图片排审阅宫格，命令说明见 [数据与工具](../shot-design/references/shot-list-spec.md)。[NovelAI 可选适配](../integrations/novelai/README.md) 单独维护；这里仅保留研究和实验辅助脚本。
 
-## 1. MinerU extraction
+| 脚本 | 用途 |
+|---|---|
+| `build_release.py` | 只打包五个通用 skill、依赖说明和许可；生成可复现 ZIP、文件清单与 SHA256 |
+| `run_storyboard_live_test.py` | 按保存的 manifest 顺序调用已有 NovelAI 客户端，记录结果；不自动重试 |
+| `inspect_live_video.py` | 对现有视频提取元数据和带时间的检查帧；依赖 FFmpeg / FFprobe |
+| `mineru_extract.py` | 将本地资料提交 MinerU，保存提取结果；使用本机 `.env` 中的配置 |
+| `split_pdf.py` | 将本地 PDF 按页数拆分 |
 
-```bash
-python tools/mineru_extract.py reference/*.pdf --out build/extracted
-```
+从仓库根目录运行，参数见各脚本 `--help`。生成与提取需要已有账号配置；检查现有媒体和拆分 PDF 可在本地完成。原始资料与运行产物放在 Git 忽略的 `reference/`、`build/`、`artifacts/`。
 
-Uses the MinerU Precision Extract API (v4): request batch upload URLs → `PUT` the files → poll the batch result → download each result zip and unpack it. Reads `MINERU_ACCESS_TOKEN` from `.env`.
-
-Notes from this run:
-
-- Account limit is **200 pages per file**. *Shot by Shot* is 474 pages, so it was split first.
-- `--model vlm` was used; `pipeline` is the cheaper default.
-- Each extracted folder contains `full.md` plus the book's figures as `images/`.
-
-## 2. Splitting oversized PDFs
-
-```bash
-python tools/split_pdf.py "reference/Film Directing Shot by Shot_ Visualizing from Concept to Screen.pdf" \
-  --pages-per-file 160 --prefix shotbyshot
-```
-
-Writes `build/split/*.pdf`, which are then passed to the extractor and may be deleted afterwards (they are page-range duplicates of the original).
-
-## 3. What remains in the repo
-
-- `build/extracted/` — the Markdown and figures used to write the skill.
-- `.env` — tokens, git-ignored; never commit.
+一次性修改旧示例的脚本已移到 [research/archive/migrations](../research/archive/migrations/)，只保留为历史记录。

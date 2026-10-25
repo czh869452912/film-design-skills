@@ -1,0 +1,86 @@
+{
+  "title": "递杯：同镜内的所有权变化",
+  "target": {
+    "aspect": "16:9",
+    "duration_s": 6
+  },
+  "scene": {
+    "space": "桌子横在甲乙之间；甲在画左，乙在画右，杯在中间偏甲。",
+    "camera": "桌前固定双人中景，双方手和杯底可见。",
+    "action_chain": "杯由桌面承托 → 甲提起并递近 → 乙托住 → 甲松手；无悬空状态。"
+  },
+  "beats": [
+    {
+      "id": "B1",
+      "name": "提供",
+      "goal": "甲把杯递向乙"
+    },
+    {
+      "id": "B2",
+      "name": "接纳",
+      "goal": "乙接稳，甲放开"
+    }
+  ],
+  "review": {
+    "status": "text-walkthrough-only",
+    "unresolved": [
+      "须绘制检查交手处遮挡",
+      "时长需走戏验证"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "beat_ids": [
+        "B1",
+        "B2"
+      ],
+      "purpose": "在同一观看位置读清递交与接纳，不以切点跳过接触。",
+      "framing": {
+        "size": "MS two-shot",
+        "angle": "eye"
+      },
+      "camera": {
+        "move": "locked"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "duration_s": 2,
+          "description": "甲乙隔桌相对，杯在甲前方桌面；甲右手握杯身。",
+          "state": {
+            "cup_support": "table",
+            "holder": "A"
+          }
+        },
+        {
+          "id": "S01-P02",
+          "duration_s": 1,
+          "description": "甲把杯提离桌面并伸向乙，乙左手从杯底下方靠近。",
+          "state": {
+            "cup_support": "A right hand",
+            "holder": "A"
+          }
+        },
+        {
+          "id": "S01-P03",
+          "duration_s": 1,
+          "description": "乙左手托住杯底、右手扶杯；甲仍握杯，接触处可见。",
+          "state": {
+            "cup_support": "A and B hands",
+            "holder": "A+B"
+          }
+        },
+        {
+          "id": "S01-P04",
+          "duration_s": 2,
+          "description": "甲松手收回，乙独自持杯并抬眼看甲。",
+          "state": {
+            "cup_support": "B hands",
+            "holder": "B"
+          }
+        }
+      ]
+    }
+  ]
+}

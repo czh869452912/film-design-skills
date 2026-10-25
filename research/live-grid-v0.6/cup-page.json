@@ -1,0 +1,112 @@
+{
+  "page_id": "cup-page",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean confident lineart, restrained flat colors, soft cel shading, consistent character designs, consistent palette, very aesthetic, masterpiece",
+  "global_prompt": "2girls, the same two women appear in every panel, same fixed eye-level medium two-shot in all four panels, wooden table in a quiet cafe, pale beige wall, window at far left, black-haired red-cardigan woman always on the left, blonde blue-cardigan woman always on the right. One single plain white handleless cup in each panel; show both women and their hands above the tabletop. Four successive moments of one continuous cup handoff, unchanged camera and background.",
+  "characters": {
+    "A": {
+      "appearance": "girl, short black bob hair, brown eyes, red cardigan, white shirt"
+    },
+    "B": {
+      "appearance": "girl, short blonde bob hair, blue eyes, blue cardigan, white shirt"
+    }
+  },
+  "negative": "lowres, bad anatomy, extra arms, extra fingers, missing hands, watermark, logo, speech bubble, text, duplicate objects",
+  "panels": [
+    {
+      "panel_id": "S01-P01",
+      "shot_id": "S01",
+      "summary": "Initial state. A single white cup rests on the tabletop near the red woman. Red woman grips its side with her right hand. Blue woman keeps both hands away from the cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right hand gripping side of the single cup resting on table, left hand resting at left table edge",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, watching the cup, both hands resting near her own body away from cup",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P02",
+      "shot_id": "S01",
+      "summary": "Offering, before contact. Red woman extends her right arm and holds the single cup above table center. Blue woman reaches one open left palm toward its bottom; a visible air gap remains between her hand and cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right arm extended toward right, holding the single white cup by its side above table center, left hand stays at table edge",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, reaching open left palm under the offered cup with a visible gap before contact, right hand near her own chest",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P03",
+      "shot_id": "S01",
+      "summary": "Shared support. Exactly one cup at table center. Red woman still holds its side with her right hand. Blue woman supports its base with her left palm and steadies its other side with her right hand. Three hands visibly contact the same cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, right hand still gripping left side of shared cup, left hand remains at table edge far from cup",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, left palm pressed against base of shared white cup, right hand holding its right side, accepting the same cup",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P04",
+      "shot_id": "S01",
+      "summary": "Release complete. Blue woman alone holds the single white cup near her chest in both hands. Red woman has released it and withdrawn her empty right hand to her side of table; clearly separated from cup.",
+      "instances": [
+        {
+          "character_id": "A",
+          "prompt": "seated on left, empty right hand withdrawn to left side of table, open relaxed fingers, looking at blue woman",
+          "local_center": [
+            0.25,
+            0.5
+          ]
+        },
+        {
+          "character_id": "B",
+          "prompt": "seated on right, holding the single white cup near her chest in both hands, looking up at red woman",
+          "local_center": [
+            0.75,
+            0.5
+          ]
+        }
+      ]
+    }
+  ]
+}

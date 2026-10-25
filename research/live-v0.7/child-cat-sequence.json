@@ -1,0 +1,40 @@
+{
+  "title": "child-cat",
+  "target": {
+    "aspect": "16:9",
+    "duration_s": 6
+  },
+  "review": {
+    "status": "planned-not-drawn"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "camera": {
+        "move": "locked"
+      },
+      "panels": [
+        {
+          "id": "S01-P01",
+          "description": "Wide low side view. Child stands upright on right, notices the small cat under table on left, looking down toward it. Cat sits just inside the right edge of the under-table space, facing child. Red cube remains farther left behind cat.",
+          "duration_s": 1.5
+        },
+        {
+          "id": "S01-P02",
+          "description": "Same wide camera and table. Child bends knees into a squat on right, looking directly at cat. Hands still near his own knees. Cat remains at exactly the same floor spot near right edge under table, facing child.",
+          "duration_s": 1.5
+        },
+        {
+          "id": "S01-P03",
+          "description": "Same wide camera and table. Child stays squatting on right and extends one EMPTY open hand low toward cat. A clear gap remains between fingertips and cat. Cat is still at original under-table position, leaning back warily toward left.",
+          "duration_s": 1.5
+        },
+        {
+          "id": "S01-P04",
+          "description": "Same wide camera. Cat has taken two short backward steps to the LEFT, deeper under table and closer to red cube, while still facing right toward child. The distance from cats nose to childs outstretched empty hand is visibly LARGER than in previous panel. Child stays in same squat on right, keeps empty palm where it was and watches cat retreat. No touching or lifting cat.",
+          "duration_s": 1.5
+        }
+      ]
+    }
+  ]
+}

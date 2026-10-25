@@ -1,5 +1,5 @@
-display-name-zh: 镜头设计与预演
-version: 0.4.5
+display-name-zh: 镜头设计
+version: 0.8.0
 tag-en: Video
 tag-cn: 视频
 complete-tags-en:
@@ -10,10 +10,10 @@ complete-tags-cn:
 - 视频 / 镜头设计
 - 视频 / 摄影语言
 - 视频 / 提示词工程
-summary-en: Design, storyboard, and previz shots for Seedance 2.5 and MiniMax H3 video generation.
-summary-cn: 从节拍到镜头表、分镜图与动态分镜，完成面向 Seedance 2.5 / MiniMax H3 的镜头设计与情绪表达。
-desc-en: For directors and creators working with AI video models. It turns a beat or a brief into beats, a shot list, storyboard panels and an animatic - framing, angle, lens, movement, staging, composition, and emotional intent - then hands the design over as a brief with reference roles, continuity anchors, duration budgets, and failure-specific bans. Covers beat sheets and tempo templates, a 42-entry mechanism library, a six-dial emotion system, viewing-plan comparison, graphic composition, a shot-card schema with validator, scripted storyboard annotation (arrows drawn by code, not by the image model), an animatic builder with fades and audio, corpus evaluation, QC checks, and repair actions. It designs and previzes; it does not format final prompts - for MiniMax H3 that stays with h3-prompt-writing in Ref2VA mode.
-desc-cn: 面向使用 AI 视频模型的导演与创作者。把一句剧情或一个情绪目标，转化为节拍表、镜头表、分镜图与动态分镜：景别、角度、镜头、运动、调度、构图与情绪意图，并以设计稿交付：参考图角色、连续性锚点、时长预算、针对具体失败模式的禁止项。包含节拍与节奏模板、42 条机制库、六拨盘情绪系统、起/转/终观看方案比较、画面构图、镜头卡校验脚本、由脚本绘制标注的分镜（箭头不交给图片模型画）、带淡入淡出与音轨的 animatic、语料统计、质检与修复。它只做设计与预演，不负责提示词规格化——MiniMax H3 的提示词由 h3-prompt-writing 以 Ref2VA 六段式撰写。
+summary-en: Turn scenes and director choices into expressive shots and drawable storyboard panels.
+summary-cn: 将导演选择落实为调度、机位、构图、镜序和镜内关键变化。
+desc-en: One of five film design skills. Jointly designs action blocking, framing, composition, camera and cuts; includes model-independent storyboard, review-grid, reference-pack and animatic tools.
+desc-cn: 影视设计技能体系的一员，联合设计动作调度、取景构图、摄影与切镜；附模型无关的分镜数据、审阅宫格、参考包和动态分镜工具。
 author-en: Shot Design Skill
 author-cn: 镜头设计 Skill
 source: community

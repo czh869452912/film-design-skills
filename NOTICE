@@ -1,0 +1,24 @@
+# NOTICE
+
+The skill text and scripts are original. Principles were distilled from the following books and public material; no book passages, complete third-party system prompts or source code were copied.
+
+## Books
+
+- Steven D. Katz, *Film Directing: Shot by Shot — Visualizing from Concept to Screen*, Michael Wiese Productions, 1991.
+- Marcos Mateu-Mestre, *Framed Ink: Drawing and Composition for Visual Storytellers*, Design Studio Press, 2010.
+- Bruce Block, *The Visual Story*, 3rd ed., 2020.
+- Walter Murch, *In the Blink of an Eye*, 2nd ed., 2001.
+
+## Public material
+
+- [62656456/ai-film-skills](https://github.com/62656456/ai-film-skills), Apache-2.0: indexed camera arrangements and viewing-plan comparison.
+- [smixs/visual-skills](https://github.com/smixs/visual-skills), CC BY 4.0, © Serge Shima: dramaturgy and concrete physical facts in shot cards.
+- [zenstory-ai/drama-skills](https://github.com/zenstory-ai/drama-skills), MIT: preserving creator choices, reference roles and frozen-frame boundaries.
+- [0xhughs/director-skills](https://github.com/0xhughs/director-skills), MIT: separating visual intent from model-specific translation.
+- [OpenAI Cookbook — Sora](https://github.com/openai/openai-cookbook/tree/main/examples/sora) and [BytePlus Seedance guide](https://docs.byteplus.com/zh-CN/docs/ModelArk/seedance-2-5-prompt-guide): historical model-prompt experiments.
+- Disney Animation Story/Layout, Pixar in a Box and Toon Boom production discussions: iterative rough-board methods. Links are in references/sources.md.
+- [YILING0013/novelai_local_web](https://github.com/YILING0013/novelai_local_web), AGPL-3.0, commit a30d510a4f4eece69bed56958e9468196114c95e: separation of stable identities, per-panel appearances and global/individual prompts. The independently implemented optional page compiler and cropper now live outside the skill at repository integrations/novelai/.
+
+## Software and artwork
+
+Scripts use the Python standard library, [Pillow](https://python-pillow.org/) and external [FFmpeg](https://ffmpeg.org/). FFmpeg is not bundled. Repository test artwork was generated with NovelAI and is not taken from the books.

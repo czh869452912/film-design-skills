@@ -1,94 +1,61 @@
-# 镜头设计与预演 Skill
+# 影视设计 skill 体系 · v0.8.0
 
-给 AI 视频生成模型（Seedance 2.5 / MiniMax H3）做**镜头设计、情绪表达与分镜预演**的 Agent Skill，外加一套可校验、可标注、可拼 animatic 的工具，以及一次盲评 A/B 实验的完整归档。
+帮助普通人把想法拍成专业、有表现力的画面。主动参与导演与画面设计，用具体拍法帮助人选择、发现和完善表达，再落实为分镜、关键原画与实际播放。
 
-技能本身只做设计与预演，**不写提示词规格**——MiniMax H3 的提示词交给 `h3-prompt-writing`（Ref2VA 六段式），Seedance 交给对应的提示词指南。
+从当前问题进入，不要求用户先懂术语、写全剧本或走完固定流水线。图片、视频使用创作者能提供的模型与工具，设计不绑定供应商。
 
-```
-创意/剧情 → 节拍 → 观看方案 → 机制 → 镜头卡 → 分镜图 → animatic → 交付设计稿 → 提示词技能
-```
+## 五个技能
 
-## 目录
-
-| 目录 | 内容 | 入库 |
+| Skill | 负责的问题 | 典型请求 |
 |---|---|---|
-| [`shot-design/`](shot-design) | 技能本体：SKILL.md、14 篇 reference、5 个脚本、3 个示例、许可与变更记录 | ✅ |
-| [`ab-test/`](ab-test) | 文本盲评实验：简报、四份设计输出、评委全文、报告、两张对照分镜 | ✅ |
-| [`duel-test/`](duel-test) | H3 实拍对比：和服 vs 水手服刀战，两份设计 + Ref2VA 提示词 + 盲评结论 + 切点检测 | ✅（原始帧与视频忽略） |
-| [`research/`](research) | 外部参考调研（公开 skill、书籍、官方指南、数据集） | ✅ |
-| [`tools/`](tools) | 把参考书 PDF 转 Markdown 的流水线（MinerU）、PDF 切分、示例维护脚本 | ✅ |
-| [`reference/`](reference) | 原始参考书 PDF（Katz、Mateu-Mestre） | 🚫 忽略 |
-| `build/` | OCR 产物（Markdown + 插图） | 🚫 忽略 |
-| `artifacts/` | 本地运行产物：分镜图、animatic、临时镜头卡 | 🚫 忽略 |
-| `.dsh/` | 本机安装的项目内技能（NovelAI / H3 / gpt-image 等） | 🚫 忽略 |
+| [film-direction](film-direction/SKILL.md) · 导演共创 | 参与理解意图、提出画面表达、比较拍法并引导完善 | “他已经接受好意，但不愿先让步，怎么拍？” |
+| [shot-design](shot-design/SKILL.md) · 镜头设计 | 调度、机位、构图、镜序与镜内变化 | “把选定拍法展开成十二秒内的分镜。” |
+| [keyframe-design](keyframe-design/SKILL.md) · 关键画面 | 共享 layout、关键姿态、必要转折帧与原画回改 | “把这段落实为能画出来的关键原画，先解决接触。” |
+| [screen-media](screen-media/SKILL.md) · 媒体执行 | 按可用模型能力组织参考、转换输入、生成和局部修正 | “用我手头的图片编辑模型出原画，再用另一家视频模型生成。” |
+| [animatic-review](animatic-review/SKILL.md) · 动态预演与回改 | 时间、声音、剪接、实际观看和最早失效处 | “为什么图都对，连起来却没有表现出我想要的意思？” |
 
-## 快速开始
+技能可以协作或单独使用。导演共创是面向模糊创作意图的入口，不额外增加只负责转发的总控 skill；已有原画、分镜或视频可直接进入相应技能。技能之间传递当前所选方案与素材，不重做已确认的工作，不逐阶段制造审批。
 
-```bash
-# 1. 安装到本机技能目录（Windows）
-Copy-Item -Recurse shot-design "$env:USERPROFILE\.agents\skills\shot-design"
-# macOS / Linux: cp -r shot-design ~/.agents/skills/
+## 从一句话开始
 
-# 2. 跑回归测试（不需要网络）
-python shot-design/scripts/selftest.py
+> 用 $film-direction 帮我设计一个十二秒内的片段：甲递杯，乙接了。我想让人感觉乙接受了好意，却不愿先让步；别煽情。我不懂镜头，请带着我一起把画面做出来。
 
-# 3. 校验并渲染一个示例
-python shot-design/scripts/shotlist.py validate shot-design/examples/descent.json --strict
-python shot-design/scripts/shotlist.py render shot-design/examples/descent.json --format rhythm
+应得到可想象的拍法与推荐，例如同框呈现“回避对视却接住”，或最后揭示杯子已在手中；比较观看差异，再随用户反馈改变距离、构图、镜序或时间。不会先让人填写焦段、机位与专业参数，也不会只交一张术语齐全的表。
+
+体系重点处理约十五秒以内的片段，但时长不决定镜数或原画张数。原画可以反过来改变导演方案；宫格用来并排审阅，时间线检查信息显露、表演与声音。实际模型能力不足时说明损失与替代，不悄悄重写表达。
+
+## 安装与工具
+
+将以上五个同名目录复制到同一宿主技能目录。每个都有 SKILL.md 和 agents/openai.yaml，保持自动发现；已安装旧版时先保存本机改动。各技能没有必须读取仓库 research、书籍 OCR 或外部服务才能设计的依赖。
+
+[下载 v0.8.0 安装包](https://github.com/czh869452912/film-design-skills/releases/tag/v0.8.0)，解压后复制五个技能目录即可。包内包含文件 SHA256 清单，外部附压缩包校验值；研究资料、模型客户端和生成素材不进入安装包。本地构建运行 `python tools/build_release.py`，产物在 `dist/`。
+
+模型无关的本地工具集中保留在 [shot-design/scripts](shot-design/scripts/)，由有需要的技能使用，避免复制多套实现。[数据与命令](shot-design/references/shot-list-spec.md) 支持文字方案、独立图片排宫格、标注、参考包和动态分镜。Python 工具需要 3.10+；图像需要 Pillow；媒体需要 FFmpeg／FFprobe。
+
+需要图像工具时运行 `python -m pip install -r requirements.txt`。只做文字设计不需要安装 Python 依赖或配置模型账号。
+
+```text
+python shot-design/scripts/selftest.py --verbose
+python shot-design/scripts/board.py plan.json --images panels --out review-board.png --columns 2
+python integrations/novelai/selftest.py
 ```
 
-在支持技能调用的宿主里（Claude Code、Codex、DSH 等），直接说"用 shot-design 把这段设计成镜头"即可，或以 `skill(name="shot-design")` 加载。
+[NovelAI 可选适配](integrations/novelai/README.md) 保留在仓库，独立于通用技能安装。旧 H3、NovelAI 实验留作证据；不因为存在本机账号或某个字段就强制选择它们。
 
-## 技能能做什么
+## 研究与验证
 
-**设计层**：节拍表（13 套节奏模板）、起/转/终观看方案比较、42 条机制库（M01–M42）+ 8 个修饰项、六拨盘情绪系统、构图（含竖屏与色彩结构）、问答链与剪辑六法则。
+[关键原画调研](research/key-animation-workflow.md) 与 [导演能力及社区工具调研](research/ai-drama-directing-landscape.md) 是本次改造依据。[v0.8 改造与验证](research/suite-v0.8.md) 区分结构／工具检查、行为推演与尚待生成及观众验证的内容。[完整研究索引](research/README.md)
 
-**预演层**：分镜绘制规范（箭头、标注、版式、简略等级）→ `annotate.py` 用脚本画箭头与标签（不交给图片模型）→ `build_refpack.py` 把干净分镜打包成有序参考（`<Picture N>` ↔ `[Shot N]`）→ `animatic.py` 按每镜时长拼接，可加淡入淡出与音轨 → EDL。
+工具验证能检查文件、像素、帧序与时间，不能给艺术质量背书。历史 [v0.7 复测](research/live-v0.7/report.md) 的动作与版式失败仍然成立，不因改版改称通过。
 
-分镜不光是用来看的，**默认就是视频模型的参考图**：一镜一张、声明为"构图与调度"、排除草图风格；需要风格时再加一张彩色关键帧（实测结论见 [handoff.md](shot-design/references/handoff.md)）。
+代码与原创文本采用 [MIT License](LICENSE)；方法出处与署名见各自参考资料及 [NOTICE](NOTICE)。[版本记录](CHANGELOG.md)。
 
-**交付层**：设计稿（参考图角色、连续性、禁止项、节拍窗口）交给提示词技能；H3 走 Ref2VA。
-
-**校验**：`validate --strict` 检查结构、节拍、机制、时长、剪辑就绪度、均分节奏、竖屏景别等；`eval.py` 做语料统计与文档表格完整性检查；`selftest.py` 是 5 项回归门。
-
-## 示例
-
-| 文件 | 内容 |
+| 目录 | 内容 |
 |---|---|
-| [`examples/descent.json`](shot-design/examples/descent.json) | 10 s 动作段：3.6 / 1.8 / 2.2 / 2.4，hold-snap-hold |
-| [`examples/last-train.json`](shot-design/examples/last-train.json) | 12 s 情绪段：5.0 / 3.0 / 4.0 |
-| [`examples/the-interview.json`](shot-design/examples/the-interview.json) | 15 s 对话与权力反转 |
-| [`worked-example.md`](shot-design/references/worked-example.md) | 从设计到交付的完整叙事案例 |
-| [`worked-example-action.md`](shot-design/references/worked-example-action.md) | 动作段：观看方案对比、机制选择、剪辑就绪 |
-
-本地运行产物（分镜图、animatic、H3 成片）在 `artifacts/`，不入库。
-
-## 评测
-
-[`ab-test/report.md`](ab-test/report.md)：2 份简报 × 2 条件（有无技能），独立子代理执行、匿名盲评。
-
-- 技能方 2 胜 0 负：36 vs 32（情绪向）、37 vs 30（动作向），满分 40。
-- 结构检查：技能 6/6、6/6；基线 2/6、2/6。
-- 基线并非全面落后：光学与距离描述更硬、单镜信息密度更高；技能赢在节拍、观看方案、机制、风险预案。
-- 实验暴露的三条共性问题（信息负荷、禁止项缺正向替代、"看错"而非"画错"）已修入 0.4.1。
-
-[`duel-test/report.md`](duel-test/report.md)：同一简报用 MiniMax H3 实拍对比（和服 vs 水手服刀战）。
-
-- 这次**基线赢**（21 : 19）：技能把峰值押在"刀咬鞘"的物件特写上，1.2 s 内模型保不住"谁握着什么"；基线用 B 的瞳孔反应承担"一击之后空气变了"。
-- 切点执行无差异：两版检测到的画面突变都落在各自宣告的切点 ±0.5 s 内。
-- 结论已修入 0.4.3：接触帧必须有人（手或脸），否则下一镜补反应。
-
-## 依赖
-
-| 用途 | 依赖 |
-|---|---|
-| 校验、渲染、语料评估 | Python 3.9+（仅标准库） |
-| 分镜标注 `annotate.py` | Pillow |
-| animatic `animatic.py` | FFmpeg（PATH 中） |
-| A/B 实验与分镜图 | NovelAI、MiniMax H3（AutoDL）——**仅测试时使用，不是技能运行依赖** |
-
-## 版本与许可
-
-当前 `shot-design/meta.yaml` 为 **0.4.2**，变更见 [`CHANGELOG.md`](shot-design/CHANGELOG.md)。
-
-MIT（见 [`LICENSE`](shot-design/LICENSE)）。设计原则来自 Katz《Film Directing: Shot by Shot》、Mateu-Mestre《Framed Ink》等；结构上受公开项目启发，逐项署名见 [`NOTICE`](shot-design/NOTICE)。
+| 五个同名技能目录 | 可独立安装的运行指引、按需方法与共用工具 |
+| `examples/` | 不进入安装包的公开导演方案对照 |
+| `integrations/` | 可选供应商适配，独立于通用技能 |
+| `research/` | 调研、实际实验与明确标识的历史归档 |
+| `tests/fixtures/legacy/` | 旧数据格式回归样本 |
+| `tools/` | 打包与仓库研究辅助工具 |
+| `artifacts/`、`build/`、`reference/`、`dist/` | 忽略的本地资料、生成结果和构建产物 |

@@ -1,0 +1,20 @@
+{
+  "version": "0.7.0",
+  "skill_sha256": "825f63d0a4b018df4f123f9ca2380b5d1fd9f424ad4307ae013bba6f31b2f3b4",
+  "balance_before": 16236,
+  "max_calls": 3,
+  "cases": [
+    "cup-contact",
+    "child-cat"
+  ],
+  "seeds": {
+    "cup-contact": 741107,
+    "child-cat": 741108
+  },
+  "model": "nai-diffusion-5-full",
+  "steps": 23,
+  "width": 2048,
+  "height": 1152,
+  "reviewer": "same executing agent; not independent or blind",
+  "notes": "Cup viewing and support changed; not controlled A/B against v0.6. Cat is new generated subject matter but selected from the existing behavioral task list. No video generation planned; animatic is only a diagnostic still-frame playback."
+}

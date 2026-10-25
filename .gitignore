@@ -9,26 +9,27 @@ build/
 
 # local runs: animatics, generated panels, scratch shot lists
 artifacts/
+dist/
 *.mp4
 
 # raw frames and clips from the H3 duel test (report, designs, prompts and verdict are tracked)
-duel-test/frames/
-duel-test/frames-out/
-duel-test/frames-v2/
-duel-test/frames-panels/
-duel-test/frames-mixed/
-duel-test/refs/
-duel-test/h3/
-duel-test/judge/x/
-duel-test/judge/y/
-duel-test/judge/_diff_*
-duel-test/judge2/A1/
-duel-test/judge2/A2/
-duel-test/judge2/B1/
-duel-test/judge2/B2/
-duel-test/judge2/diff/
-duel-test/panels/*/
-duel-test/previs/*/
+research/archive/duel-test/frames/
+research/archive/duel-test/frames-out/
+research/archive/duel-test/frames-v2/
+research/archive/duel-test/frames-panels/
+research/archive/duel-test/frames-mixed/
+research/archive/duel-test/refs/
+research/archive/duel-test/h3/
+research/archive/duel-test/judge/x/
+research/archive/duel-test/judge/y/
+research/archive/duel-test/judge/_diff_*
+research/archive/duel-test/judge2/A1/
+research/archive/duel-test/judge2/A2/
+research/archive/duel-test/judge2/B1/
+research/archive/duel-test/judge2/B2/
+research/archive/duel-test/judge2/diff/
+research/archive/duel-test/panels/*/
+research/archive/duel-test/previs/*/
 
 # locally installed project skills (host state, not part of the deliverable)
 .dsh/
@@ -38,5 +39,3 @@ __pycache__/
 *.pyc
 Thumbs.db
 .DS_Store
-
-duel-test/judge/_diff_*

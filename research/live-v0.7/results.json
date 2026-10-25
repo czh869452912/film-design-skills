@@ -1,0 +1,790 @@
+{
+  "protocol": {
+    "version": "0.7.0",
+    "skill_sha256": "825f63d0a4b018df4f123f9ca2380b5d1fd9f424ad4307ae013bba6f31b2f3b4",
+    "balance_before": 16236,
+    "max_calls": 3,
+    "cases": [
+      "cup-contact",
+      "child-cat"
+    ],
+    "seeds": {
+      "cup-contact": 741107,
+      "child-cat": 741108
+    },
+    "model": "nai-diffusion-5-full",
+    "steps": 23,
+    "width": 2048,
+    "height": 1152,
+    "reviewer": "same executing agent; not independent or blind",
+    "notes": "Cup viewing and support changed; not controlled A/B against v0.6. Cat is new generated subject matter but selected from the existing behavioral task list. No video generation planned; animatic is only a diagnostic still-frame playback."
+  },
+  "balance_after": 16059,
+  "observed_anlas_decrease": 177,
+  "calls": 3,
+  "successful_images": 3,
+  "automatic_network_retries": 0,
+  "content_cases_passed": 0,
+  "content_cases_tested": 2,
+  "h3_calls": 0,
+  "regression": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0
+  },
+  "diagnostic_playback": {
+    "file": "artifacts/live-v0.7/child-cat/FAILED-diagnostic.mp4",
+    "duration_s": 6,
+    "decoded_frames": 144,
+    "fps": 24,
+    "shots": 1,
+    "panels": 4,
+    "content_approved": false
+  },
+  "experiments": [
+    {
+      "case": "cup-contact",
+      "result": {
+        "status": "DONE",
+        "correlation": "E0GLEL",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741107,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "review": {
+        "image": "raw/image_0.png",
+        "image_sha256": "df0995cf1297b6e702c361246f51ed26a0d97a40501b648f21df139839a8ed97",
+        "layout_reviewed": true,
+        "planned_grid_matched": false,
+        "actual_panel_count": 5,
+        "content_approved": false,
+        "observations": [
+          "Two top medium panels and three bottom hand panels instead of the planned four panels.",
+          "Cup approaches and blue palm supports it; red fingertips may touch its side in the close-up, but the red hand is open and does not clearly retain a supporting grip. Shared support remains ambiguous.",
+          "Later close-ups clearly show the red hand withdrawing and blue hand alone supporting the cup. Extra panels cannot be silently packed into the original four-state map."
+        ],
+        "crop_status": "not-mapped: actual frame count differs from planned ids; source retained"
+      },
+      "request": {
+        "input": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n2girls, four consecutive moments in a quiet cafe. The black-haired woman in red sits on the left, the blonde woman in blue sits on the right. Exactly one plain white ceramic tumbler without a handle in each panel. Top row medium two-shots across a wooden table, beige wall and window at left. Bottom row changes to close-ups of the SAME cup and the SAME red and blue sleeves, hands only, neutral tabletop background. Cup transfer from red woman to blue woman. Read left to right then down.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Medium two-shot. Red woman holds the single cup near her own body above the table. Blue woman looks at the offered cup, hesitating, hands folded near her own body.\nPanel 2, row 1 column 2: Same medium two-shot. Red woman extends the cup toward blue woman. Blue woman unfolds one hand and reaches toward it, but a clear air gap still separates her palm from cup. Red woman alone supports the cup.\nPanel 3, row 2 column 1: Cut to a tight hand close-up. Exactly ONE white cup held ABOVE tabletop, exactly TWO hands from opposite sides simultaneously supporting it. A red sleeve enters from the LEFT, its hand still grips the upper left side of cup. A blue sleeve enters from the RIGHT, its open palm is pressed flush against the BOTTOM of the SAME cup. The red hand has NOT released. Show both red grip and blue supporting palm in physical contact with this cup. No faces, no full people.\nPanel 4, row 2 column 2: Same tight hand close-up and tabletop. The blue-sleeved hand alone now supports the single white cup from below near right half of frame. The red-sleeved hand is OPEN and EMPTY, withdrawn leftward with a visible gap from the cup. Show one cup and two separated hands, one holding and the other empty. No faces, no full people.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n2girls, four consecutive moments in a quiet cafe. The black-haired woman in red sits on the left, the blonde woman in blue sits on the right. Exactly one plain white ceramic tumbler without a handle in each panel. Top row medium two-shots across a wooden table, beige wall and window at left. Bottom row changes to close-ups of the SAME cup and the SAME red and blue sleeves, hands only, neutral tabletop background. Cup transfer from red woman to blue woman. Read left to right then down.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Medium two-shot. Red woman holds the single cup near her own body above the table. Blue woman looks at the offered cup, hesitating, hands folded near her own body.\nPanel 2, row 1 column 2: Same medium two-shot. Red woman extends the cup toward blue woman. Blue woman unfolds one hand and reaches toward it, but a clear air gap still separates her palm from cup. Red woman alone supports the cup.\nPanel 3, row 2 column 1: Cut to a tight hand close-up. Exactly ONE white cup held ABOVE tabletop, exactly TWO hands from opposite sides simultaneously supporting it. A red sleeve enters from the LEFT, its hand still grips the upper left side of cup. A blue sleeve enters from the RIGHT, its open palm is pressed flush against the BOTTOM of the SAME cup. The red hand has NOT released. Show both red grip and blue supporting palm in physical contact with this cup. No faces, no full people.\nPanel 4, row 2 column 2: Same tight hand close-up and tabletop. The blue-sleeved hand alone now supports the single white cup from below near right half of frame. The red-sleeved hand is OPEN and EMPTY, withdrawn leftward with a visible gap from the cup. Show one cup and two separated hands, one holding and the other empty. No faces, no full people.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, watermark, logo, speech bubbles, text, bad anatomy, extra limbs, duplicate objects",
+          "seed": 741107,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n2girls, four consecutive moments in a quiet cafe. The black-haired woman in red sits on the left, the blonde woman in blue sits on the right. Exactly one plain white ceramic tumbler without a handle in each panel. Top row medium two-shots across a wooden table, beige wall and window at left. Bottom row changes to close-ups of the SAME cup and the SAME red and blue sleeves, hands only, neutral tabletop background. Cup transfer from red woman to blue woman. Read left to right then down.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Medium two-shot. Red woman holds the single cup near her own body above the table. Blue woman looks at the offered cup, hesitating, hands folded near her own body.\nPanel 2, row 1 column 2: Same medium two-shot. Red woman extends the cup toward blue woman. Blue woman unfolds one hand and reaches toward it, but a clear air gap still separates her palm from cup. Red woman alone supports the cup.\nPanel 3, row 2 column 1: Cut to a tight hand close-up. Exactly ONE white cup held ABOVE tabletop, exactly TWO hands from opposite sides simultaneously supporting it. A red sleeve enters from the LEFT, its hand still grips the upper left side of cup. A blue sleeve enters from the RIGHT, its open palm is pressed flush against the BOTTOM of the SAME cup. The red hand has NOT released. Show both red grip and blue supporting palm in physical contact with this cup. No faces, no full people.\nPanel 4, row 2 column 2: Same tight hand close-up and tabletop. The blue-sleeved hand alone now supports the single white cup from below near right half of frame. The red-sleeved hand is OPEN and EMPTY, withdrawn leftward with a visible gap from the cup. Show one cup and two separated hands, one holding and the other empty. No faces, no full people.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "woman, black bob hair, red cardigan, white shirt, seated on left, holding one white cup near her own chest with the hand nearest the other woman",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "woman, blonde bob hair, blue cardigan, white shirt, seated on right, looking at the cup, hands folded near her own chest, hesitant expression",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "woman, black bob hair, red cardigan, white shirt, seated on left, extending the same single cup toward the right above table center, maintaining her grip on its side",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "woman, blonde bob hair, blue cardigan, white shirt, seated on right, reaching an open palm toward the cup, palm still visibly separated below cup base",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "hand, red cardigan sleeve cuff, hands only, hand entering from left, fingers firmly wrapped around upper left side of the single white cup, still gripping it, red sleeve visible",
+                  "centers": [
+                    {
+                      "x": 0.165,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "hand, blue cardigan sleeve cuff, hands only, hand entering from right, palm facing up directly pressed against the bottom of the same cup, supporting the cup from below, blue sleeve visible",
+                  "centers": [
+                    {
+                      "x": 0.335,
+                      "y": 0.8049999999999999
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "hand, red cardigan sleeve cuff, hands only, empty open hand withdrawing to left, fingers clearly separated from the cup, red sleeve cuff visible",
+                  "centers": [
+                    {
+                      "x": 0.6,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "hand, blue cardigan sleeve cuff, hands only, palm facing up securely supporting the single white cup from below on right, cup resting on palm, blue sleeve visible",
+                  "centers": [
+                    {
+                      "x": 0.8400000000000001,
+                      "y": 0.78
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, watermark, logo, speech bubbles, text, bad anatomy, extra limbs, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.125,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.375,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.625,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.875,
+                      "y": 0.25
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.165,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.335,
+                      "y": 0.8049999999999999
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.6,
+                      "y": 0.75
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.8400000000000001,
+                      "y": 0.78
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "character_slots": 8,
+      "use_coords": true,
+      "use_order": true
+    },
+    {
+      "case": "child-cat",
+      "result": {
+        "status": "DONE",
+        "correlation": "HdXyKM",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741108,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "review": {
+        "image": "raw/image_0.png",
+        "image_sha256": "6852586bb3a944978f61cb4bb50fb076990ed1aab9d3ada67c4365a5e5169fba",
+        "layout_reviewed": true,
+        "planned_grid_matched": true,
+        "actual_panel_count": 4,
+        "panels": [
+          {
+            "panel_id": "S01-P01",
+            "box": [
+              35,
+              27,
+              864,
+              548
+            ],
+            "content_approved": true,
+            "observation": "One child stands at right and looks toward one cat under table at left; basic discovery and identities are visible."
+          },
+          {
+            "panel_id": "S01-P02",
+            "box": [
+              892,
+              27,
+              2014,
+              548
+            ],
+            "content_approved": false,
+            "observation": "Two cats and two adjacent tables appear inside the same outer frame. The child squats near an extra cat on the right, changing the planned fixed geometry."
+          },
+          {
+            "panel_id": "S01-P03",
+            "box": [
+              35,
+              604,
+              864,
+              1125
+            ],
+            "content_approved": false,
+            "observation": "One child squats and reaches an empty hand with a clear gap. The cat is standing and appears to advance right; the planned stationary wary pose and fixed geometry are not clearly matched."
+          },
+          {
+            "panel_id": "S01-P04",
+            "box": [
+              892,
+              604,
+              2014,
+              1125
+            ],
+            "content_approved": false,
+            "observation": "Two cats remain in one frame, one left and one beyond child on right. A retreat leftward away from the outstretched hand cannot be established."
+          }
+        ]
+      },
+      "request": {
+        "input": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, four successive moments of ONE continuous locked low side-view wide shot, unchanged camera and identical room geometry. A simple tall wooden table occupies the LEFT half of the room; its two thin legs leave a clear open view of the floor under the tabletop. A red toy cube stays on the floor at far left under table. Same child on RIGHT and same cat under table on LEFT in every panel, full child and cat visible. Cat faces right toward child throughout. Open floor between them, cream wall, daylight. The child notices the cat, crouches, extends an empty hand and the cat backs LEFT farther beneath the table, away from hand. No physical contact.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide low side view. Child stands upright on right, notices the small cat under table on left, looking down toward it. Cat sits just inside the right edge of the under-table space, facing child. Red cube remains farther left behind cat.\nPanel 2, row 1 column 2: Same wide camera and table. Child bends knees into a squat on right, looking directly at cat. Hands still near his own knees. Cat remains at exactly the same floor spot near right edge under table, facing child.\nPanel 3, row 2 column 1: Same wide camera and table. Child stays squatting on right and extends one EMPTY open hand low toward cat. A clear gap remains between fingertips and cat. Cat is still at original under-table position, leaning back warily toward left.\nPanel 4, row 2 column 2: Same wide camera. Cat has taken two short backward steps to the LEFT, deeper under table and closer to red cube, while still facing right toward child. The distance from cats nose to childs outstretched empty hand is visibly LARGER than in previous panel. Child stays in same squat on right, keeps empty palm where it was and watches cat retreat. No touching or lifting cat.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, four successive moments of ONE continuous locked low side-view wide shot, unchanged camera and identical room geometry. A simple tall wooden table occupies the LEFT half of the room; its two thin legs leave a clear open view of the floor under the tabletop. A red toy cube stays on the floor at far left under table. Same child on RIGHT and same cat under table on LEFT in every panel, full child and cat visible. Cat faces right toward child throughout. Open floor between them, cream wall, daylight. The child notices the cat, crouches, extends an empty hand and the cat backs LEFT farther beneath the table, away from hand. No physical contact.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide low side view. Child stands upright on right, notices the small cat under table on left, looking down toward it. Cat sits just inside the right edge of the under-table space, facing child. Red cube remains farther left behind cat.\nPanel 2, row 1 column 2: Same wide camera and table. Child bends knees into a squat on right, looking directly at cat. Hands still near his own knees. Cat remains at exactly the same floor spot near right edge under table, facing child.\nPanel 3, row 2 column 1: Same wide camera and table. Child stays squatting on right and extends one EMPTY open hand low toward cat. A clear gap remains between fingertips and cat. Cat is still at original under-table position, leaning back warily toward left.\nPanel 4, row 2 column 2: Same wide camera. Cat has taken two short backward steps to the LEFT, deeper under table and closer to red cube, while still facing right toward child. The distance from cats nose to childs outstretched empty hand is visibly LARGER than in previous panel. Child stays in same squat on right, keeps empty palm where it was and watches cat retreat. No touching or lifting cat.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, watermark, logo, speech bubbles, text, bad anatomy, extra limbs, duplicate objects",
+          "seed": 741108,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, four successive moments of ONE continuous locked low side-view wide shot, unchanged camera and identical room geometry. A simple tall wooden table occupies the LEFT half of the room; its two thin legs leave a clear open view of the floor under the tabletop. A red toy cube stays on the floor at far left under table. Same child on RIGHT and same cat under table on LEFT in every panel, full child and cat visible. Cat faces right toward child throughout. Open floor between them, cream wall, daylight. The child notices the cat, crouches, extends an empty hand and the cat backs LEFT farther beneath the table, away from hand. No physical contact.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Wide low side view. Child stands upright on right, notices the small cat under table on left, looking down toward it. Cat sits just inside the right edge of the under-table space, facing child. Red cube remains farther left behind cat.\nPanel 2, row 1 column 2: Same wide camera and table. Child bends knees into a squat on right, looking directly at cat. Hands still near his own knees. Cat remains at exactly the same floor spot near right edge under table, facing child.\nPanel 3, row 2 column 1: Same wide camera and table. Child stays squatting on right and extends one EMPTY open hand low toward cat. A clear gap remains between fingertips and cat. Cat is still at original under-table position, leaning back warily toward left.\nPanel 4, row 2 column 2: Same wide camera. Cat has taken two short backward steps to the LEFT, deeper under table and closer to red cube, while still facing right toward child. The distance from cats nose to childs outstretched empty hand is visibly LARGER than in previous panel. Child stays in same squat on right, keeps empty palm where it was and watches cat retreat. No touching or lifting cat.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, standing upright on right beside table, full body visible, head turned down left toward cat under table, arms relaxed",
+                  "centers": [
+                    {
+                      "x": 0.38,
+                      "y": 0.215
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, sitting on floor under table at left, facing right toward child, orange tail resting behind",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, squatting on right beside table, both feet on floor, knees bent, hands near own knees, looking left under table",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.345
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, sitting at same position under table on left, facing right toward squatting child, ears attentive",
+                  "centers": [
+                    {
+                      "x": 0.655,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, remaining in squat on right, extending one empty open hand left toward cat close to floor, fingers stop well short of cat",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, under table at original position on left, facing right toward approaching empty hand, leaning body back left warily",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.885
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, same squat on right, holding extended empty hand still in previous place, watching cat move away left, full body visible",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, standing deeper under table at far left near red toy cube, taking backward steps left while head faces right toward child, visibly farther from hand",
+                  "centers": [
+                    {
+                      "x": 0.58,
+                      "y": 0.885
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, watermark, logo, speech bubbles, text, bad anatomy, extra limbs, duplicate objects",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.38,
+                      "y": 0.215
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.345
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.655,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.885
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.58,
+                      "y": 0.885
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "character_slots": 8,
+      "use_coords": true,
+      "use_order": true
+    },
+    {
+      "case": "child-cat-revision-1",
+      "result": {
+        "status": "DONE",
+        "correlation": "qRXTyB",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "seed": 741108,
+        "files": [
+          "image_0.png"
+        ]
+      },
+      "review": {
+        "image": "raw/image_0.png",
+        "image_sha256": "cab52cf6b53ee863f6e6d49f9a291cceaf7822755795b60f9b578620d744137d",
+        "layout_reviewed": true,
+        "planned_grid_matched": false,
+        "actual_panel_count": 8,
+        "content_approved": false,
+        "observations": [
+          "Eight actual frames in two rows of four, rather than the planned two-by-two grid.",
+          "Child and cat are often split into separate frames. In combined frames cat is on the wrong side of the child and not clearly under table.",
+          "Retreat left away from the hand is not readable; red cube also changes into a large red block."
+        ],
+        "crop_status": "not-mapped: actual frame count differs from planned ids; source retained"
+      },
+      "request": {
+        "input": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, comic storyboard. Four equal-size panels in a strict 2 by 2 grid. In EACH panel exactly ONE boy and exactly ONE cat beside exactly ONE wooden table. Identical locked low side-view wide shot in every panel. One wooden table on LEFT, boy on RIGHT outside the table, cat on floor UNDER the table facing RIGHT. Cream wall, red cube at far left. Table size and camera remain identical in all panels. Floor and both table legs visible.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Panel one. Wide side view: boy stands at right and looks down left. One cat sits under the table at left. Boy has noticed it.\nPanel 2, row 1 column 2: Panel two. SAME wide view: boy now squats outside table on right, hands on own knees, looking left. One cat remains sitting under table at left.\nPanel 3, row 2 column 1: Panel three. SAME wide view: squatting boy extends one empty hand left toward cat, without touching. One cat remains under table at left, a gap separates it from fingers.\nPanel 4, row 2 column 2: Panel four. SAME wide view: boy stays in the same squat, his empty hand held still. One cat has moved LEFT closer to red cube, farther away from hand, still facing RIGHT. Show a larger empty gap between cat and hand.\nno text, no speech bubbles",
+        "model": "nai-diffusion-5-full",
+        "action": "generate",
+        "parameters": {
+          "params_version": 4,
+          "width": 2048,
+          "height": 1152,
+          "scale": 5.5,
+          "uncond_scale": 0,
+          "cfg_rescale": 0,
+          "sampler": "k_euler_ancestral",
+          "steps": 23,
+          "n_samples": 1,
+          "noise_schedule": "karras",
+          "legacy_v3_extend": false,
+          "sm": false,
+          "sm_dyn": false,
+          "dynamic_thresholding": false,
+          "dynamic_thresholding_percentile": 0.999,
+          "dynamic_thresholding_mimic_scale": 10,
+          "controlnet_strength": 1,
+          "skip_cfg_below_sigma": 0,
+          "deliberate_euler_ancestral_bug": false,
+          "prefer_brownian": true,
+          "cfg_sched_eligibility": "enable_for_post_summer_samplers",
+          "explike_fine_detail": false,
+          "minimize_sigma_inf": false,
+          "uncond_per_vibe": true,
+          "wonky_vibe_correlation": true,
+          "straight_alpha": true,
+          "quality_boost": false,
+          "tag_hint_qt": 1,
+          "tag_hint_uc_preset": 2,
+          "reference_information_extracted_multiple": [],
+          "reference_strength_multiple": [],
+          "prompt": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, comic storyboard. Four equal-size panels in a strict 2 by 2 grid. In EACH panel exactly ONE boy and exactly ONE cat beside exactly ONE wooden table. Identical locked low side-view wide shot in every panel. One wooden table on LEFT, boy on RIGHT outside the table, cat on floor UNDER the table facing RIGHT. Cream wall, red cube at far left. Table size and camera remain identical in all panels. Floor and both table legs visible.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Panel one. Wide side view: boy stands at right and looks down left. One cat sits under the table at left. Boy has noticed it.\nPanel 2, row 1 column 2: Panel two. SAME wide view: boy now squats outside table on right, hands on own knees, looking left. One cat remains sitting under table at left.\nPanel 3, row 2 column 1: Panel three. SAME wide view: squatting boy extends one empty hand left toward cat, without touching. One cat remains under table at left, a gap separates it from fingers.\nPanel 4, row 2 column 2: Panel four. SAME wide view: boy stays in the same squat, his empty hand held still. One cat has moved LEFT closer to red cube, farther away from hand, still facing RIGHT. Show a larger empty gap between cat and hand.\nno text, no speech bubbles",
+          "negative_prompt": "lowres, text, watermark, speech bubble, extra limbs, extra cat within panel, duplicate cat within panel, extra table within panel",
+          "seed": 741108,
+          "v4_prompt": {
+            "caption": {
+              "base_caption": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece\n1boy, 1cat, comic storyboard. Four equal-size panels in a strict 2 by 2 grid. In EACH panel exactly ONE boy and exactly ONE cat beside exactly ONE wooden table. Identical locked low side-view wide shot in every panel. One wooden table on LEFT, boy on RIGHT outside the table, cat on floor UNDER the table facing RIGHT. Cream wall, red cube at far left. Table size and camera remain identical in all panels. Floor and both table legs visible.\ncomic, multiple views, storyboard page, exactly 4 separate panels in 2 rows and 2 columns, thin straight panel borders, read left to right then top to bottom\nPanel 1, row 1 column 1: Panel one. Wide side view: boy stands at right and looks down left. One cat sits under the table at left. Boy has noticed it.\nPanel 2, row 1 column 2: Panel two. SAME wide view: boy now squats outside table on right, hands on own knees, looking left. One cat remains sitting under table at left.\nPanel 3, row 2 column 1: Panel three. SAME wide view: squatting boy extends one empty hand left toward cat, without touching. One cat remains under table at left, a gap separates it from fingers.\nPanel 4, row 2 column 2: Panel four. SAME wide view: boy stays in the same squat, his empty hand held still. One cat has moved LEFT closer to red cube, farther away from hand, still facing RIGHT. Show a larger empty gap between cat and hand.\nno text, no speech bubbles",
+              "char_captions": [
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, standing upright, arms down, looking down left",
+                  "centers": [
+                    {
+                      "x": 0.38,
+                      "y": 0.215
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, sitting, facing right",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, squatting, hands on knees, looking left",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.345
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, sitting in same spot, facing right",
+                  "centers": [
+                    {
+                      "x": 0.655,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, squatting, one arm reaching left, empty open palm",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, standing in same spot, facing right",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.885
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks, same squat, one arm held still reaching left, empty open palm",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "small white cat, orange ears, orange tail, green eyes, walking backwards toward left, head facing right, nearer red cube at far left",
+                  "centers": [
+                    {
+                      "x": 0.58,
+                      "y": 0.885
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": true,
+            "use_order": true,
+            "legacy_uc": false
+          },
+          "v4_negative_prompt": {
+            "caption": {
+              "base_caption": "lowres, text, watermark, speech bubble, extra limbs, extra cat within panel, duplicate cat within panel, extra table within panel",
+              "char_captions": [
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.38,
+                      "y": 0.215
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.865,
+                      "y": 0.345
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.655,
+                      "y": 0.385
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.35,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.155,
+                      "y": 0.885
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.85,
+                      "y": 0.845
+                    }
+                  ]
+                },
+                {
+                  "char_caption": "",
+                  "centers": [
+                    {
+                      "x": 0.58,
+                      "y": 0.885
+                    }
+                  ]
+                }
+              ]
+            },
+            "use_coords": false,
+            "use_order": false,
+            "legacy_uc": false
+          }
+        }
+      },
+      "character_slots": 8,
+      "use_coords": true,
+      "use_order": true
+    }
+  ]
+}

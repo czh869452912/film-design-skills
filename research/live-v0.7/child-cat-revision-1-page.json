@@ -1,0 +1,112 @@
+{
+  "page_id": "child-cat-revision-1",
+  "columns": 2,
+  "rows": 2,
+  "width": 2048,
+  "height": 1152,
+  "style": "anime storyboard, clean lineart, flat muted colors, soft cel shading, consistent character design, very aesthetic, masterpiece",
+  "global_prompt": "1boy, 1cat, comic storyboard. Four equal-size panels in a strict 2 by 2 grid. In EACH panel exactly ONE boy and exactly ONE cat beside exactly ONE wooden table. Identical locked low side-view wide shot in every panel. One wooden table on LEFT, boy on RIGHT outside the table, cat on floor UNDER the table facing RIGHT. Cream wall, red cube at far left. Table size and camera remain identical in all panels. Floor and both table legs visible.",
+  "characters": {
+    "C": {
+      "appearance": "boy, short dark brown hair, mustard yellow hoodie, green shorts, white socks"
+    },
+    "K": {
+      "appearance": "small white cat, orange ears, orange tail, green eyes"
+    }
+  },
+  "negative": "lowres, text, watermark, speech bubble, extra limbs, extra cat within panel, duplicate cat within panel, extra table within panel",
+  "panels": [
+    {
+      "panel_id": "S01-P01",
+      "shot_id": "S01",
+      "summary": "Panel one. Wide side view: boy stands at right and looks down left. One cat sits under the table at left. Boy has noticed it.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "standing upright, arms down, looking down left",
+          "local_center": [
+            0.76,
+            0.43
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "sitting, facing right",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P02",
+      "shot_id": "S01",
+      "summary": "Panel two. SAME wide view: boy now squats outside table on right, hands on own knees, looking left. One cat remains sitting under table at left.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "squatting, hands on knees, looking left",
+          "local_center": [
+            0.73,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "sitting in same spot, facing right",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P03",
+      "shot_id": "S01",
+      "summary": "Panel three. SAME wide view: squatting boy extends one empty hand left toward cat, without touching. One cat remains under table at left, a gap separates it from fingers.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "squatting, one arm reaching left, empty open palm",
+          "local_center": [
+            0.7,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "standing in same spot, facing right",
+          "local_center": [
+            0.31,
+            0.77
+          ]
+        }
+      ]
+    },
+    {
+      "panel_id": "S01-P04",
+      "shot_id": "S01",
+      "summary": "Panel four. SAME wide view: boy stays in the same squat, his empty hand held still. One cat has moved LEFT closer to red cube, farther away from hand, still facing RIGHT. Show a larger empty gap between cat and hand.",
+      "instances": [
+        {
+          "character_id": "C",
+          "prompt": "same squat, one arm held still reaching left, empty open palm",
+          "local_center": [
+            0.7,
+            0.69
+          ]
+        },
+        {
+          "character_id": "K",
+          "prompt": "walking backwards toward left, head facing right, nearer red cube at far left",
+          "local_center": [
+            0.16,
+            0.77
+          ]
+        }
+      ]
+    }
+  ]
+}

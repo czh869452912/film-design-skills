@@ -1,0 +1,28 @@
+name: Validate film design tools
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image and media dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Check model-independent tools
+        run: python shot-design/scripts/selftest.py --verbose
+      - name: Check optional page adapter
+        run: python integrations/novelai/selftest.py
+      - name: Build five-skill package
+        run: python tools/build_release.py

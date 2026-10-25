@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""Build a reference pack from storyboard panels.
-
-Copies each shot's panel into an ordered folder and writes a manifest that a
-prompt writer can turn into per-picture roles (H3 Ref2VA `<Picture N>`, Seedance
-`@Image N`). The panels become the composition/staging references for the video
-model — the previs drawing is the input, not just the check.
-
-Usage:
-    python build_refpack.py shotlist.json --images storyboard --out refs/run1
-"""
-
+"""Pack selected clean panels, retaining original shot/panel associations."""
 from __future__ import annotations
 
 import argparse
@@ -18,117 +8,67 @@ import shutil
 import sys
 from pathlib import Path
 
-IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp")
-
-
-def load(path: Path) -> dict:
-    with path.open(encoding="utf-8") as fh:
-        data = json.load(fh)
-    if not isinstance(data.get("shots"), list):
-        raise SystemExit("shot list needs a 'shots' array")
-    return data
-
-
-def find_panel(images: Path, shot_id: str) -> Path | None:
-    for ext in IMAGE_EXTS:
-        candidate = images / f"{shot_id}{ext}"
-        if candidate.exists():
-            return candidate
-    return None
+sys.dont_write_bytecode = True
+from sequence import iter_panels, load, require_valid, resolve_image
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("shotlist")
-    ap.add_argument("--images", required=True, help="directory with <shot_id> panel images")
-    ap.add_argument("--out", required=True, help="destination for the ordered reference pack")
-    ap.add_argument("--first-frame", action="store_true",
-                    help="mark picture 1 as the first frame instead of only a staging reference")
+    ap.add_argument("--images", help="override image folder; otherwise paths are relative to JSON")
+    ap.add_argument("--out", required=True)
+    ap.add_argument("--select", action="append", help="panel id to include; repeat, or omit for all")
+    ap.add_argument("--first-frame", action="store_true", help="mark the actual first panel as a first-frame reference")
+    ap.add_argument("--allow-missing", action="store_true", help="allow a manifest explicitly marked incomplete")
     args = ap.parse_args()
-
-    data = load(Path(args.shotlist))
-    images = Path(args.images)
-    out_dir = Path(args.out)
-    out_dir.mkdir(parents=True, exist_ok=True)
-
+    plan = Path(args.shotlist)
+    data = load(plan)
+    require_valid(data)
+    all_panels = list(iter_panels(data))
+    wanted = set(args.select or [p['id'] for p in all_panels])
+    unknown = wanted - {p['id'] for p in all_panels}
+    if unknown:
+        raise SystemExit("unknown panels: " + ", ".join(sorted(unknown)))
+    if args.first_frame and all_panels[0]['id'] not in wanted:
+        raise SystemExit("--first-frame requires the actual first panel in the selection")
+    panels = [p for p in all_panels if p['id'] in wanted]
+    sources = [resolve_image(p, images=Path(args.images) if args.images else None, base=plan.parent) for p in panels]
+    missing = [p['id'] for p, src in zip(panels, sources) if src is None]
+    if missing and not args.allow_missing:
+        raise SystemExit("missing panels: " + ", ".join(missing))
+    dest = Path(args.out)
+    dest.mkdir(parents=True, exist_ok=True)
+    shot_indices = {s['id']: i for i, s in enumerate(data['shots'], 1)}
     entries = []
-    missing = []
-    index = 0
-    for shot in data["shots"]:
-        shot_id = str(shot.get("id") or f"S{index + 1:02d}")
-        source = find_panel(images, shot_id)
+    for panel, source in zip(panels, sources):
         if source is None:
-            missing.append(shot_id)
             continue
-        index += 1
-        target = out_dir / f"{index:02d}-{shot_id}{source.suffix.lower()}"
+        index = len(entries) + 1
+        target = dest / f"{index:02d}-{panel['id']}{source.suffix.lower()}"
+        if source.resolve() == target.resolve():
+            raise SystemExit(f"source and output are the same: {source}")
         shutil.copyfile(source, target)
-        framing = shot.get("framing") or {}
-        composition = shot.get("composition") or {}
-        staging = shot.get("staging") or {}
-        role = (
-            f"composition and staging of [Shot {index}]"
-            + (" and the first frame of the video" if args.first_frame and index == 1 else "")
-        )
-        entries.append(
-            {
-                "picture": f"Picture {index}",
-                "shot": shot_id,
-                "file": target.name,
-                "role": role,
-                "size": framing.get("size"),
-                "angle": framing.get("angle"),
-                "subjects": [
-                    {
-                        "screen": subject.get("screen"),
-                        "facing": subject.get("facing"),
-                        "pose": subject.get("pose"),
-                    }
-                    for subject in (staging.get("subjects") or [])
-                    if isinstance(subject, dict)
-                ],
-                "value_masses": composition.get("value_masses"),
-                "note": (
-                    "Use for layout, subject placement, screen direction and light direction. "
-                    "Do not carry over the sketch style, line work, labels or annotations."
-                ),
-            }
-        )
-
-    manifest = {
-        "title": data.get("title"),
-        "count": len(entries),
-        "pictures": entries,
-        "instructions": [
-            "Feed the files in this order as <Picture 1>..<Picture N> (H3) or @Image N (Seedance).",
-            "Panels are staging references; give them that role explicitly and exclude their sketch style.",
-            "Use unannotated panels: labels and arrows are for review, not for the model.",
-        ],
-    }
-    (out_dir / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-
-    lines = [f"# Reference pack — {data.get('title') or 'untitled'}", ""]
-    for entry in entries:
-        lines.append(
-            f"- **{entry['picture']}** `{entry['file']}` — {entry['role']}; "
-            f"{entry['size']} / {entry['angle']}"
-        )
-        if entry["value_masses"]:
-            lines.append(f"  - values: {entry['value_masses']}")
-        for subject in entry["subjects"]:
-            lines.append(
-                f"  - {subject['screen']} facing {subject['facing']}: {subject['pose']}"
-            )
-    lines += ["", "Exclude the sketch style and any labels when describing these references."]
-    (out_dir / "refs.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-    print(f"refpack: {len(entries)} pictures -> {out_dir}")
+        role = f"staging reference for shot {panel['shot_id']}, panel {panel['id']}"
+        if args.first_frame and panel['id'] == all_panels[0]['id']:
+            role += "; first frame"
+        entries.append(dict(reference_id=f"R{index:02d}", picture=f"Picture {index}", shot=panel['shot_id'],
+                            shot_index=shot_indices[panel['shot_id']], panel=panel['id'],
+                            file=target.name, role=role, description=panel['description'],
+                            framing=panel.get('framing', {}), staging=panel.get('staging', {})))
+    payload = dict(title=data.get('title'), count=len(entries), pictures=entries,
+                   missing_panels=missing, complete=not missing,
+                   instructions=["Reference index, shot index and panel id are different identifiers.",
+                                 "The target adapter chooses supported bindings and reference count.",
+                                 "Use clean panels; style exclusion instructions cannot guarantee absence of style leakage."])
+    (dest / 'manifest.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding='utf-8')
+    lines = [f"# Reference pack — {data.get('title', 'untitled')}", ""]
+    lines += [f"- {e['reference_id']}: {e['file']} — {e['role']} (original shot #{e['shot_index']})" for e in entries]
     if missing:
-        print(f"missing panels: {', '.join(missing)}")
+        lines.append("Incomplete: " + ", ".join(missing))
+    (dest / 'refs.md').write_text("\n".join(lines) + "\n", encoding='utf-8')
+    print(f"refpack: {len(entries)} references; {len(missing)} missing panels -> {dest}")
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.exit(main())

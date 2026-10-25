@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Build a simple animatic (timed previz clip) from storyboard panels.
 
-Reads a shot list JSON, looks for one panel image per shot
-(`<shot_id>.png|jpg|jpeg|webp`), renders each panel as a video segment of its
-declared duration, concatenates them, and writes an mp4 plus an EDL.
+Renders timed panels, preserving continuous-shot groups in the EDL.
+Supports legacy one-image-per-shot plans. Missing drawings are explicit
+placeholders unless --require-images is used. Output is not visual approval.
 
-Options: per-panel fade in/out (`--transition fade`), an external audio track
+Options: fade at shot boundaries (`--transition fade`), an external audio track
 (`--audio`), label position, size and fps.
 
 Usage:
@@ -17,30 +17,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import shutil
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
+sys.dont_write_bytecode = True
+from sequence import iter_panels, load, require_valid, resolve_image
+
 IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp")
 DEFAULT_FONT = "Arial" if sys.platform.startswith("win") else None
-
-
-def load(path: Path) -> dict:
-    with path.open(encoding="utf-8") as fh:
-        data = json.load(fh)
-    if not isinstance(data.get("shots"), list) or not data["shots"]:
-        raise SystemExit("shot list needs a non-empty 'shots' array")
-    return data
-
-
-def find_panel(images: Path, shot_id: str) -> Path | None:
-    for ext in IMAGE_EXTS:
-        candidate = images / f"{shot_id}{ext}"
-        if candidate.exists():
-            return candidate
-    return None
 
 
 def size_from_aspect(aspect: str) -> tuple[int, int]:
@@ -48,7 +36,7 @@ def size_from_aspect(aspect: str) -> tuple[int, int]:
         w, h = (float(part) for part in aspect.split(":"))
     except (ValueError, AttributeError):
         return 1344, 768
-    if not w or not h:
+    if not all(math.isfinite(v) and v > 0 for v in (w, h)):
         return 1344, 768
     height = 768
     width = int(round(height * w / h / 2)) * 2
@@ -64,7 +52,8 @@ def run(cmd: list[str]) -> None:
 
 def render_segment(src: Path | None, shot_id: str, duration: float, width: int, height: int,
                    out: Path, labels: bool, font: str | None, fps: int,
-                   transition: str = "none", label_position: str = "top-left") -> None:
+                   transition: str = "none", label_position: str = "top-left",
+                   fade_in: bool = True, fade_out: bool = True) -> None:
     """Render one panel as a video segment of exactly `duration` seconds.
 
     Fades must be applied to the segment, not to the still: a still has a single
@@ -92,8 +81,10 @@ def render_segment(src: Path | None, shot_id: str, duration: float, width: int, 
 
     if transition == "fade" and duration > 0.5:
         fade = min(0.25, duration / 4)
-        vf.append(f"fade=t=in:st=0:d={fade:.2f}")
-        vf.append(f"fade=t=out:st={duration - fade:.2f}:d={fade:.2f}")
+        if fade_in:
+            vf.append(f"fade=t=in:st=0:d={fade:.2f}")
+        if fade_out:
+            vf.append(f"fade=t=out:st={duration - fade:.2f}:d={fade:.2f}")
 
     cmd = ["ffmpeg", "-v", "error", "-y"]
     if src is None:
@@ -101,7 +92,7 @@ def render_segment(src: Path | None, shot_id: str, duration: float, width: int, 
     else:
         cmd += ["-loop", "1", "-i", str(src)]
     cmd += [
-        "-t", f"{duration:.3f}",
+        "-frames:v", str(round(duration * fps)),
         "-vf", ",".join(vf),
         "-r", str(fps),
         "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", "-pix_fmt", "yuv420p",
@@ -121,14 +112,19 @@ def main() -> int:
     ap.add_argument("--font", default=None, help="fontconfig font name for labels (default Arial on Windows)")
     ap.add_argument("--label-position", default="top-left", choices=["top-left", "bottom-right"])
     ap.add_argument("--transition", default="none", choices=["none", "fade"],
-                    help="fade = dip through black between panels")
+                    help="fade at shot boundaries; internal panels remain continuous")
     ap.add_argument("--audio", default=None, help="optional audio track (mp3/wav/m4a) trimmed to the runtime")
+    ap.add_argument("--require-images", action="store_true", help="fail if any panel drawing is absent")
     args = ap.parse_args()
 
     if shutil.which("ffmpeg") is None:
         raise SystemExit("ffmpeg not found on PATH")
 
-    data = load(Path(args.shotlist))
+    plan_path = Path(args.shotlist)
+    data = load(plan_path)
+    require_valid(data, timed=True)
+    if args.fps <= 0:
+        raise SystemExit("fps must be positive")
     target = data.get("target") or {}
     style = data.get("style") or {}
     aspect = style.get("aspect") or target.get("aspect") or "16:9"
@@ -140,40 +136,62 @@ def main() -> int:
             raise SystemExit("--size must look like 1344x768")
 
     images = Path(args.images) if args.images else None
+    panels = list(iter_panels(data))
+    sources = [resolve_image(p, images=images, base=plan_path.parent) for p in panels]
+    if args.require_images and any(p is None for p in sources):
+        raise SystemExit("missing panels: " + ", ".join(p['id'] for p, src in zip(panels, sources) if src is None))
+    if width <= 0 or height <= 0 or width % 2 or height % 2:
+        raise SystemExit("video size must have positive even dimensions")
     font = args.font if args.font else DEFAULT_FONT
     labels = not args.no_labels
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    shots = data["shots"]
+    planned_total = sum(p['duration_s'] for p in panels)
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
         concat_lines: list[str] = []
         edl: list[dict] = []
         cursor = 0.0
+        planned_cursor = 0.0
+        frame_cursor = 0
 
-        for index, shot in enumerate(shots, start=1):
-            shot_id = str(shot.get("id") or f"S{index:02d}")
-            duration = float(shot.get("duration_s") or 0)
-            src = find_panel(images, shot_id) if images else None
-            segment = tmp_dir / f"{index:03d}_{shot_id}.mp4"
+        for index, (shot, src) in enumerate(zip(panels, sources), start=1):
+            shot_id = shot['shot_id']
+            panel_id = shot['id']
+            planned_duration = shot['duration_s']
+            planned_cursor += planned_duration
+            end_frame = round(planned_cursor * args.fps)
+            frame_count = end_frame - frame_cursor
+            if frame_count < 1:
+                raise SystemExit(f"{panel_id}: timing is shorter than a frame at {args.fps}fps")
+            duration = frame_count / args.fps
+            segment = tmp_dir / f"{index:03d}_{panel_id}.mp4"
             render_segment(
-                src, shot_id, duration, width, height, segment, labels, font, args.fps,
+                src, f"{shot_id}/{panel_id}", duration, width, height, segment, labels, font, args.fps,
                 transition=args.transition, label_position=args.label_position,
+                fade_in=shot['shot_start'],
+                fade_out=index == len(panels) or panels[index]['shot_start'],
             )
             concat_lines.append(f"file '{segment.as_posix()}'")
             edl.append(
                 {
                     "shot_id": shot_id,
+                    "panel_id": panel_id,
+                    "shot_start": shot['shot_start'],
                     "start_s": round(cursor, 3),
                     "duration_s": round(duration, 3),
+                    "planned_duration_s": planned_duration,
+                    "start_frame": frame_cursor,
+                    "frame_count": frame_count,
                     "panel": str(src) if src else None,
                     "placeholder": src is None,
-                    "beat_id": shot.get("beat_id"),
+                    "beat_ids": shot.get("beat_ids", []),
                 }
             )
             cursor += duration
+            frame_cursor = end_frame
 
         concat_file = tmp_dir / "concat.txt"
         concat_file.write_text("\n".join(concat_lines) + "\n", encoding="utf-8")
@@ -193,6 +211,7 @@ def main() -> int:
             "-map", "0:v:0", "-map", "1:a:0",
             "-t", f"{cursor:.3f}",
             "-c:v", "copy",
+            "-af", "apad",
             "-c:a", "aac", "-b:a", "96k", "-shortest",
             str(out_path),
         ]
@@ -206,8 +225,16 @@ def main() -> int:
                 "size": f"{width}x{height}",
                 "fps": args.fps,
                 "duration_s": round(cursor, 3),
-                "planned_duration_s": round(sum(float(s.get("duration_s") or 0) for s in shots), 3),
-                "shots": edl,
+                "planned_duration_s": round(planned_total, 3),
+                "panels": edl,
+                "shots": [
+                    {"shot_id": sid,
+                     "start_s": next(p['start_s'] for p in edl if p['shot_id'] == sid),
+                     "duration_s": round(sum(p['frame_count'] for p in edl if p['shot_id'] == sid) / args.fps, 3),
+                     "panel_ids": [p['panel_id'] for p in edl if p['shot_id'] == sid]}
+                    for sid in [s['id'] for s in data['shots']]
+                ],
+                "visual_review": "not assessed by this script",
             },
             ensure_ascii=False,
             indent=2,
@@ -215,8 +242,8 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    missing = [item["shot_id"] for item in edl if item["placeholder"]]
-    print(f"animatic: {out_path}  ({cursor:.1f}s, {width}x{height}, {args.fps}fps)")
+    missing = [item["panel_id"] for item in edl if item["placeholder"]]
+    print(f"animatic: {out_path}  ({len(data['shots'])} shots / {len(panels)} panels, {cursor:.3f}s, {width}x{height}, {args.fps}fps)")
     print(f"edl:      {edl_path}")
     if missing:
         print(f"placeholders used for: {', '.join(missing)}")
